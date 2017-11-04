@@ -10,7 +10,7 @@ import { StocksService } from '../stocks.service';
 export class ChartComponentComponent implements OnInit {
 
   constructor(private dataService: StocksService) { }
-
+  chartBackgroundColor = "#F5F5F5";
   ngOnInit() {
   }
 
@@ -22,9 +22,11 @@ export class ChartComponentComponent implements OnInit {
 *
 *
 */
+
   totalCostChart = new Chart({
     chart: {
-      type: 'pie'
+      type: 'pie',
+      backgroundColor: this.chartBackgroundColor
     },
     title: {
       text: 'Totalkostnad per aktie'
@@ -121,7 +123,8 @@ export class ChartComponentComponent implements OnInit {
 
   totalValueChart = new Chart({
     chart: {
-      type: 'pie'
+      type: 'pie',
+      backgroundColor: this.chartBackgroundColor
     },
     title: {
       text: 'Totalvärde per aktie'
@@ -215,121 +218,123 @@ export class ChartComponentComponent implements OnInit {
 *
 */
 
-totalCostPerIndustryChart = new Chart({
-  chart: {
-    type: 'pie'
-  },
-  title: {
-    text: 'Totalkostnad per bransch'
-  },
-  plotOptions: {
-    pie: {
-      allowPointSelect: true,
-      cursor: 'pointer',
-      dataLabels: {
-          enabled: true,
-          format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-          style: {
-              color: 'black'
-          }
-      },
-      tooltip: {
-        pointFormat: '{point.y:.2f} kr' 
+  totalCostPerIndustryChart = new Chart({
+    chart: {
+      type: 'pie',
+      backgroundColor: this.chartBackgroundColor
+    },
+    title: {
+      text: 'Totalkostnad per bransch'
+    },
+    plotOptions: {
+      pie: {
+        allowPointSelect: true,
+        cursor: 'pointer',
+        dataLabels: {
+            enabled: true,
+            format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+            style: {
+                color: 'black'
+            }
+        },
+        tooltip: {
+          pointFormat: '{point.y:.2f} kr' 
+        }
       }
-    }
-  },
-  series: [{
-    data: [{
-      name: 'Dagligvaror',
-      y: (this.dataService.Actic.boughtFor * this.dataService.Actic.amount) + (this.dataService.Kopparbergs.boughtFor * this.dataService.Kopparbergs.amount) + (this.dataService.ICA.boughtFor * this.dataService.Kopparbergs.amount) + (this.dataService.ClasOhlson.boughtFor * this.dataService.ClasOhlson.amount)
-      },{
-        name: 'Industrivaror & Tjänster',        
-        y: (this.dataService.AtlasCopco.boughtFor * this.dataService.AtlasCopco.amount) + (this.dataService.Mycronic.boughtFor * this.dataService.Mycronic.amount) + (this.dataService.Peab.boughtFor * this.dataService.Peab.amount)        
-      },{
-        name: 'Informationsteknik',
-        y: (this.dataService.Starbreeze.boughtFor * this.dataService.Starbreeze.amount) + (this.dataService.Tobii.boughtFor * this.dataService.Tobii.amount)
-      },{
-        name: 'Material',
-        y: this.dataService.BillerudKorsnas.boughtFor * this.dataService.BillerudKorsnas.amount
-      }, {
-        name: 'Okänd',
-        y: (this.dataService.NVIDIA.boughtFor * this.dataService.NVIDIA.amount) + (this.dataService.Tesla.boughtFor * this.dataService.Tesla.amount) + (this.dataService.Amazon.boughtFor * this.dataService.Amazon.amount) + (this.dataService.Alibaba.boughtFor * this.dataService.Alibaba.amount)
-      }, {
-        name: 'Sällanköpvaror & Tjänster',
-        y: (this.dataService.Hovding.boughtFor * this.dataService.Hovding.amount) + (this.dataService.Cloetta.boughtFor * this.dataService.Cloetta.amount)
-      }, {
-        name: 'Finsns & Fastighet',
-        y: (this.dataService.Avanza.boughtFor * this.dataService.Avanza.amount) + (this.dataService.Handelsbanken.boughtFor * this.dataService.Handelsbanken.amount)
-      }, {
-        name: 'Telekomoperatörer',
-        y: this.dataService.Bahnhof.boughtFor * this.dataService.Bahnhof.amount
-      }
-    ]
-  }]
-})
+    },
+    series: [{
+      data: [{
+        name: 'Dagligvaror',
+        y: (this.dataService.Actic.boughtFor * this.dataService.Actic.amount) + (this.dataService.Kopparbergs.boughtFor * this.dataService.Kopparbergs.amount) + (this.dataService.ICA.boughtFor * this.dataService.Kopparbergs.amount) + (this.dataService.ClasOhlson.boughtFor * this.dataService.ClasOhlson.amount)
+        },{
+          name: 'Industrivaror & Tjänster',        
+          y: (this.dataService.AtlasCopco.boughtFor * this.dataService.AtlasCopco.amount) + (this.dataService.Mycronic.boughtFor * this.dataService.Mycronic.amount) + (this.dataService.Peab.boughtFor * this.dataService.Peab.amount)        
+        },{
+          name: 'Informationsteknik',
+          y: (this.dataService.Starbreeze.boughtFor * this.dataService.Starbreeze.amount) + (this.dataService.Tobii.boughtFor * this.dataService.Tobii.amount)
+        },{
+          name: 'Material',
+          y: this.dataService.BillerudKorsnas.boughtFor * this.dataService.BillerudKorsnas.amount
+        }, {
+          name: 'Okänd',
+          y: (this.dataService.NVIDIA.boughtFor * this.dataService.NVIDIA.amount) + (this.dataService.Tesla.boughtFor * this.dataService.Tesla.amount) + (this.dataService.Amazon.boughtFor * this.dataService.Amazon.amount) + (this.dataService.Alibaba.boughtFor * this.dataService.Alibaba.amount)
+        }, {
+          name: 'Sällanköpvaror & Tjänster',
+          y: (this.dataService.Hovding.boughtFor * this.dataService.Hovding.amount) + (this.dataService.Cloetta.boughtFor * this.dataService.Cloetta.amount)
+        }, {
+          name: 'Finsns & Fastighet',
+          y: (this.dataService.Avanza.boughtFor * this.dataService.Avanza.amount) + (this.dataService.Handelsbanken.boughtFor * this.dataService.Handelsbanken.amount)
+        }, {
+          name: 'Telekomoperatörer',
+          y: this.dataService.Bahnhof.boughtFor * this.dataService.Bahnhof.amount
+        }
+      ]
+    }]
+  })
 
 
-/*
-*
-*
-*
-* TOTALVÄRDE PER BRANSCH
-*
-*
-*/
+  /*
+  *
+  *
+  *
+  * TOTALVÄRDE PER BRANSCH
+  *
+  *
+  */
 
-totalValuePerIndustryChart = new Chart({
-  chart: {
-    type: 'pie'
-  },
-  title: {
-    text: 'Totalvärde per bransch'
-  },
-  plotOptions: {
-    pie: {
-      allowPointSelect: true,
-      cursor: 'pointer',
-      dataLabels: {
-          enabled: true,
-          format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-          style: {
-              color: 'black'
-          }
-      },
-      tooltip: {
-        pointFormat: '{point.y:.2f} kr' 
+  totalValuePerIndustryChart = new Chart({
+    chart: {
+      type: 'pie',
+      backgroundColor: this.chartBackgroundColor
+    },
+    title: {
+      text: 'Totalvärde per bransch'
+    },
+    plotOptions: {
+      pie: {
+        allowPointSelect: true,
+        cursor: 'pointer',
+        dataLabels: {
+            enabled: true,
+            format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+            style: {
+                color: 'black'
+            }
+        },
+        tooltip: {
+          pointFormat: '{point.y:.2f} kr' 
+        }
       }
-    }
-  },
-  series: [{
-    data: [{
-      name: 'Dagligvaror',
-      y: (this.dataService.Actic.currentPrice * this.dataService.Actic.amount) + (this.dataService.Kopparbergs.currentPrice * this.dataService.Kopparbergs.amount) + (this.dataService.ICA.currentPrice * this.dataService.Kopparbergs.amount) + (this.dataService.ClasOhlson.currentPrice * this.dataService.ClasOhlson.amount)
-      },{
-        name: 'Industrivaror & Tjänster',        
-        y: (this.dataService.AtlasCopco.currentPrice * this.dataService.AtlasCopco.amount) + (this.dataService.Mycronic.currentPrice * this.dataService.Mycronic.amount) + (this.dataService.Peab.currentPrice * this.dataService.Peab.amount)        
-      },{
-        name: 'Informationsteknik',
-        y: (this.dataService.Starbreeze.currentPrice * this.dataService.Starbreeze.amount) + (this.dataService.Tobii.currentPrice * this.dataService.Tobii.amount)
-      },{
-        name: 'Material',
-        y: this.dataService.BillerudKorsnas.currentPrice * this.dataService.BillerudKorsnas.amount
-      }, {
-        name: 'Okänd',
-        y: (this.dataService.NVIDIA.currentPrice * this.dataService.NVIDIA.amount) + (this.dataService.Tesla.currentPrice * this.dataService.Tesla.amount) + (this.dataService.Amazon.currentPrice * this.dataService.Amazon.amount) + (this.dataService.Alibaba.currentPrice * this.dataService.Alibaba.amount)
-      }, {
-        name: 'Sällanköpvaror & Tjänster',
-        y: (this.dataService.Hovding.currentPrice * this.dataService.Hovding.amount) + (this.dataService.Cloetta.currentPrice * this.dataService.Cloetta.amount)
-      }, {
-        name: 'Finsns & Fastighet',
-        y: (this.dataService.Avanza.currentPrice * this.dataService.Avanza.amount) + (this.dataService.Handelsbanken.currentPrice * this.dataService.Handelsbanken.amount)
-      }, {
-        name: 'Telekomoperatörer',
-        y: this.dataService.Bahnhof.currentPrice * this.dataService.Bahnhof.amount
-      }
-    ]
-  }]
-})
+    },
+    series: [{
+      data: [{
+        name: 'Dagligvaror',
+        y: (this.dataService.Actic.currentPrice * this.dataService.Actic.amount) + (this.dataService.Kopparbergs.currentPrice * this.dataService.Kopparbergs.amount) + (this.dataService.ICA.currentPrice * this.dataService.Kopparbergs.amount) + (this.dataService.ClasOhlson.currentPrice * this.dataService.ClasOhlson.amount)
+        },{
+          name: 'Industrivaror & Tjänster',        
+          y: (this.dataService.AtlasCopco.currentPrice * this.dataService.AtlasCopco.amount) + (this.dataService.Mycronic.currentPrice * this.dataService.Mycronic.amount) + (this.dataService.Peab.currentPrice * this.dataService.Peab.amount)        
+        },{
+          name: 'Informationsteknik',
+          y: (this.dataService.Starbreeze.currentPrice * this.dataService.Starbreeze.amount) + (this.dataService.Tobii.currentPrice * this.dataService.Tobii.amount)
+        },{
+          name: 'Material',
+          y: this.dataService.BillerudKorsnas.currentPrice * this.dataService.BillerudKorsnas.amount
+        }, {
+          name: 'Okänd',
+          y: (this.dataService.NVIDIA.currentPrice * this.dataService.NVIDIA.amount) + (this.dataService.Tesla.currentPrice * this.dataService.Tesla.amount) + (this.dataService.Amazon.currentPrice * this.dataService.Amazon.amount) + (this.dataService.Alibaba.currentPrice * this.dataService.Alibaba.amount)
+        }, {
+          name: 'Sällanköpvaror & Tjänster',
+          y: (this.dataService.Hovding.currentPrice * this.dataService.Hovding.amount) + (this.dataService.Cloetta.currentPrice * this.dataService.Cloetta.amount)
+        }, {
+          name: 'Finsns & Fastighet',
+          y: (this.dataService.Avanza.currentPrice * this.dataService.Avanza.amount) + (this.dataService.Handelsbanken.currentPrice * this.dataService.Handelsbanken.amount)
+        }, {
+          name: 'Telekomoperatörer',
+          y: this.dataService.Bahnhof.currentPrice * this.dataService.Bahnhof.amount
+        }
+      ]
+    }]
+  })
 
 
 /*
@@ -341,39 +346,40 @@ totalValuePerIndustryChart = new Chart({
 *
 */
 
-dividendPercentageChart = new Chart({
-  chart: {
-    type: 'pie'
-  },
-  title: {
-    text: 'Totalvärde per bransch'
-  },
-  plotOptions: {
-    pie: {
-      allowPointSelect: true,
-      cursor: 'pointer',
-      dataLabels: {
-          enabled: true,
-          format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-          style: {
-              color: 'black'
-          }
-      },
-      tooltip: {
-        pointFormat: '{point.y:.2f} kr' 
+  dividendPercentageChart = new Chart({
+    chart: {
+      type: 'pie',
+      backgroundColor: this.chartBackgroundColor
+    },
+    title: {
+      text: 'Totalvärde per bransch'
+    },
+    plotOptions: {
+      pie: {
+        allowPointSelect: true,
+        cursor: 'pointer',
+        dataLabels: {
+            enabled: true,
+            format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+            style: {
+                color: 'black'
+            }
+        },
+        tooltip: {
+          pointFormat: '{point.y:.2f} kr' 
+        }
       }
-    }
-  },
-  series: [{
-    data: [{
-      name: 'Ger inte utdelning',
-      y: (this.dataService.Actic.currentPrice * this.dataService.Actic.amount) + (this.dataService.Starbreeze.currentPrice * this.dataService.Starbreeze.amount) + (this.dataService.Tesla.currentPrice * this.dataService.Tesla.amount) + (this.dataService.Amazon.currentPrice * this.dataService.Tesla.amount) + (this.dataService.Alibaba.currentPrice * this.dataService.Alibaba.amount) + (this.dataService.Hovding.currentPrice * this.dataService.Hovding.amount)
-      },{
-        name: 'Ger utdelning',        
-        y: (this.dataService.AtlasCopco.currentPrice * this.dataService.AtlasCopco.amount) + (this.dataService.Kopparbergs.currentPrice * this.dataService.Kopparbergs.amount) + (this.dataService.Mycronic.currentPrice * this.dataService.Mycronic.amount) + (this.dataService.NVIDIA.currentPrice * this.dataService.NVIDIA.amount) + (this.dataService.ICA.currentPrice * this.dataService.ICA.amount) + (this.dataService.Bahnhof.currentPrice * this.dataService.Bahnhof.amount) + (this.dataService.ClasOhlson.currentPrice * this.dataService.ClasOhlson.amount) + (this.dataService.Peab.currentPrice * this.dataService.Peab.amount) + (this.dataService.BillerudKorsnas.currentPrice * this.dataService.BillerudKorsnas.amount) + (this.dataService.Avanza.currentPrice * this.dataService.Avanza.amount) + (this.dataService.Cloetta.currentPrice * this.dataService.Cloetta.amount) + (this.dataService.Handelsbanken.currentPrice * this.dataService.Handelsbanken.amount)   
-      }
-    ]
-  }]
-})
+    },
+    series: [{
+      data: [{
+        name: 'Ger inte utdelning',
+        y: (this.dataService.Actic.currentPrice * this.dataService.Actic.amount) + (this.dataService.Starbreeze.currentPrice * this.dataService.Starbreeze.amount) + (this.dataService.Tesla.currentPrice * this.dataService.Tesla.amount) + (this.dataService.Amazon.currentPrice * this.dataService.Tesla.amount) + (this.dataService.Alibaba.currentPrice * this.dataService.Alibaba.amount) + (this.dataService.Hovding.currentPrice * this.dataService.Hovding.amount)
+        },{
+          name: 'Ger utdelning',        
+          y: (this.dataService.AtlasCopco.currentPrice * this.dataService.AtlasCopco.amount) + (this.dataService.Kopparbergs.currentPrice * this.dataService.Kopparbergs.amount) + (this.dataService.Mycronic.currentPrice * this.dataService.Mycronic.amount) + (this.dataService.NVIDIA.currentPrice * this.dataService.NVIDIA.amount) + (this.dataService.ICA.currentPrice * this.dataService.ICA.amount) + (this.dataService.Bahnhof.currentPrice * this.dataService.Bahnhof.amount) + (this.dataService.ClasOhlson.currentPrice * this.dataService.ClasOhlson.amount) + (this.dataService.Peab.currentPrice * this.dataService.Peab.amount) + (this.dataService.BillerudKorsnas.currentPrice * this.dataService.BillerudKorsnas.amount) + (this.dataService.Avanza.currentPrice * this.dataService.Avanza.amount) + (this.dataService.Cloetta.currentPrice * this.dataService.Cloetta.amount) + (this.dataService.Handelsbanken.currentPrice * this.dataService.Handelsbanken.amount)   
+        }
+      ]
+    }]
+  })
 
 }

@@ -8,18 +8,21 @@ import { StocksService } from './stocks.service';
 })
 export class AppComponent {
   title = 'app';
-  Amazon = {};
-  Tesla = {};
   stockToBuy = "";
-
+  Tesla = this.dataService.Tesla;
+  Amazon = this.dataService.Amazon;
+  AmazonTotalCost = this.Amazon.boughtFor * this.Amazon.amount;
   constructor(private dataService: StocksService)
   {
 
   }
 
   ngOnInit() {
-    this.Tesla = this.dataService.Tesla;
-    this.Amazon= this.dataService.Amazon;
     this.stockToBuy = this.dataService.stockToBuy();
+  }
+
+  calcValue(cost :number, amount: number)
+  {
+    
   }
 }

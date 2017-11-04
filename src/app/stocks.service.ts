@@ -215,7 +215,7 @@ export class StocksService {
   }
 
   stocks = [
-    'Avanza', 'Atlas Copco', 'Amazon', 'Tesla'
+    this.Actic, this.AtlasCopco, this.Kopparbergs, this.Mycronic, this.NVIDIA, this.Starbreeze, this.Tesla, this.Amazon, this.ICA, this.Alibaba, this.Bahnhof, this.ClasOhlson, this.Peab, this.BillerudKorsnas, this.Avanza, this.Hovding, this.Cloetta, this.Handelsbanken, this.Tobii
   ];
 
   stockToBuy()

@@ -1,12 +1,32 @@
-<h3>
-  Diagram
-</h3>
-
 <!-- <img (click)="clickEvent($event)" width="100%" src={{chartOne}}>
 <img width="100%" src={{chartTwo}}> -->
-
-<div [chart]="totalCostChart"></div>
-<div [chart]="totalValueChart"></div>
-<div [chart]="totalCostPerIndustryChart"></div>
-<div [chart]="totalValuePerIndustryChart"></div>
-<div [chart]="dividendPercentageChart"></div>
+<div class="page">
+  <h3>
+      Diagram
+    </h3>
+    
+  <div class="row">
+      <div class="col-lg-6 col-xs-12">
+        <div class="chart-container box" [chart]="totalCostChart"></div>
+      </div>
+      <div class="col-lg-6 col-xs-12">
+        <div class="chart-container box" [chart]="totalValueChart"></div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-6 col-xs-12">
+        <div class="chart-container box" [chart]="totalCostPerIndustryChart"></div>
+      </div>
+      <div class="col-lg-6 col-xs-12">
+        <div class="chart-container box" [chart]="totalValuePerIndustryChart"></div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-6">
+        <div class="chart-container box" [chart]="dividendPercentageChart"></div>
+      </div>
+      <div class="col-md-6"></div>
+    </div>
+</div>
