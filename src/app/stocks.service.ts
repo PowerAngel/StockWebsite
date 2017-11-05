@@ -7,7 +7,7 @@ export class StocksService {
 
   Actic = {
     name: 'Actic Group',
-    ticker: '',
+    ticker: 'ATIC',
     industry: 'Dagligvaror',
     boughtFor: 52.62,
     amount: 17,
@@ -18,7 +18,7 @@ export class StocksService {
 
   Alibaba = {
     name: 'Alibaba Group Holding Ltd',
-    ticker: '',
+    ticker: 'BABA',
     industry: '',
     boughtFor: 1024.81,
     amount: 1,
@@ -29,7 +29,7 @@ export class StocksService {
 
   Amazon = {
     name: 'Amazon',
-    ticker: '',
+    ticker: 'AMZN',
     industry: '',
     boughtFor: 8756.88,
     amount: 1,
@@ -40,7 +40,7 @@ export class StocksService {
 
   AtlasCopco = {
     name: 'Atlas Copco B',
-    ticker: '',
+    ticker: 'ATCO B',
     industry: 'Industrivaror & Tjänster',
     boughtFor: 282.70,
     amount: 10,
@@ -51,7 +51,7 @@ export class StocksService {
 
   Avanza = {
     name: 'Avanza ',
-    ticker: '',
+    ticker: 'AZA',
     industry: 'Finans & Fastighet',
     boughtFor: 334.85,
     amount: 6,
@@ -62,7 +62,7 @@ export class StocksService {
 
   Bahnhof = {
     name: 'Bahnhof B',
-    ticker: '',
+    ticker: 'BAHN B',
     industry: 'Telekomoperatörer',
     boughtFor: 18.20,
     amount: 40,
@@ -73,7 +73,7 @@ export class StocksService {
 
   BillerudKorsnas = {
     name: 'BillerudKorsnäs',
-    ticker: '',
+    ticker: 'BILL',
     industry: 'Material',
     boughtFor: 136.60,
     amount: 8,
@@ -84,7 +84,7 @@ export class StocksService {
 
   ClasOhlson = {
     name: 'Clas Ohlson AB B',
-    ticker: '',
+    ticker: 'CLAS B',
     industry: 'Dagligvaror',
     boughtFor: 147.75,
     amount: 6,
@@ -95,7 +95,7 @@ export class StocksService {
 
   Cloetta = {
     name: 'Cloetta',
-    ticker: '',
+    ticker: 'CLA B',
     industry: 'Sällanköpvaror & Tjänster',
     boughtFor: 28,
     amount: 15,
@@ -106,7 +106,7 @@ export class StocksService {
 
   Handelsbanken = {
     name: 'Handelsbanken',
-    ticker: '',
+    ticker: 'SHB B',
     industry: 'Finans & Fastighet',
     boughtFor: 123,
     amount: 10,
@@ -117,7 +117,7 @@ export class StocksService {
 
   Hovding = {
     name: 'Hövding Sverige',
-    ticker: '',
+    ticker: 'HOVD',
     industry: 'Sällanköpvaror & Tjänster',
     boughtFor: 20.90,
     amount: 30,
@@ -128,7 +128,7 @@ export class StocksService {
 
   ICA = {
     name: 'ICA Gruppen',
-    ticker: '',
+    ticker: 'ICA',
     industry: 'Dagligvaror',
     boughtFor: 312.86,
     amount: 7,
@@ -139,7 +139,7 @@ export class StocksService {
 
   Kopparbergs = {
     name: 'Kopparbergs',
-    ticker: '',
+    ticker: 'KOBR MTF B',
     industry: 'Dagligvaror',
     boughtFor: 233.15,
     amount: 10,
@@ -150,7 +150,7 @@ export class StocksService {
 
   Mycronic = {
     name: 'Mycronic',
-    ticker: '',
+    ticker: 'MYCR',
     industry: 'Industrivaror & Tjänster',
     boughtFor: 90.20,
     amount: 10,
@@ -161,7 +161,7 @@ export class StocksService {
 
   NVIDIA = {
     name: 'NVIDIA Corp',
-    ticker: '',
+    ticker: 'NVDA',
     industry: '',
     boughtFor: 898.66,
     amount: 1,
@@ -172,7 +172,7 @@ export class StocksService {
 
   Peab = {
     name: 'Peab B',
-    ticker: '',
+    ticker: 'PEAB B',
     industry: 'Industrivaror & Tjänster',
     boughtFor: 90.87,
     amount: 18,
@@ -183,7 +183,7 @@ export class StocksService {
 
   Starbreeze = {
     name: 'Starbreeze B',
-    ticker: '',
+    ticker: 'STAR B',
     industry: 'Informationsteknik',
     boughtFor: 18.46,
     amount: 25,
@@ -205,7 +205,7 @@ export class StocksService {
 
   Tobii = {
     name: 'Tobii',
-    ticker: '',
+    ticker: 'TOBII',
     industry: 'Informationsteknik',
     boughtFor: 46.50,
     amount: 22,
