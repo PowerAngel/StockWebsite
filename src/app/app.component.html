@@ -49,73 +49,90 @@
   <tbody>
     <tr>
       <td>Dagligvaror</td>
-      <td class="table-cell--right">{{(Actic.boughtFor * Actic.amount) + (ClasOhlson.boughtFor * ClasOhlson.amount) + (ICA.boughtFor * ICA.amount) + (Kopparbergs.boughtFor * Kopparbergs.amount) | number}} kr</td>
-      <td class="table-cell--right">{{(Actic.currentPrice * Actic.amount) + (ClasOhlson.currentPrice * ClasOhlson.amount) + (ICA.currentPrice * ICA.amount) + (Kopparbergs.currentPrice * Kopparbergs.amount) | number}} kr</td>
+      <td class="table-cell--right">{{DagligvarorTotalCost | number}} kr</td>
+      <td class="table-cell--right">{{DagligvarorTotalValue | number}} kr</td>
       <td class="table-cell--right">4</td>
-      <td class="table-cell--right">?</td>
+      <td class="table-cell--right">{{DagligvarorPortion | percent}}</td>
     </tr>
     <tr>
       <td>Industrivaror & Tjänster</td>
-      <td class="table-cell--right">{{(AtlasCopco.boughtFor * AtlasCopco.amount) + (Mycronic.boughtFor * Mycronic.amount) + (Peab.boughtFor * Peab.amount) | number}} kr</td>
-      <td class="table-cell--right">{{(AtlasCopco.currentPrice * AtlasCopco.amount) + (Mycronic.currentPrice * Mycronic.amount) + (Peab.currentPrice * Peab.amount) | number}} kr</td>
+      <td class="table-cell--right">{{IndustrivarorTotalCost | number}} kr</td>
+      <td class="table-cell--right">{{IndustrivarorTotalValue | number}} kr</td>
       <td class="table-cell--right">3</td>
-      <td class="table-cell--right">?</td>
+      <td class="table-cell--right">{{IndustrivarorPortion | percent}}</td>
     </tr>
     <tr>
       <td>Informationsteknik</td>
-      <td class="table-cell--right">{{(Starbreeze.boughtFor * Starbreeze.amount) + (Tobii.boughtFor * Tobii.amount) | number}} kr</td>
-      <td class="table-cell--right">{{(Starbreeze.currentPrice * Starbreeze.amount) + (Tobii.currentPrice * Tobii.amount) | number}} kr</td>
+      <td class="table-cell--right">{{InformationsteknikTotalCost | number}} kr</td>
+      <td class="table-cell--right">{{InformationsteknikTotalValue | number}} kr</td>
       <td class="table-cell--right">2</td>
-      <td class="table-cell--right">?</td>
+      <td class="table-cell--right">{{InformationsteknikPortion | percent}}</td>
     </tr>
     <tr>
       <td>Material</td>
-      <td class="table-cell--right">{{(BillerudKorsnas.boughtFor * BillerudKorsnas.amount) | number}} kr</td>
-      <td class="table-cell--right">{{(BillerudKorsnas.currentPrice * BillerudKorsnas.amount) | number}} kr</td>
+      <td class="table-cell--right">{{MaterialTotalCost | number}} kr</td>
+      <td class="table-cell--right">{{MaterialTotalValue | number}} kr</td>
       <td class="table-cell--right">1</td>
-      <td class="table-cell--right">?</td>
+      <td class="table-cell--right">{{MaterialPortion | percent}}</td>
     </tr>
     <tr>
       <td>Sällanköpvaror & tjänster</td>
-      <td class="table-cell--right">{{(Cloetta.boughtFor * Cloetta.amount) + (Hovding.boughtFor * Hovding.amount) | number}} kr</td>
-      <td class="table-cell--right">{{(Cloetta.currentPrice * Cloetta.amount) + (Hovding.currentPrice * Hovding.amount) | number}} kr</td>
+      <td class="table-cell--right">{{SallankopTotalCost | number}} kr</td>
+      <td class="table-cell--right">{{SallankopTotalValue | number}} kr</td>
       <td class="table-cell--right">2</td>
-      <td class="table-cell--right">?</td>
+      <td class="table-cell--right">{{SallankopPortion | percent}}</td>
     </tr>
     <tr>
       <td>Finans & Fastighet</td>
-      <td class="table-cell--right">{{(Avanza.boughtFor * Avanza.amount) + (Handelsbanken.boughtFor * Handelsbanken.amount) | number}} kr</td>
-      <td class="table-cell--right">{{(Avanza.currentPrice * Avanza.amount) + (Handelsbanken.currentPrice * Handelsbanken.amount) | number}} kr</td>
+      <td class="table-cell--right">{{FinansFastighetTotalCost | number}} kr</td>
+      <td class="table-cell--right">{{FinansFastighetTotalValue | number}} kr</td>
       <td class="table-cell--right">2</td>
-      <td class="table-cell--right">?</td>
+      <td class="table-cell--right">{{FinansFastighetPortion | percent}}</td>
     </tr>
     <tr>
       <td>Telekomoperatörer</td>
-      <td class="table-cell--right">{{(Bahnhof.boughtFor * Bahnhof.amount) | number}} kr</td>
-      <td class="table-cell--right">{{(Bahnhof.currentPrice * Bahnhof.amount) | number}} kr</td>
+      <td class="table-cell--right">{{TelekomTotalCost | number}} kr</td>
+      <td class="table-cell--right">{{TelekomTotalValue | number}} kr</td>
       <td class="table-cell--right">1</td>
-      <td class="table-cell--right">?</td>
+      <td class="table-cell--right">{{TelekomPortion | percent}}</td>
     </tr>
     <tr>
       <td>Energi</td>
       <td class="table-cell--right">0 kr</td>
       <td class="table-cell--right">0 kr</td>
       <td class="table-cell--right">0</td>
-      <td class="table-cell--right">0</td>
+      <td class="table-cell--right">{{EnergiPortion | percent}}</td>
     </tr>
     <tr>
       <td>Hälsovård</td>
       <td class="table-cell--right">0 kr</td>
       <td class="table-cell--right">0 kr</td>
       <td class="table-cell--right">0</td>
-      <td class="table-cell--right">0</td>
+      <td class="table-cell--right">{{HalsaPortion | percent}}</td>
     </tr>
     <tr>
       <td>Okänd</td>
-      <td class="table-cell--right">{{(Alibaba.boughtFor * Alibaba.amount) + (Amazon.boughtFor * Amazon.amount) + (NVIDIA.boughtFor * NVIDIA.amount) + (Tesla.boughtFor * Tesla.amount) | number}} kr</td>
-      <td class="table-cell--right">{{(Alibaba.currentPrice * Alibaba.amount) + (Amazon.currentPrice * Amazon.amount) + (NVIDIA.currentPrice * NVIDIA.amount) + (Tesla.currentPrice * Tesla.amount) | number}} kr</td>
+      <td class="table-cell--right">{{OvrigtToalCost | number}} kr</td>
+      <td class="table-cell--right">{{OvrigtTotalValue | number}} kr</td>
       <td class="table-cell--right">4</td>
-      <td class="table-cell--right">?</td>
+      <td class="table-cell--right">{{OvrigtPortion | percent}}</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Totalkostnad</th>
+      <th>Totalvärde</th>
+      <th>Avkastning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="table-cell--right">{{TotalCost | number}} kr</td>
+      <td class="table-cell--right">{{TotalValue | number}} kr</td>
+      <td class="table-cell--right">{{TotalValue / TotalCost | percent}}</td>
     </tr>
   </tbody>
 </table>

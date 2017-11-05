@@ -245,28 +245,28 @@ export class ChartComponentComponent implements OnInit {
     series: [{
       data: [{
         name: 'Dagligvaror',
-        y: (this.dataService.Actic.boughtFor * this.dataService.Actic.amount) + (this.dataService.Kopparbergs.boughtFor * this.dataService.Kopparbergs.amount) + (this.dataService.ICA.boughtFor * this.dataService.Kopparbergs.amount) + (this.dataService.ClasOhlson.boughtFor * this.dataService.ClasOhlson.amount)
-        },{
-          name: 'Industrivaror & Tjänster',        
-          y: (this.dataService.AtlasCopco.boughtFor * this.dataService.AtlasCopco.amount) + (this.dataService.Mycronic.boughtFor * this.dataService.Mycronic.amount) + (this.dataService.Peab.boughtFor * this.dataService.Peab.amount)        
+        y: this.dataService.DagligvarorTotalCost
+      },{
+          name: 'Industrivaror & Tjänster',   
+          y: this.dataService.IndustrivarorTotalCost     
         },{
           name: 'Informationsteknik',
-          y: (this.dataService.Starbreeze.boughtFor * this.dataService.Starbreeze.amount) + (this.dataService.Tobii.boughtFor * this.dataService.Tobii.amount)
+          y: this.dataService.InformationsteknikTotalCost
         },{
           name: 'Material',
-          y: this.dataService.BillerudKorsnas.boughtFor * this.dataService.BillerudKorsnas.amount
+          y: this.dataService.MaterialTotalCost
         }, {
           name: 'Okänd',
-          y: (this.dataService.NVIDIA.boughtFor * this.dataService.NVIDIA.amount) + (this.dataService.Tesla.boughtFor * this.dataService.Tesla.amount) + (this.dataService.Amazon.boughtFor * this.dataService.Amazon.amount) + (this.dataService.Alibaba.boughtFor * this.dataService.Alibaba.amount)
+          y: this.dataService.OvrigtToalCost
         }, {
           name: 'Sällanköpvaror & Tjänster',
-          y: (this.dataService.Hovding.boughtFor * this.dataService.Hovding.amount) + (this.dataService.Cloetta.boughtFor * this.dataService.Cloetta.amount)
+          y: this.dataService.SallankopTotalCost
         }, {
           name: 'Finsns & Fastighet',
-          y: (this.dataService.Avanza.boughtFor * this.dataService.Avanza.amount) + (this.dataService.Handelsbanken.boughtFor * this.dataService.Handelsbanken.amount)
+          y: this.dataService.FinansFastighetTotalCost
         }, {
           name: 'Telekomoperatörer',
-          y: this.dataService.Bahnhof.boughtFor * this.dataService.Bahnhof.amount
+          y: this.dataService.TelekomTotalCost
         }
       ]
     }]
@@ -309,28 +309,28 @@ export class ChartComponentComponent implements OnInit {
     series: [{
       data: [{
         name: 'Dagligvaror',
-        y: (this.dataService.Actic.currentPrice * this.dataService.Actic.amount) + (this.dataService.Kopparbergs.currentPrice * this.dataService.Kopparbergs.amount) + (this.dataService.ICA.currentPrice * this.dataService.Kopparbergs.amount) + (this.dataService.ClasOhlson.currentPrice * this.dataService.ClasOhlson.amount)
+        y: this.dataService.DagligvarorTotalValue
         },{
-          name: 'Industrivaror & Tjänster',        
-          y: (this.dataService.AtlasCopco.currentPrice * this.dataService.AtlasCopco.amount) + (this.dataService.Mycronic.currentPrice * this.dataService.Mycronic.amount) + (this.dataService.Peab.currentPrice * this.dataService.Peab.amount)        
+          name: 'Industrivaror & Tjänster',   
+          y: this.dataService.IndustrivarorTotalValue     
         },{
           name: 'Informationsteknik',
-          y: (this.dataService.Starbreeze.currentPrice * this.dataService.Starbreeze.amount) + (this.dataService.Tobii.currentPrice * this.dataService.Tobii.amount)
+          y: this.dataService.InformationsteknikTotalValue
         },{
           name: 'Material',
-          y: this.dataService.BillerudKorsnas.currentPrice * this.dataService.BillerudKorsnas.amount
+          y: this.dataService.MaterialTotalValue
         }, {
           name: 'Okänd',
-          y: (this.dataService.NVIDIA.currentPrice * this.dataService.NVIDIA.amount) + (this.dataService.Tesla.currentPrice * this.dataService.Tesla.amount) + (this.dataService.Amazon.currentPrice * this.dataService.Amazon.amount) + (this.dataService.Alibaba.currentPrice * this.dataService.Alibaba.amount)
+          y: this.dataService.OvrigtTotalValue
         }, {
           name: 'Sällanköpvaror & Tjänster',
-          y: (this.dataService.Hovding.currentPrice * this.dataService.Hovding.amount) + (this.dataService.Cloetta.currentPrice * this.dataService.Cloetta.amount)
+          y: this.dataService.SallankopTotalValue
         }, {
-          name: 'Finsns & Fastighet',
-          y: (this.dataService.Avanza.currentPrice * this.dataService.Avanza.amount) + (this.dataService.Handelsbanken.currentPrice * this.dataService.Handelsbanken.amount)
+          name: 'Finans & Fastighet',
+          y: this.dataService.FinansFastighetTotalValue
         }, {
           name: 'Telekomoperatörer',
-          y: this.dataService.Bahnhof.currentPrice * this.dataService.Bahnhof.amount
+          y: this.dataService.TelekomTotalValue
         }
       ]
     }]

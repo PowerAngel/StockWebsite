@@ -35,6 +35,42 @@ export class AppComponent {
   Tesla = this.dataService.Tesla;
   Tobii = this.dataService.Tobii;
 
+  DagligvarorTotalCost = this.dataService.DagligvarorTotalCost;
+  IndustrivarorTotalCost = this.dataService.IndustrivarorTotalCost;
+  InformationsteknikTotalCost = this.dataService.InformationsteknikTotalCost;
+  MaterialTotalCost = this.dataService.MaterialTotalCost;
+  SallankopTotalCost = this.dataService.SallankopTotalCost;
+  FinansFastighetTotalCost = this.dataService.FinansFastighetTotalCost;
+  TelekomTotalCost = this.dataService.TelekomTotalCost;
+  EnergiTotalCost = 0;
+  HalsaTotalCost = 0;
+  OvrigtTotalCost = this.dataService.OvrigtToalCost;
+
+  DagligvarorTotalValue = this.dataService.DagligvarorTotalValue;
+  IndustrivarorTotalValue = this.dataService.IndustrivarorTotalValue;
+  InformationsteknikTotalValue = this.dataService.IndustrivarorTotalValue;
+  MaterialTotalValue = this.dataService.MaterialTotalValue;
+  SallankopTotalValue = this.dataService.SallankopTotalValue;
+  FinansFastighetTotalValue = this.dataService.FinansFastighetTotalValue;
+  TelekomTotalValue = this.dataService.TelekomTotalValue;
+  EnergiTotalValue = 0;
+  HalsaTotalValue = 0;
+  OvrigtTotalValue = this.dataService.OvrigtTotalValue;
+
+  TotalCost = this.dataService.TotalCost;
+  TotalValue = this.dataService.TotalValue;
+
+  DagligvarorPortion = this.DagligvarorTotalValue / this.TotalValue;
+  IndustrivarorPortion = this.IndustrivarorTotalValue / this.TotalValue;
+  InformationsteknikPortion = this.InformationsteknikTotalValue / this.TotalValue;
+  MaterialPortion = this.MaterialTotalValue / this.TotalValue;
+  SallankopPortion = this.SallankopTotalValue / this.TotalValue;
+  FinansFastighetPortion = this.FinansFastighetTotalValue / this.TotalValue;
+  TelekomPortion = this.TelekomTotalValue / this.TotalValue;
+  EnergiPortion = 0;
+  HalsaPortion = 0;
+  OvrigtPortion = this.OvrigtTotalValue / this.TotalValue;
+
   stocks = this.dataService.stocks;
 
   ngOnInit() {
