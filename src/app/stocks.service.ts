@@ -13,7 +13,7 @@ export class StocksService {
     amount: 17,
     currentPrice: 35,
     stockMarket: 'Stockholmsbörsen (Small Cap)',
-    dividend: ''
+    dividend: 0
   }
 
   AtlasCopco = {

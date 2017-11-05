@@ -1,27 +1,53 @@
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Ticker</th>
-    <th>Industry</th>    
-    <th>Bought for</th>
-    <th>Amount</th>
-    <th>Total cost</th>
-    <th>Current price</th>
-    <th>Total value</th>
-    <th>Yield</th>
-    <th>Market</th>
-    <th>Dividend</th>
-  </tr>
-  <tr>
+<h1>Aktieöversikt 2017-11-05</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Namn</th>
+      <th>Ticker</th>
+      <th>Bransch</th>    
+      <th>Handlades för</th>
+      <th>Antal</th>
+      <th>Totalkostnad</th>
+      <th>Nuvarande pris</th>
+      <th>Totalvärde</th>
+      <th>Avkastning</th>
+      <th>Börs</th>
+      <th>Utdelning</th>
+      </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let stock of stocks">
+      <td>{{stock.name}}</td>
+      <td>{{stock.ticker}}</td>
+      <td>{{stock.industry}}</td>
+      <td class="table-cell--right">{{stock.boughtFor}}</td>
+      <td class="table-cell--right">{{stock.amount}}</td>
+      <td class="table-cell--right">{{stock.boughtFor * stock.amount | number}}</td>
+      <td class="table-cell--right">{{stock.currentPrice}}</td>
+      <td class="table-cell--right">{{stock.currentPrice * stock.amount | number}}</td>
+      <td class="table-cell--right">{{(stock.currentPrice * stock.amount) / (stock.boughtFor * stock.amount) | percent}}</td>
+      <td>{{stock.stockMarket}}</td>
+      <td class="table-cell--right">{{stock.dividend}} %</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<app-chart-component></app-chart-component>
+
+<!-- 
+    <tr>
     <td>{{Tesla.name}}</td>
     <td>{{Tesla.ticker}}</td>
     <td>{{Tesla.industry}}</td>
     <td>{{Tesla.boughtFor}}</td>
     <td>{{Tesla.amount}}</td>
-    <td>{{Tesla.boughtFor}} * {{Tesla.amount}}</td>
+    <td>{{Tesla.boughtFor * Tesla.amount}}</td>
     <td>{{Tesla.currentPrice}}</td>
-    <td>{{Tesla.currentPrice}} * {{Tesla.amount}}</td>
-    <td>({{Tesla.currentPrice}} * {{Tesla.amount}})/({{Tesla.boughtFor}} * {{Tesla.amount}})</td>
+    <td>{{Tesla.currentPrice * Tesla.amount}}</td>
+    <td>{{Tesla.currentPrice * Tesla.amount / Tesla.boughtFor * Tesla.amount}}</td>
     <td>{{Tesla.stockMarket}}</td>
     <td>{{Tesla.dividend}}</td>
   </tr>
@@ -32,10 +58,4 @@
     <td>{{Amazon.boughtFor}}</td>
     <td></td>
   </tr>
-</table>
-
-<br>
-<p>Todays stock to buy: {{stockToBuy}}</p>
-
-<app-chart-component></app-chart-component>
-
+-->

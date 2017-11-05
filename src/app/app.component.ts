@@ -7,15 +7,17 @@ import { StocksService } from './stocks.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  constructor(private dataService: StocksService)
+  {
+
+  }
+  
   title = 'app';
   stockToBuy = "";
   Tesla = this.dataService.Tesla;
   Amazon = this.dataService.Amazon;
   AmazonTotalCost = this.Amazon.boughtFor * this.Amazon.amount;
-  constructor(private dataService: StocksService)
-  {
-
-  }
+  stocks = this.dataService.stocks;
 
   ngOnInit() {
     this.stockToBuy = this.dataService.stockToBuy();

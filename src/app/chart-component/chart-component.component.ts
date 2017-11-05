@@ -352,7 +352,7 @@ export class ChartComponentComponent implements OnInit {
       backgroundColor: this.chartBackgroundColor
     },
     title: {
-      text: 'Totalvärde per bransch'
+      text: 'Andel nuvarande värde som ger utdelning'
     },
     plotOptions: {
       pie: {

@@ -1,7 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
-h3 {
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+h1 {
+    text-align: center;
+}
+
+h2 {
     text-align: center
 }
 .page {
     margin: 50px 50px;
+}
+
+.table-cell--right {
+    text-align: right;
+}
+
+.table {
+    width: 100%;
+}
+thead tr th {
+    border-bottom: 2px solid #DDD;
+}
+
+tbody tr td {
+    border-bottom: 1px solid #DDD;
+}
+.table th, .table td {
+    padding: 4px 8px;
 }
