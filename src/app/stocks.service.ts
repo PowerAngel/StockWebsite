@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 export class StocksService {
 
   constructor() { }
+  APIKey = "0DTMFM8K821YG008";
 
   Actic = {
     name: 'Actic Group',

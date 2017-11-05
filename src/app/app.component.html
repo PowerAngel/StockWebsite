@@ -22,11 +22,11 @@
       <td>{{stock.name}}</td>
       <td>{{stock.ticker}}</td>
       <td>{{stock.industry}}</td>
-      <td class="table-cell--right">{{stock.boughtFor}}</td>
+      <td class="table-cell--right">{{stock.boughtFor}} kr</td>
       <td class="table-cell--right">{{stock.amount}}</td>
-      <td class="table-cell--right">{{stock.boughtFor * stock.amount | number}}</td>
-      <td class="table-cell--right">{{stock.currentPrice}}</td>
-      <td class="table-cell--right">{{stock.currentPrice * stock.amount | number}}</td>
+      <td class="table-cell--right">{{stock.boughtFor * stock.amount | number}} kr</td>
+      <td class="table-cell--right">{{stock.currentPrice}} kr</td>
+      <td class="table-cell--right">{{stock.currentPrice * stock.amount | number}} kr</td>
       <td class="table-cell--right">{{(stock.currentPrice * stock.amount) / (stock.boughtFor * stock.amount) | percent}}</td>
       <td>{{stock.stockMarket}}</td>
       <td class="table-cell--right">{{stock.dividend}} %</td>
