@@ -1,5 +1,6 @@
 <h1>Aktieöversikt 2017-11-05</h1>
 
+<h2>Aktier</h2>
 <table class="table">
   <thead>
     <tr>
@@ -34,6 +35,90 @@
 </table>
 
 <br>
+<h2>Branschöversikt</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Bransch</th>
+      <th>Totalkostnad</th>
+      <th>Nuvarande värde</th>
+      <th>Antal bolag</th>
+      <th>Andel nuvarande värde</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Dagligvaror</td>
+      <td class="table-cell--right">{{(Actic.boughtFor * Actic.amount) + (ClasOhlson.boughtFor * ClasOhlson.amount) + (ICA.boughtFor * ICA.amount) + (Kopparbergs.boughtFor * Kopparbergs.amount) | number}} kr</td>
+      <td class="table-cell--right">{{(Actic.currentPrice * Actic.amount) + (ClasOhlson.currentPrice * ClasOhlson.amount) + (ICA.currentPrice * ICA.amount) + (Kopparbergs.currentPrice * Kopparbergs.amount) | number}} kr</td>
+      <td class="table-cell--right">4</td>
+      <td class="table-cell--right">?</td>
+    </tr>
+    <tr>
+      <td>Industrivaror & Tjänster</td>
+      <td class="table-cell--right">{{(AtlasCopco.boughtFor * AtlasCopco.amount) + (Mycronic.boughtFor * Mycronic.amount) + (Peab.boughtFor * Peab.amount) | number}} kr</td>
+      <td class="table-cell--right">{{(AtlasCopco.currentPrice * AtlasCopco.amount) + (Mycronic.currentPrice * Mycronic.amount) + (Peab.currentPrice * Peab.amount) | number}} kr</td>
+      <td class="table-cell--right">3</td>
+      <td class="table-cell--right">?</td>
+    </tr>
+    <tr>
+      <td>Informationsteknik</td>
+      <td class="table-cell--right">{{(Starbreeze.boughtFor * Starbreeze.amount) + (Tobii.boughtFor * Tobii.amount) | number}} kr</td>
+      <td class="table-cell--right">{{(Starbreeze.currentPrice * Starbreeze.amount) + (Tobii.currentPrice * Tobii.amount) | number}} kr</td>
+      <td class="table-cell--right">2</td>
+      <td class="table-cell--right">?</td>
+    </tr>
+    <tr>
+      <td>Material</td>
+      <td class="table-cell--right">{{(BillerudKorsnas.boughtFor * BillerudKorsnas.amount) | number}} kr</td>
+      <td class="table-cell--right">{{(BillerudKorsnas.currentPrice * BillerudKorsnas.amount) | number}} kr</td>
+      <td class="table-cell--right">1</td>
+      <td class="table-cell--right">?</td>
+    </tr>
+    <tr>
+      <td>Sällanköpvaror & tjänster</td>
+      <td class="table-cell--right">{{(Cloetta.boughtFor * Cloetta.amount) + (Hovding.boughtFor * Hovding.amount) | number}} kr</td>
+      <td class="table-cell--right">{{(Cloetta.currentPrice * Cloetta.amount) + (Hovding.currentPrice * Hovding.amount) | number}} kr</td>
+      <td class="table-cell--right">2</td>
+      <td class="table-cell--right">?</td>
+    </tr>
+    <tr>
+      <td>Finans & Fastighet</td>
+      <td class="table-cell--right">{{(Avanza.boughtFor * Avanza.amount) + (Handelsbanken.boughtFor * Handelsbanken.amount) | number}} kr</td>
+      <td class="table-cell--right">{{(Avanza.currentPrice * Avanza.amount) + (Handelsbanken.currentPrice * Handelsbanken.amount) | number}} kr</td>
+      <td class="table-cell--right">2</td>
+      <td class="table-cell--right">?</td>
+    </tr>
+    <tr>
+      <td>Telekomoperatörer</td>
+      <td class="table-cell--right">{{(Bahnhof.boughtFor * Bahnhof.amount) | number}} kr</td>
+      <td class="table-cell--right">{{(Bahnhof.currentPrice * Bahnhof.amount) | number}} kr</td>
+      <td class="table-cell--right">1</td>
+      <td class="table-cell--right">?</td>
+    </tr>
+    <tr>
+      <td>Energi</td>
+      <td class="table-cell--right">0 kr</td>
+      <td class="table-cell--right">0 kr</td>
+      <td class="table-cell--right">0</td>
+      <td class="table-cell--right">0</td>
+    </tr>
+    <tr>
+      <td>Hälsovård</td>
+      <td class="table-cell--right">0 kr</td>
+      <td class="table-cell--right">0 kr</td>
+      <td class="table-cell--right">0</td>
+      <td class="table-cell--right">0</td>
+    </tr>
+    <tr>
+      <td>Okänd</td>
+      <td class="table-cell--right">{{(Alibaba.boughtFor * Alibaba.amount) + (Amazon.boughtFor * Amazon.amount) + (NVIDIA.boughtFor * NVIDIA.amount) + (Tesla.boughtFor * Tesla.amount) | number}} kr</td>
+      <td class="table-cell--right">{{(Alibaba.currentPrice * Alibaba.amount) + (Amazon.currentPrice * Amazon.amount) + (NVIDIA.currentPrice * NVIDIA.amount) + (Tesla.currentPrice * Tesla.amount) | number}} kr</td>
+      <td class="table-cell--right">4</td>
+      <td class="table-cell--right">?</td>
+    </tr>
+  </tbody>
+</table>
 
 <app-chart-component></app-chart-component>
 
