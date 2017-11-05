@@ -262,7 +262,7 @@ export class ChartComponentComponent implements OnInit {
           name: 'Sällanköpvaror & Tjänster',
           y: this.dataService.SallankopTotalCost
         }, {
-          name: 'Finsns & Fastighet',
+          name: 'Finans & Fastighet',
           y: this.dataService.FinansFastighetTotalCost
         }, {
           name: 'Telekomoperatörer',

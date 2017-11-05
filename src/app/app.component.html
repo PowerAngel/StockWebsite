@@ -4,17 +4,17 @@
 <table class="table">
   <thead>
     <tr>
-      <th>Namn</th>
-      <th>Ticker</th>
-      <th>Bransch</th>    
-      <th>Handlades för</th>
-      <th>Antal</th>
-      <th>Totalkostnad</th>
-      <th>Nuvarande pris</th>
-      <th>Totalvärde</th>
-      <th>Avkastning</th>
-      <th>Börs</th>
-      <th>Utdelning</th>
+      <th class="table-cell--left">Namn</th>
+      <th class="table-cell--left">Ticker</th>
+      <th class="table-cell--left">Bransch</th>    
+      <th class="table-cell--right">Handlades för</th>
+      <th class="table-cell--right">Antal</th>
+      <th class="table-cell--right">Totalkostnad</th>
+      <th class="table-cell--right">Nuvarande pris</th>
+      <th class="table-cell--right">Totalvärde</th>
+      <th class="table-cell--right">Avkastning</th>
+      <th class="table-cell--left">Börs</th>
+      <th class="table-cell--right">Utdelning</th>
       </tr>
   </thead>
   <tbody>
@@ -27,7 +27,7 @@
       <td class="table-cell--right">{{stock.boughtFor * stock.amount | number}} kr</td>
       <td class="table-cell--right">{{stock.currentPrice}} kr</td>
       <td class="table-cell--right">{{stock.currentPrice * stock.amount | number}} kr</td>
-      <td class="table-cell--right">{{(stock.currentPrice * stock.amount) / (stock.boughtFor * stock.amount) | percent}}</td>
+      <td class="table-cell--right">{{((stock.currentPrice * stock.amount) / (stock.boughtFor * stock.amount)) - 1 | percent }}</td>
       <td>{{stock.stockMarket}}</td>
       <td class="table-cell--right">{{stock.dividend}} %</td>
     </tr>
@@ -39,11 +39,11 @@
 <table class="table">
   <thead>
     <tr>
-      <th>Bransch</th>
-      <th>Totalkostnad</th>
-      <th>Nuvarande värde</th>
-      <th>Antal bolag</th>
-      <th>Andel nuvarande värde</th>
+      <th class="table-cell--left">Bransch</th>
+      <th class="table-cell--right">Totalkostnad</th>
+      <th class="table-cell--right">Nuvarande värde</th>
+      <th class="table-cell--right">Antal bolag</th>
+      <th class="table-cell--right">Andel nuvarande värde</th>
     </tr>
   </thead>
   <tbody>
@@ -123,9 +123,9 @@
 <table class="table">
   <thead>
     <tr>
-      <th>Totalkostnad</th>
-      <th>Totalvärde</th>
-      <th>Avkastning</th>
+      <th class="table-cell--right">Totalkostnad</th>
+      <th class="table-cell--right">Totalvärde</th>
+      <th class="table-cell--right">Avkastning</th>
     </tr>
   </thead>
   <tbody>

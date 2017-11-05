@@ -17,6 +17,10 @@ h2 {
     text-align: right;
 }
 
+.table-cell--left {
+    text-align: left;
+}
+
 .table {
     width: 100%;
 }
