@@ -52,7 +52,8 @@ tbody tr td {
 
 .left {
     width: 50%;
-    height: 200px;
+    margin-top: 55px;
+    height: 75px;
     float: left;
 }
 
