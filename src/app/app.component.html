@@ -18,7 +18,8 @@
       </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let stock of stocks">
+    <tr *ngFor="let stock of stocks; let even = even; let odd = odd"
+      [ngClass]="{ odd: odd, even: even }">
       <td>{{stock.name}}</td>
       <td>{{stock.ticker}}</td>
       <td>{{stock.industry}}</td>
@@ -120,44 +121,33 @@
   </tbody>
 </table>
 <br>
-<table class="table">
-  <thead>
-    <tr>
-      <th class="table-cell--right">Totalkostnad</th>
-      <th class="table-cell--right">Totalvärde</th>
-      <th class="table-cell--right">Avkastning</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="table-cell--right">{{TotalCost | number}} kr</td>
-      <td class="table-cell--right">{{TotalValue | number}} kr</td>
-      <td class="table-cell--right">{{TotalValue / TotalCost | percent}}</td>
-    </tr>
-  </tbody>
-</table>
+
+
+<section class="container">
+  <table class="left">
+    <thead>
+      <tr>
+        <th class="table-cell--right">Totalkostnad</th>
+        <th class="table-cell--right">Totalvärde</th>
+        <th class="table-cell--right">Avkastning</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="table-cell--right">{{TotalCost | number}} kr</td>
+        <td class="table-cell--right">{{TotalValue | number}} kr</td>
+        <td class="table-cell--right">{{(TotalValue / TotalCost) - 1 | percent}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="right">
+    <h3>Regler</h3>
+    <ul>
+      <li>10-20 % utländska bolag</li>
+      <li>80 % av värdet ska ge direktavkastning</li>
+      <li>Undvik onödigt courtage. Handla t.ex. inte små poster på Nordic MTF</li>
+    </ul>
+  </div>
+</section>
 
 <app-chart-component></app-chart-component>
-
-<!-- 
-    <tr>
-    <td>{{Tesla.name}}</td>
-    <td>{{Tesla.ticker}}</td>
-    <td>{{Tesla.industry}}</td>
-    <td>{{Tesla.boughtFor}}</td>
-    <td>{{Tesla.amount}}</td>
-    <td>{{Tesla.boughtFor * Tesla.amount}}</td>
-    <td>{{Tesla.currentPrice}}</td>
-    <td>{{Tesla.currentPrice * Tesla.amount}}</td>
-    <td>{{Tesla.currentPrice * Tesla.amount / Tesla.boughtFor * Tesla.amount}}</td>
-    <td>{{Tesla.stockMarket}}</td>
-    <td>{{Tesla.dividend}}</td>
-  </tr>
-  <tr>
-    <td>{{Amazon.name}}</td>
-    <td>{{Amazon.ticker}}</td>
-    <td>{{Amazon.industry}}</td>
-    <td>{{Amazon.boughtFor}}</td>
-    <td></td>
-  </tr>
--->
