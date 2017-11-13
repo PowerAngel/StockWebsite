@@ -120,8 +120,8 @@ export class StocksService {
     name: 'Hövding Sverige',
     ticker: 'HOVD',
     industry: 'Sällanköpvaror & Tjänster',
-    boughtFor: 20.90,
-    amount: 30,
+    boughtFor: 18.18,
+    amount: 40,
     currentPrice: 13.10,
     stockMarket: 'First North Stockholm',
     dividend: 0
