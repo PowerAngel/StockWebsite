@@ -122,7 +122,40 @@
 </table>
 <br>
 
-<section class="container">
+<section class="row">
+  <div class="col-sm-8 col-xs-12">
+    <div class="box">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="table-cell--right">Totalkostnad</th>
+            <th class="table-cell--right">Totalvärde</th>
+            <th class="table-cell--right">Avkastning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="table-cell--right">{{TotalCost | number}} kr</td>
+            <td class="table-cell--right">{{TotalValue | number}} kr</td>
+            <td class="table-cell--right">{{(TotalValue / TotalCost) - 1 | percent}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="col-sm-4 col-xs-12 graybox">
+    <div class="box">
+      <h3>Regler</h3>
+      <ul>
+        <li>10-20 % utländska bolag</li>
+        <li>80 % av värdet ska ge direktavkastning</li>
+        <li>Undvik onödigt courtage. Handla t.ex. inte små poster på Nordic MTF</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="container">
   <table class="left">
     <thead>
       <tr>
@@ -147,6 +180,6 @@
       <li>Undvik onödigt courtage. Handla t.ex. inte små poster på Nordic MTF</li>
     </ul>
   </div>
-</section>
+</section> -->
 
 <app-chart-component></app-chart-component>

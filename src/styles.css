@@ -50,17 +50,7 @@ tbody tr td {
     padding: 10px;
 }
 
-.left {
-    width: 50%;
-    margin-top: 55px;
-    height: 75px;
-    float: left;
-}
-
-.right {
-    margin-left: 60%;
-    width: 20%;
+.graybox {
+    background-color: #C6C6C6;
     padding: 15px;
-    height: 200px;
-    background-color: #c6c6c6;
 }
