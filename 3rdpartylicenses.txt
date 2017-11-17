@@ -71,10 +71,6 @@ THE SOFTWARE.
 MIT
 MIT
 
-@angular/http@4.4.6
-MIT
-MIT
-
 angular-highcharts@4.0.7
 MIT
 MIT
