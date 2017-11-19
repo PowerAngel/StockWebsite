@@ -48,7 +48,7 @@ export class AppComponent {
 
   DagligvarorTotalValue = this.dataService.DagligvarorTotalValue;
   IndustrivarorTotalValue = this.dataService.IndustrivarorTotalValue;
-  InformationsteknikTotalValue = this.dataService.IndustrivarorTotalValue;
+  InformationsteknikTotalValue = this.dataService.InformationsteknikTotalValue;
   MaterialTotalValue = this.dataService.MaterialTotalValue;
   SallankopTotalValue = this.dataService.SallankopTotalValue;
   FinansFastighetTotalValue = this.dataService.FinansFastighetTotalValue;
@@ -70,6 +70,17 @@ export class AppComponent {
   EnergiPortion = 0;
   HalsaPortion = 0;
   OvrigtPortion = this.OvrigtTotalValue / this.TotalValue;
+
+  DagligvarorYield = this.DagligvarorTotalValue / this.DagligvarorTotalCost;
+  IndustrivarorYield = this.IndustrivarorTotalValue / this.IndustrivarorTotalCost;
+  InformationsteknikYield = this.InformationsteknikTotalValue / this.InformationsteknikTotalCost;
+  MaterialYield = this.MaterialTotalValue / this.MaterialTotalCost;
+  SallankopYield = this.SallankopTotalValue / this.SallankopTotalCost;
+  FinansFastighetYield = this.FinansFastighetTotalValue / this.FinansFastighetTotalCost;
+  TelekomYield = this.TelekomTotalValue / this.TelekomTotalCost;
+  EnergiYield = 0;
+  HalsaYield = 0;
+  OvrigtYield = this.OvrigtTotalValue / this.OvrigtTotalCost;
 
   stocks = this.dataService.stocks;
 

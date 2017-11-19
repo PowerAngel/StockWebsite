@@ -43,6 +43,7 @@
       <th class="table-cell--left">Bransch</th>
       <th class="table-cell--right">Totalkostnad</th>
       <th class="table-cell--right">Nuvarande värde</th>
+      <th class="table-cell--right">Avkastning</th>
       <th class="table-cell--right">Antal bolag</th>
       <th class="table-cell--right">Andel nuvarande värde</th>
     </tr>
@@ -52,6 +53,7 @@
       <td>Dagligvaror</td>
       <td class="table-cell--right">{{DagligvarorTotalCost | number}} kr</td>
       <td class="table-cell--right">{{DagligvarorTotalValue | number}} kr</td>
+      <td class="table-cell--right">{{DagligvarorYield -1 | percent}}</td>
       <td class="table-cell--right">4</td>
       <td class="table-cell--right">{{DagligvarorPortion | percent}}</td>
     </tr>
@@ -59,6 +61,7 @@
       <td>Industrivaror & Tjänster</td>
       <td class="table-cell--right">{{IndustrivarorTotalCost | number}} kr</td>
       <td class="table-cell--right">{{IndustrivarorTotalValue | number}} kr</td>
+      <td class="table-cell--right">{{IndustrivarorYield -1 | percent}}</td>      
       <td class="table-cell--right">3</td>
       <td class="table-cell--right">{{IndustrivarorPortion | percent}}</td>
     </tr>
@@ -66,6 +69,7 @@
       <td>Informationsteknik</td>
       <td class="table-cell--right">{{InformationsteknikTotalCost | number}} kr</td>
       <td class="table-cell--right">{{InformationsteknikTotalValue | number}} kr</td>
+      <td class="table-cell--right">{{InformationsteknikYield -1 | percent}}</td>      
       <td class="table-cell--right">2</td>
       <td class="table-cell--right">{{InformationsteknikPortion | percent}}</td>
     </tr>
@@ -73,6 +77,7 @@
       <td>Material</td>
       <td class="table-cell--right">{{MaterialTotalCost | number}} kr</td>
       <td class="table-cell--right">{{MaterialTotalValue | number}} kr</td>
+      <td class="table-cell--right">{{MaterialYield -1 | percent}}</td>      
       <td class="table-cell--right">1</td>
       <td class="table-cell--right">{{MaterialPortion | percent}}</td>
     </tr>
@@ -80,6 +85,7 @@
       <td>Sällanköpvaror & tjänster</td>
       <td class="table-cell--right">{{SallankopTotalCost | number}} kr</td>
       <td class="table-cell--right">{{SallankopTotalValue | number}} kr</td>
+      <td class="table-cell--right">{{SallankopYield -1 | percent}}</td>      
       <td class="table-cell--right">2</td>
       <td class="table-cell--right">{{SallankopPortion | percent}}</td>
     </tr>
@@ -87,6 +93,7 @@
       <td>Finans & Fastighet</td>
       <td class="table-cell--right">{{FinansFastighetTotalCost | number}} kr</td>
       <td class="table-cell--right">{{FinansFastighetTotalValue | number}} kr</td>
+      <td class="table-cell--right">{{FinansFastighetYield -1 | percent}}</td>      
       <td class="table-cell--right">2</td>
       <td class="table-cell--right">{{FinansFastighetPortion | percent}}</td>
     </tr>
@@ -94,6 +101,7 @@
       <td>Telekomoperatörer</td>
       <td class="table-cell--right">{{TelekomTotalCost | number}} kr</td>
       <td class="table-cell--right">{{TelekomTotalValue | number}} kr</td>
+      <td class="table-cell--right">{{TelekomYield -1 | percent}}</td>      
       <td class="table-cell--right">1</td>
       <td class="table-cell--right">{{TelekomPortion | percent}}</td>
     </tr>
@@ -101,6 +109,7 @@
       <td>Energi</td>
       <td class="table-cell--right">0 kr</td>
       <td class="table-cell--right">0 kr</td>
+      <td class="table-cell--right">{{0 | percent}}</td>      
       <td class="table-cell--right">0</td>
       <td class="table-cell--right">{{EnergiPortion | percent}}</td>
     </tr>
@@ -108,6 +117,7 @@
       <td>Hälsovård</td>
       <td class="table-cell--right">0 kr</td>
       <td class="table-cell--right">0 kr</td>
+      <td class="table-cell--right">{{0 | percent}}</td>      
       <td class="table-cell--right">0</td>
       <td class="table-cell--right">{{HalsaPortion | percent}}</td>
     </tr>
@@ -115,6 +125,7 @@
       <td>Okänd</td>
       <td class="table-cell--right">{{OvrigtTotalCost | number}} kr</td>
       <td class="table-cell--right">{{OvrigtTotalValue | number}} kr</td>
+      <td class="table-cell--right">{{OvrigtYield -1 | percent}}</td>      
       <td class="table-cell--right">4</td>
       <td class="table-cell--right">{{OvrigtPortion | percent}}</td>
     </tr>
