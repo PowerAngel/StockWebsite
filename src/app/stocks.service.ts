@@ -12,7 +12,7 @@ export class StocksService {
     industry: 'Dagligvaror',
     boughtFor: 52.62,
     amount: 17,
-    currentPrice: 40,
+    currentPrice: 39.7,
     stockMarket: 'Stockholmsbörsen (Small Cap)',
     dividend: 0
   }
@@ -23,7 +23,7 @@ export class StocksService {
     industry: '',
     boughtFor: 1024.81,
     amount: 1,
-    currentPrice: 1558.31,
+    currentPrice: 1481.84,
     stockMarket: 'NYSE',
     dividend: 0
   }
@@ -34,7 +34,7 @@ export class StocksService {
     industry: '',
     boughtFor: 8756.88,
     amount: 1,
-    currentPrice: 9557.53,
+    currentPrice: 9847.3,
     stockMarket: 'NASDAQ',
     dividend: 0
   }
@@ -45,7 +45,7 @@ export class StocksService {
     industry: 'Industrivaror & Tjänster',
     boughtFor: 282.70,
     amount: 10,
-    currentPrice: 330.3,
+    currentPrice: 321.6,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
     dividend: 2.21
   }
@@ -56,7 +56,7 @@ export class StocksService {
     industry: 'Finans & Fastighet',
     boughtFor: 331.14,
     amount: 8,
-    currentPrice: 332.00,
+    currentPrice: 352.90,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
     dividend: 3.16
   }
@@ -67,7 +67,7 @@ export class StocksService {
     industry: 'Telekomoperatörer',
     boughtFor: 18.20,
     amount: 40,
-    currentPrice: 22.20,
+    currentPrice: 19.9,
     stockMarket: 'Aktietorget',
     dividend: 1.5
   }
@@ -78,7 +78,7 @@ export class StocksService {
     industry: 'Material',
     boughtFor: 136.60,
     amount: 8,
-    currentPrice: 139.40,
+    currentPrice: 143.0,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
     dividend: 3.37
   }
@@ -89,7 +89,7 @@ export class StocksService {
     industry: 'Dagligvaror',
     boughtFor: 140.25,
     amount: 6,
-    currentPrice: 141,
+    currentPrice: 139.25,
     stockMarket: 'Stockholmsbörsen (Mid Cap)',
     dividend: 4.03
   }
@@ -100,7 +100,7 @@ export class StocksService {
     industry: 'Sällanköpvaror & Tjänster',
     boughtFor: 28,
     amount: 15,
-    currentPrice: 27.3,
+    currentPrice: 27.9,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
     dividend: 2.72
   }
@@ -111,7 +111,7 @@ export class StocksService {
     industry: 'Finans & Fastighet',
     boughtFor: 123,
     amount: 10,
-    currentPrice: 116.60,
+    currentPrice: 116.0,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
     dividend: 4.04
   }
@@ -122,7 +122,7 @@ export class StocksService {
     industry: 'Sällanköpvaror & Tjänster',
     boughtFor: 18.18,
     amount: 40,
-    currentPrice: 12.05,
+    currentPrice: 12.95,
     stockMarket: 'First North Stockholm',
     dividend: 0
   }
@@ -133,7 +133,7 @@ export class StocksService {
     industry: 'Dagligvaror',
     boughtFor: 312.86,
     amount: 7,
-    currentPrice: 299.40,
+    currentPrice: 302.80,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
     dividend: 3.30
   }
@@ -144,7 +144,7 @@ export class StocksService {
     industry: 'Dagligvaror',
     boughtFor: 233.15,
     amount: 10,
-    currentPrice: 223.50,
+    currentPrice: 209.0,
     stockMarket: 'Nordic MTF',
     dividend: 2.66
   }
@@ -155,7 +155,7 @@ export class StocksService {
     industry: 'Industrivaror & Tjänster',
     boughtFor: 90.20,
     amount: 10,
-    currentPrice: 92,
+    currentPrice: 87.5,
     stockMarket: 'Stockholmsbörsen (Mid Cap)',
     dividend: 2.33
   }
@@ -166,7 +166,7 @@ export class StocksService {
     industry: '',
     boughtFor: 898.66,
     amount: 1,
-    currentPrice: 1778.32,
+    currentPrice: 1679.59,
     stockMarket: 'NASDAQ',
     dividend: 0.29
   }
@@ -175,9 +175,9 @@ export class StocksService {
     name: 'Peab B',
     ticker: 'PEAB B',
     industry: 'Industrivaror & Tjänster',
-    boughtFor: 88.30,
-    amount: 23,
-    currentPrice: 79.80,
+    boughtFor: 85.2,
+    amount: 30,
+    currentPrice: 75.25,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
     dividend: 4.13
   }
@@ -188,7 +188,7 @@ export class StocksService {
     industry: 'Informationsteknik',
     boughtFor: 13.23,
     amount: 50,
-    currentPrice: 8.0,
+    currentPrice: 8.20,
     stockMarket: 'First North Stockholm',
     dividend: 0
   }
@@ -199,7 +199,7 @@ export class StocksService {
     industry: '',
     boughtFor: 1740.52,
     amount: 1,
-    currentPrice: 2626.18,
+    currentPrice: 2584.52,
     stockMarket: 'NASDAQ',
     dividend: 0
   }
@@ -210,7 +210,7 @@ export class StocksService {
     industry: 'Informationsteknik',
     boughtFor: 46.50,
     amount: 22,
-    currentPrice: 40,
+    currentPrice: 37.5,
     stockMarket: 'Stockholmsbörsen (Mid Cap)',
     dividend: 0
   }
