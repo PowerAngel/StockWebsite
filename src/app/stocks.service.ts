@@ -12,7 +12,7 @@ export class StocksService {
     industry: 'Dagligvaror',
     boughtFor: 52.62,
     amount: 17,
-    currentPrice: 39.7,
+    currentPrice: 38.5,
     stockMarket: 'Stockholmsbörsen (Small Cap)',
     dividend: 0
   }
@@ -23,7 +23,7 @@ export class StocksService {
     industry: '',
     boughtFor: 1024.81,
     amount: 1,
-    currentPrice: 1481.84,
+    currentPrice: 1424.59,
     stockMarket: 'NYSE',
     dividend: 0
   }
@@ -34,7 +34,7 @@ export class StocksService {
     industry: '',
     boughtFor: 8756.88,
     amount: 1,
-    currentPrice: 9847.3,
+    currentPrice: 9625.15,
     stockMarket: 'NASDAQ',
     dividend: 0
   }
@@ -45,9 +45,9 @@ export class StocksService {
     industry: 'Industrivaror & Tjänster',
     boughtFor: 282.70,
     amount: 10,
-    currentPrice: 321.6,
+    currentPrice: 318.50,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
-    dividend: 2.21
+    dividend: 3.4
   }
 
   Avanza = {
@@ -56,9 +56,9 @@ export class StocksService {
     industry: 'Finans & Fastighet',
     boughtFor: 331.14,
     amount: 8,
-    currentPrice: 352.90,
+    currentPrice: 346.50,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
-    dividend: 3.16
+    dividend: 10.5
   }
 
   Bahnhof = {
@@ -67,9 +67,9 @@ export class StocksService {
     industry: 'Telekomoperatörer',
     boughtFor: 18.20,
     amount: 40,
-    currentPrice: 19.9,
+    currentPrice: 20.30,
     stockMarket: 'Aktietorget',
-    dividend: 1.5
+    dividend: 0.33
   }
 
   BillerudKorsnas = {
@@ -78,9 +78,9 @@ export class StocksService {
     industry: 'Material',
     boughtFor: 136.60,
     amount: 8,
-    currentPrice: 143.0,
+    currentPrice: 141.5,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
-    dividend: 3.37
+    dividend: 4.3
   }
 
   ClasOhlson = {
@@ -89,9 +89,9 @@ export class StocksService {
     industry: 'Dagligvaror',
     boughtFor: 140.25,
     amount: 6,
-    currentPrice: 139.25,
+    currentPrice: 114.75,
     stockMarket: 'Stockholmsbörsen (Mid Cap)',
-    dividend: 4.03
+    dividend: 6.25
   }
 
   Cloetta = {
@@ -100,20 +100,20 @@ export class StocksService {
     industry: 'Sällanköpvaror & Tjänster',
     boughtFor: 28,
     amount: 15,
-    currentPrice: 27.9,
+    currentPrice: 28.1,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
-    dividend: 2.72
+    dividend: 0.75
   }
 
   Handelsbanken = {
     name: 'Handelsbanken',
     ticker: 'SHB B',
     industry: 'Finans & Fastighet',
-    boughtFor: 123,
-    amount: 10,
-    currentPrice: 116.0,
+    boughtFor: 119.86,
+    amount: 14,
+    currentPrice: 112.0,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
-    dividend: 4.04
+    dividend: 5
   }
 
   Hovding = {
@@ -133,9 +133,9 @@ export class StocksService {
     industry: 'Dagligvaror',
     boughtFor: 312.86,
     amount: 7,
-    currentPrice: 302.80,
+    currentPrice: 303.90,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
-    dividend: 3.30
+    dividend: 10.5
   }
 
   Kopparbergs = {
@@ -144,9 +144,9 @@ export class StocksService {
     industry: 'Dagligvaror',
     boughtFor: 233.15,
     amount: 10,
-    currentPrice: 209.0,
+    currentPrice: 223.50,
     stockMarket: 'Nordic MTF',
-    dividend: 2.66
+    dividend: 5.9
   }
 
   Mycronic = {
@@ -155,9 +155,9 @@ export class StocksService {
     industry: 'Industrivaror & Tjänster',
     boughtFor: 90.20,
     amount: 10,
-    currentPrice: 87.5,
+    currentPrice: 86.5,
     stockMarket: 'Stockholmsbörsen (Mid Cap)',
-    dividend: 2.33
+    dividend: 2
   }
 
   NVIDIA = {
@@ -166,7 +166,7 @@ export class StocksService {
     industry: '',
     boughtFor: 898.66,
     amount: 1,
-    currentPrice: 1679.59,
+    currentPrice: 1582.93,
     stockMarket: 'NASDAQ',
     dividend: 0.29
   }
@@ -177,9 +177,9 @@ export class StocksService {
     industry: 'Industrivaror & Tjänster',
     boughtFor: 85.2,
     amount: 30,
-    currentPrice: 75.25,
+    currentPrice: 76.0,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
-    dividend: 4.13
+    dividend: 3.6
   }
 
   Starbreeze = {
@@ -188,7 +188,7 @@ export class StocksService {
     industry: 'Informationsteknik',
     boughtFor: 13.23,
     amount: 50,
-    currentPrice: 8.20,
+    currentPrice: 8.05,
     stockMarket: 'First North Stockholm',
     dividend: 0
   }
@@ -199,7 +199,7 @@ export class StocksService {
     industry: '',
     boughtFor: 1740.52,
     amount: 1,
-    currentPrice: 2584.52,
+    currentPrice: 2560.65,
     stockMarket: 'NASDAQ',
     dividend: 0
   }
@@ -210,7 +210,7 @@ export class StocksService {
     industry: 'Informationsteknik',
     boughtFor: 46.50,
     amount: 22,
-    currentPrice: 37.5,
+    currentPrice: 35.1,
     stockMarket: 'Stockholmsbörsen (Mid Cap)',
     dividend: 0
   }
