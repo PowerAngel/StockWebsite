@@ -30,7 +30,7 @@
       <td class="table-cell--right">{{stock.currentPrice * stock.amount | number}} kr</td>
       <td class="table-cell--right">{{((stock.currentPrice * stock.amount) / (stock.boughtFor * stock.amount)) - 1 | percent }}</td>
       <td>{{stock.stockMarket}}</td>
-      <td class="table-cell--right">{{stock.dividend / stock.currentPrice}} %</td>
+      <td class="table-cell--right">{{stock.dividend / stock.currentPrice | percent}}</td>
     </tr>
   </tbody>
 </table>
