@@ -14,7 +14,8 @@
       <th class="table-cell--right">Totalvärde</th>
       <th class="table-cell--right">Avkastning</th>
       <th class="table-cell--left">Börs</th>
-      <th class="table-cell--right">Utdelning</th>
+      <th class="table-cell--right">Utdelning (aktuellt)</th>
+      <th class="table-cell--right">Utdelning (inköp)</th>
       </tr>
   </thead>
   <tbody>
@@ -31,6 +32,7 @@
       <td class="table-cell--right">{{((stock.currentPrice * stock.amount) / (stock.boughtFor * stock.amount)) - 1 | percent }}</td>
       <td>{{stock.stockMarket}}</td>
       <td class="table-cell--right">{{stock.dividend / stock.currentPrice | percent}}</td>
+      <td class="table-cell--right">{{stock.dividend / stock.boughtFor | percent}}</td>
     </tr>
   </tbody>
 </table>
