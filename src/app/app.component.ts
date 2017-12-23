@@ -15,6 +15,8 @@ export class AppComponent {
   title = 'app';
   stockToBuy = "";
 
+  stocks = this.dataService.stocks;  
+
   Actic = this.dataService.Actic;
   Alibaba = this.dataService.Alibaba;
   Amazon = this.dataService.Amazon;  
@@ -57,39 +59,69 @@ export class AppComponent {
   HalsaTotalValue = 0;
   OvrigtTotalValue = this.dataService.OvrigtTotalValue;
 
-  TotalCost = this.dataService.TotalCost;
-  TotalValue = this.dataService.TotalValue;
 
-  DagligvarorPortion = this.DagligvarorTotalValue / this.TotalValue;
-  IndustrivarorPortion = this.IndustrivarorTotalValue / this.TotalValue;
-  InformationsteknikPortion = this.InformationsteknikTotalValue / this.TotalValue;
-  MaterialPortion = this.MaterialTotalValue / this.TotalValue;
-  SallankopPortion = this.SallankopTotalValue / this.TotalValue;
-  FinansFastighetPortion = this.FinansFastighetTotalValue / this.TotalValue;
-  TelekomPortion = this.TelekomTotalValue / this.TotalValue;
-  EnergiPortion = 0;
-  HalsaPortion = 0;
-  OvrigtPortion = this.OvrigtTotalValue / this.TotalValue;
+  TotalCost = 0;
+  TotalValue = 0;
 
-  DagligvarorYield = this.DagligvarorTotalValue / this.DagligvarorTotalCost;
-  IndustrivarorYield = this.IndustrivarorTotalValue / this.IndustrivarorTotalCost;
-  InformationsteknikYield = this.InformationsteknikTotalValue / this.InformationsteknikTotalCost;
-  MaterialYield = this.MaterialTotalValue / this.MaterialTotalCost;
-  SallankopYield = this.SallankopTotalValue / this.SallankopTotalCost;
-  FinansFastighetYield = this.FinansFastighetTotalValue / this.FinansFastighetTotalCost;
-  TelekomYield = this.TelekomTotalValue / this.TelekomTotalCost;
-  EnergiYield = 0;
-  HalsaYield = 0;
-  OvrigtYield = this.OvrigtTotalValue / this.OvrigtTotalCost;
+  TotalDividend = 0;
+  TotalDividendValue = 0;
+  TotalDividendCost = 0;
 
-  stocks = this.dataService.stocks;
+  DagligvarorPortion;
+  IndustrivarorPortion;
+  InformationsteknikPortion;
+  MaterialPortion;
+  SallankopPortion;
+  FinansFastighetPortion;
+  TelekomPortion;
+  EnergiPortion;
+  HalsaPortion ;
+  OvrigtPortion;
 
+  DagligvarorYield;
+  IndustrivarorYield;
+  InformationsteknikYield;
+  MaterialYield;
+  SallankopYield;
+  FinansFastighetYield;
+  TelekomYield;
+  EnergiYield;
+  HalsaYield;
+  OvrigtYield;
+  
   ngOnInit() {
     this.stockToBuy = this.dataService.stockToBuy();
-  }
 
-  calcValue(cost :number, amount: number)
-  {
     
+    this.stocks.forEach(element => {
+      this.TotalDividend += element.dividend * element.amount;
+      this.TotalCost += element.boughtFor * element.amount;
+      this.TotalValue += element.currentPrice * element.amount;      
+    });    
+
+    this.TotalDividendCost = this.TotalDividend / this.TotalCost;
+    this.TotalDividendValue = this.TotalDividend / this.TotalValue;
+
+    this.DagligvarorPortion = this.DagligvarorTotalValue / this.TotalValue;
+    this.IndustrivarorPortion = this.IndustrivarorTotalValue / this.TotalValue;
+    this.InformationsteknikPortion = this.InformationsteknikTotalValue / this.TotalValue;
+    this.MaterialPortion = this.MaterialTotalValue / this.TotalValue;
+    this.SallankopPortion = this.SallankopTotalValue / this.TotalValue;
+    this.FinansFastighetPortion = this.FinansFastighetTotalValue / this.TotalValue;
+    this.TelekomPortion = this.TelekomTotalValue / this.TotalValue;
+    this.EnergiPortion = 0;
+    this.HalsaPortion = 0;
+    this.OvrigtPortion = this.OvrigtTotalValue / this.TotalValue;
+  
+    this.DagligvarorYield = this.DagligvarorTotalValue / this.DagligvarorTotalCost;
+    this.IndustrivarorYield = this.IndustrivarorTotalValue / this.IndustrivarorTotalCost;
+    this.InformationsteknikYield = this.InformationsteknikTotalValue / this.InformationsteknikTotalCost;
+    this.MaterialYield = this.MaterialTotalValue / this.MaterialTotalCost;
+    this.SallankopYield = this.SallankopTotalValue / this.SallankopTotalCost;
+    this.FinansFastighetYield = this.FinansFastighetTotalValue / this.FinansFastighetTotalCost;
+    this.TelekomYield = this.TelekomTotalValue / this.TelekomTotalCost;
+    this.EnergiYield = 0;
+    this.HalsaYield = 0;
+    this.OvrigtYield = this.OvrigtTotalValue / this.OvrigtTotalCost;
   }
 }
