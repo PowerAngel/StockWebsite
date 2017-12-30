@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { ChartComponentComponent } from './chart-component/chart-component.component';
 import { ChartModule } from 'angular-highcharts';
 
+import { DataTableModule } from 'angular-4-data-table/src/index';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -13,7 +16,8 @@ import { ChartModule } from 'angular-highcharts';
   ],
   imports: [
     BrowserModule,
-    ChartModule
+    ChartModule,
+    DataTableModule
   ],
   providers: [StocksService],
   bootstrap: [AppComponent]

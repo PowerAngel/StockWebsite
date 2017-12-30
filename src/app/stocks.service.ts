@@ -3,8 +3,44 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class StocksService {
 
-  constructor() { }
+  constructor() {
+    this.stocks.forEach(element => {
+      element.totalCost = element.boughtFor * element.amount;
+      element.totalValue = element.currentPrice * element.amount;
+      element.yield = (element.currentPrice * element.amount) / (element.boughtFor * element.amount) - 1;
+      element.dividendCost = element.dividend / element.boughtFor;
+      element.dividendValue = element.dividend / element.currentPrice;
+
+      this.totalCost += element.totalCost;
+      this.totalValue += element.totalValue;
+      this.totalDividend += element.dividend * element.amount;
+
+      this.industries.forEach(industry => {
+          if(element.industry === industry.name)
+          {
+            industry.totalCost += element.totalCost;
+            industry.totalValue += element.totalValue;
+            industry.amount++;
+          }
+      });
+    });
+
+    this.industries.forEach(industry => {
+      industry.yield = industry.totalValue / industry.totalCost -1;
+      industry.portion = industry.totalValue / this.totalValue;
+    });
+
+    this.totalDividendCost = this.totalDividend / this.totalCost;
+    this.totalDividendValue = this.totalDividend / this.totalValue;
+   }
+
   APIKey = "0DTMFM8K821YG008";
+
+  totalCost = 0;
+  totalValue = 0;
+  totalDividend = 0;
+  totalDividendCost = 0;
+  totalDividendValue = 0;
 
   Actic = {
     name: 'Actic Group',
@@ -12,31 +48,49 @@ export class StocksService {
     industry: 'Dagligvaror',
     boughtFor: 52.62,
     amount: 17,
-    currentPrice: 36.6,
+    currentPrice: 37.8,
     stockMarket: 'Stockholmsbörsen (Small Cap)',
-    dividend: 0
+    dividend: 0,
+    totalCost: 0,
+    totalValue: 0,
+    yield: 0,
+    dividendCost: 0,
+    dividendValue: 0,
+    url: "https://www.avanza.se/aktier/om-aktien.html/742358/actic-group"
   }
 
   Alibaba = {
     name: 'Alibaba Group Holding Ltd',
     ticker: 'BABA',
-    industry: '',
+    industry: 'Övrigt',
     boughtFor: 1024.81,
     amount: 1,
-    currentPrice: 1468,
+    currentPrice: 1414,
     stockMarket: 'NYSE',
-    dividend: 0
+    dividend: 0,
+    totalCost: 0,
+    totalValue: 0,
+    yield: 0,
+    dividendCost: 0,
+    dividendValue: 0,
+    url: "https://www.avanza.se/aktier/om-aktien.html/506278/alibaba-group-holding-ltd"
   }
 
   Amazon = {
     name: 'Amazon',
     ticker: 'AMZN',
-    industry: '',
+    industry: 'Övrigt',
     boughtFor: 8756.88,
     amount: 1,
-    currentPrice: 9740,
+    currentPrice: 9641,
     stockMarket: 'NASDAQ',
-    dividend: 0
+    dividend: 0,
+    totalCost: 0,
+    totalValue: 0,
+    yield: 0,
+    dividendCost: 0,
+    dividendValue: 0,
+    url: "https://www.avanza.se/aktier/om-aktien.html/3986/amazon-com-inc"
   }
 
   AtlasCopco = {
@@ -45,9 +99,15 @@ export class StocksService {
     industry: 'Industrivaror & Tjänster',
     boughtFor: 282.70,
     amount: 10,
-    currentPrice: 322.10,
+    currentPrice: 314.60,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
-    dividend: 3.4
+    dividend: 3.4,
+    totalCost: 0,
+    totalValue: 0,
+    yield: 0,
+    dividendCost: 0,
+    dividendValue: 0,
+    url: "https://www.avanza.se/aktier/om-aktien.html/5235/atlas-copco-b"
   }
 
   Avanza = {
@@ -56,9 +116,15 @@ export class StocksService {
     industry: 'Finans & Fastighet',
     boughtFor: 331.14,
     amount: 8,
-    currentPrice: 341,
+    currentPrice: 344.1,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
-    dividend: 10.5
+    dividend: 10.5,
+    totalCost: 0,
+    totalValue: 0,
+    yield: 0,
+    dividendCost: 0,
+    dividendValue: 0,
+    url: "https://www.avanza.se/aktier/om-aktien.html/5361/avanza-bank-holding"
   }
 
   Bahnhof = {
@@ -67,9 +133,15 @@ export class StocksService {
     industry: 'Telekomoperatörer',
     boughtFor: 18.20,
     amount: 40,
-    currentPrice: 21.30,
+    currentPrice: 21.60,
     stockMarket: 'Aktietorget',
-    dividend: 0.33
+    dividend: 0.33,
+    totalCost: 0,
+    totalValue: 0,
+    yield: 0,
+    dividendCost: 0,
+    dividendValue: 0,
+    url: "https://www.avanza.se/aktier/om-aktien.html/106733/bahnhof-b"
   }
 
   BillerudKorsnas = {
@@ -78,9 +150,15 @@ export class StocksService {
     industry: 'Material',
     boughtFor: 136.60,
     amount: 8,
-    currentPrice: 141.6,
+    currentPrice: 140.5,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
-    dividend: 4.3
+    dividend: 4.3,
+    totalCost: 0,
+    totalValue: 0,
+    yield: 0,
+    dividendCost: 0,
+    dividendValue: 0,
+    url: "https://www.avanza.se/aktier/om-aktien.html/5556/billerudkorsnas"
   }
 
   ClasOhlson = {
@@ -89,9 +167,15 @@ export class StocksService {
     industry: 'Dagligvaror',
     boughtFor: 140.25,
     amount: 6,
-    currentPrice: 110.75,
+    currentPrice: 112.5,
     stockMarket: 'Stockholmsbörsen (Mid Cap)',
-    dividend: 6.25
+    dividend: 6.25,
+    totalCost: 0,
+    totalValue: 0,
+    yield: 0,
+    dividendCost: 0,
+    dividendValue: 0,
+    url: "https://www.avanza.se/aktier/om-aktien.html/5457/clas-ohlson-b"
   }
 
   Cloetta = {
@@ -100,9 +184,15 @@ export class StocksService {
     industry: 'Sällanköpvaror & Tjänster',
     boughtFor: 28,
     amount: 15,
-    currentPrice: 29.8,
+    currentPrice: 29.7,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
-    dividend: 0.75
+    dividend: 0.75,
+    totalCost: 0,
+    totalValue: 0,
+    yield: 0,
+    dividendCost: 0,
+    dividendValue: 0,
+    url: "https://www.avanza.se/aktier/om-aktien.html/163148/cloetta-b"
   }
 
   Handelsbanken = {
@@ -111,9 +201,15 @@ export class StocksService {
     industry: 'Finans & Fastighet',
     boughtFor: 119.86,
     amount: 14,
-    currentPrice: 115.2,
+    currentPrice: 113,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
-    dividend: 5
+    dividend: 5,
+    totalCost: 0,
+    totalValue: 0,
+    yield: 0,
+    dividendCost: 0,
+    dividendValue: 0,
+    url: "https://www.avanza.se/aktier/om-aktien.html/5265/handelsbanken-b"
   }
 
   Hovding = {
@@ -122,9 +218,15 @@ export class StocksService {
     industry: 'Sällanköpvaror & Tjänster',
     boughtFor: 18.18,
     amount: 40,
-    currentPrice: 12.9,
+    currentPrice: 12.8,
     stockMarket: 'First North Stockholm',
-    dividend: 0
+    dividend: 0,
+    totalCost: 0,
+    totalValue: 0,
+    yield: 0,
+    dividendCost: 0,
+    dividendValue: 0,
+    url: "https://www.avanza.se/aktier/om-aktien.html/572376/hovding-sverige"
   }
 
   ICA = {
@@ -133,9 +235,15 @@ export class StocksService {
     industry: 'Dagligvaror',
     boughtFor: 312.86,
     amount: 7,
-    currentPrice: 296.4,
+    currentPrice: 297.9,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
-    dividend: 10.5
+    dividend: 10.5,
+    totalCost: 0,
+    totalValue: 0,
+    yield: 0,
+    dividendCost: 0,
+    dividendValue: 0,
+    url: "https://www.avanza.se/aktier/om-aktien.html/31607/ica-gruppen"
   }
 
   Kopparbergs = {
@@ -144,9 +252,15 @@ export class StocksService {
     industry: 'Dagligvaror',
     boughtFor: 233.15,
     amount: 10,
-    currentPrice: 190.5,
+    currentPrice: 180,
     stockMarket: 'Nordic MTF',
-    dividend: 5.9
+    dividend: 5.9,
+    totalCost: 0,
+    totalValue: 0,
+    yield: 0,
+    dividendCost: 0,
+    dividendValue: 0,
+    url: "https://www.avanza.se/aktier/om-aktien.html/13477/kopparbergs-b"
   }
 
   Mycronic = {
@@ -155,20 +269,32 @@ export class StocksService {
     industry: 'Industrivaror & Tjänster',
     boughtFor: 90.20,
     amount: 10,
-    currentPrice: 88,
+    currentPrice: 85,
     stockMarket: 'Stockholmsbörsen (Mid Cap)',
-    dividend: 2
+    dividend: 2,
+    totalCost: 0,
+    totalValue: 0,
+    yield: 0,
+    dividendCost: 0,
+    dividendValue: 0,
+    url: "https://www.avanza.se/aktier/om-aktien.html/5466/mycronic"
   }
 
   NVIDIA = {
     name: 'NVIDIA Corp',
     ticker: 'NVDA',
-    industry: '',
+    industry: 'Övrigt',
     boughtFor: 898.66,
     amount: 1,
-    currentPrice: 1628,
+    currentPrice: 1595,
     stockMarket: 'NASDAQ',
-    dividend: 0.29
+    dividend: 0.29,
+    totalCost: 0,
+    totalValue: 0,
+    yield: 0,
+    dividendCost: 0,
+    dividendValue: 0,
+    url: "https://www.avanza.se/aktier/om-aktien.html/4478/nvidia-corp"
   }
 
   Peab = {
@@ -177,9 +303,15 @@ export class StocksService {
     industry: 'Industrivaror & Tjänster',
     boughtFor: 85.2,
     amount: 30,
-    currentPrice: 70.35,
+    currentPrice: 70.6,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
-    dividend: 3.6
+    dividend: 3.6,
+    totalCost: 0,
+    totalValue: 0,
+    yield: 0,
+    dividendCost: 0,
+    dividendValue: 0,
+    url: "https://www.avanza.se/aktier/om-aktien.html/5330/peab-b"
   }
 
   Starbreeze = {
@@ -188,20 +320,32 @@ export class StocksService {
     industry: 'Informationsteknik',
     boughtFor: 13.23,
     amount: 50,
-    currentPrice: 8.65,
+    currentPrice: 8.4,
     stockMarket: 'First North Stockholm',
-    dividend: 0
+    dividend: 0,
+    totalCost: 0,
+    totalValue: 0,
+    yield: 0,
+    dividendCost: 0,
+    dividendValue: 0,
+    url: "https://www.avanza.se/aktier/om-aktien.html/5528/starbreeze-b"
   }
 
   Tesla = {
     name: 'Tesla',
     ticker: 'TSLA',
-    industry: '',
+    industry: 'Övrigt',
     boughtFor: 1740.52,
     amount: 1,
-    currentPrice: 2711,
+    currentPrice: 2567,
     stockMarket: 'NASDAQ',
-    dividend: 0
+    dividend: 0,
+    totalCost: 0,
+    totalValue: 0,
+    yield: 0,
+    dividendCost: 0,
+    dividendValue: 0,
+    url: "https://www.avanza.se/aktier/om-aktien.html/238449/tesla-inc"
   }
 
   Tobii = {
@@ -210,13 +354,114 @@ export class StocksService {
     industry: 'Informationsteknik',
     boughtFor: 46.50,
     amount: 22,
-    currentPrice: 36.5,
+    currentPrice: 35.4,
     stockMarket: 'Stockholmsbörsen (Mid Cap)',
-    dividend: 0
+    dividend: 0,
+    totalCost: 0,
+    totalValue: 0,
+    yield: 0,
+    dividendCost: 0,
+    dividendValue: 0,
+    url: "https://www.avanza.se/aktier/om-aktien.html/556803/tobii"
   }
 
   stocks = [
     this.Actic, this.Alibaba, this.Amazon, this.AtlasCopco, this.Avanza, this.Bahnhof, this.BillerudKorsnas, this.ClasOhlson, this.Cloetta, this.Handelsbanken, this.Hovding, this.ICA, this.Kopparbergs, this.Mycronic, this.NVIDIA, this.Peab, this.Starbreeze, this.Tesla, this.Tobii
+  ];
+
+  /* Branscher */
+  Dagligvaror = {
+    name: 'Dagligvaror',
+    totalCost: 0,
+    totalValue: 0,
+    yield: 0,
+    amount: 0,
+    portion: 0
+  }
+
+  Industrivaror = {
+    name: 'Industrivaror & Tjänster',
+    totalCost: 0,
+    totalValue: 0,
+    yield: 0,
+    amount: 0,
+    portion: 0
+  }
+
+  Informationsteknik = {
+    name: 'Informationsteknik',
+    totalCost: 0,
+    totalValue: 0,
+    yield: 0,
+    amount: 0,
+    portion: 0
+  }
+
+  Material = {
+    name: 'Material',
+    totalCost: 0,
+    totalValue: 0,
+    yield: 0,
+    amount: 0,
+    portion: 0
+  }
+
+  Sallankop = {
+    name: 'Sällanköpvaror & Tjänster',
+    totalCost: 0,
+    totalValue: 0,
+    yield: 0,
+    amount: 0,
+    portion: 0
+  }
+
+  FinansFastighet = {
+    name: 'Finans & Fastighet',
+    totalCost: 0,
+    totalValue: 0,
+    yield: 0,
+    amount: 0,
+    portion: 0
+  }
+
+  Telekom = {
+    name: 'Telekomoperatörer',
+    totalCost: 0,
+    totalValue: 0,
+    yield: 0,
+    amount: 0,
+    portion: 0
+  }
+
+  Energi = {
+    name: 'Energi',
+    totalCost: 0,
+    totalValue: 0,
+    yield: 0,
+    amount: 0,
+    portion: 0
+  }
+
+  Halsa = {
+    name: 'Hälsa',
+    totalCost: 0,
+    totalValue: 0,
+    yield: 0,
+    amount: 0,
+    portion: 0
+  }
+
+  Ovrigt = {
+    name: 'Övrigt',
+    totalCost: 0,
+    totalValue: 0,
+    yield: 0,
+    amount: 0,
+    portion: 0
+  }
+
+  industries = [
+    this.Dagligvaror, this.Industrivaror, this.Informationsteknik, this.Material, this.Sallankop, this.FinansFastighet, this.Telekom, this.Energi, this.Halsa, this.Ovrigt
   ];
 
   DagligvarorTotalCost = (this.Actic.boughtFor * this.Actic.amount) + (this.ClasOhlson.boughtFor * this.ClasOhlson.amount) + (this.ICA.boughtFor * this.ICA.amount) + (this.Kopparbergs.boughtFor * this.Kopparbergs.amount);

@@ -6,3 +6,7 @@
         -ms-overflow-style: -ms-autohiding-scrollbar;
     }
 }
+.sw-table-wrapper {
+    display: block;
+    margin-bottom: 100px;
+}
