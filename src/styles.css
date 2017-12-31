@@ -51,8 +51,8 @@ tbody tr td {
 }
 
 .graybox {
-    background-color: #C6C6C6;
-    padding: 15px;
+    background-color: #CFE2ED;
+    padding: 0 15px 10px 15px;
 }
 
 @media only screen and (max-width : 1024px)
