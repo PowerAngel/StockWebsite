@@ -1,43 +1,5 @@
 <h1>Aktieöversikt 2017-12-31</h1>
 
-<h2>Aktier</h2>
-<!-- <table class="table">
-  <thead>
-    <tr>
-      <th class="table-cell--left">Namn</th>
-      <th class="table-cell--left">Ticker</th>
-      <th class="table-cell--left">Bransch</th>    
-      <th class="table-cell--right">Handlades för</th>
-      <th class="table-cell--right">Antal</th>
-      <th class="table-cell--right">Totalkostnad</th>
-      <th class="table-cell--right">Nuvarande pris</th>
-      <th class="table-cell--right">Totalvärde</th>
-      <th class="table-cell--right">Avkastning</th>
-      <th class="table-cell--left">Börs</th>
-      <th class="table-cell--right">Utdelning (inköp)</th>
-      <th class="table-cell--right">Utdelning (aktuellt)</th>      
-      </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let stock of stocks; let even = even; let odd = odd"
-      [ngClass]="{ odd: odd, even: even }">
-      <td>{{stock.name}}</td>
-      <td>{{stock.ticker}}</td>
-      <td>{{stock.industry}}</td>
-      <td class="table-cell--right">{{stock.boughtFor}} kr</td>
-      <td class="table-cell--right">{{stock.amount}}</td>
-      <td class="table-cell--right">{{stock.boughtFor * stock.amount | number}} kr</td>
-      <td class="table-cell--right">{{stock.currentPrice}} kr</td>
-      <td class="table-cell--right">{{stock.currentPrice * stock.amount | number}} kr</td>
-      <td class="table-cell--right">{{((stock.currentPrice * stock.amount) / (stock.boughtFor * stock.amount)) - 1 | percent }}</td>
-      <td>{{stock.stockMarket}}</td>
-      <td class="table-cell--right">{{stock.dividend / stock.boughtFor | percent}}</td>
-      <td class="table-cell--right">{{stock.dividend / stock.currentPrice | percent}}</td>      
-    </tr>
-  </tbody>
-</table> -->
-
-<!-- Jonatan testar sortering av tabell -->
 <data-table id="stock-grid"
   headerTitle="Aktier"
   [items]="items"

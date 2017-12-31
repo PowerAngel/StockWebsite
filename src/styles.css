@@ -63,4 +63,10 @@ tbody tr td {
         margin: 10px 0px;
         padding: 10px;
     }
+    .table {
+        display: block;
+        overflow-x: auto;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+    }
+
 }

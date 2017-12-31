@@ -1,12 +1,5 @@
-@media only screen and (max-width : 1024px)
-{
-    .table {
-        display: block;
-        overflow-x: auto;
-        -ms-overflow-style: -ms-autohiding-scrollbar;
-    }
-}
 .sw-table-wrapper {
     display: block;
     margin-bottom: 100px;
 }
+
