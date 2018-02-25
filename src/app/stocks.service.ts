@@ -15,6 +15,13 @@ export class StocksService {
       this.totalValue += element.totalValue;
       this.totalDividend += element.dividend * element.amount;
 
+      if(element.dividend === 0){
+        this.totalValueNonDividendStocks += element.totalValue;
+      }
+      else{
+        this.totalValueDividendStocks += element.totalValue;
+      }
+
       this.industries.forEach(industry => {
           if(element.industry === industry.name)
           {
@@ -41,6 +48,8 @@ export class StocksService {
   totalDividend = 0;
   totalDividendCost = 0;
   totalDividendValue = 0;
+  totalValueDividendStocks = 0;
+  totalValueNonDividendStocks = 0;
 
   Actic = {
     name: 'Actic Group',

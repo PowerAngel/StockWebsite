@@ -336,50 +336,49 @@ export class ChartComponentComponent implements OnInit {
     }]
   })
 
-
-/*
+  /*
 *
 *
 *
-* Andel nuvarande värde som ger utdelning
+* Andel nuvarande värde som ger utdelning (uträknat genom kod)
 *
 *
 */
 
-  dividendPercentageChart = new Chart({
-    chart: {
-      type: 'pie',
-      backgroundColor: this.chartBackgroundColor
-    },
-    title: {
-      text: 'Andel nuvarande värde som ger utdelning'
-    },
-    plotOptions: {
-      pie: {
-        allowPointSelect: true,
-        cursor: 'pointer',
-        dataLabels: {
-            enabled: true,
-            format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-            style: {
-                color: 'black'
-            }
-        },
-        tooltip: {
-          pointFormat: '{point.y:.2f} kr' 
-        }
+dividendPercentageChartByCode = new Chart({
+  chart: {
+    type: 'pie',
+    backgroundColor: this.chartBackgroundColor
+  },
+  title: {
+    text: 'Andel nuvarande värde som ger utdelning'
+  },
+  plotOptions: {
+    pie: {
+      allowPointSelect: true,
+      cursor: 'pointer',
+      dataLabels: {
+          enabled: true,
+          format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+          style: {
+              color: 'black'
+          }
+      },
+      tooltip: {
+        pointFormat: '{point.y:.2f} kr' 
       }
-    },
-    series: [{
-      data: [{
-        name: 'Ger inte utdelning',
-        y: (this.dataService.Actic.currentPrice * this.dataService.Actic.amount) + (this.dataService.Starbreeze.currentPrice * this.dataService.Starbreeze.amount) + (this.dataService.Tesla.currentPrice * this.dataService.Tesla.amount) + (this.dataService.Amazon.currentPrice * this.dataService.Tesla.amount) + (this.dataService.Alibaba.currentPrice * this.dataService.Alibaba.amount) + (this.dataService.Hovding.currentPrice * this.dataService.Hovding.amount)
-        },{
-          name: 'Ger utdelning',        
-          y: (this.dataService.AtlasCopco.currentPrice * this.dataService.AtlasCopco.amount) + (this.dataService.Kopparbergs.currentPrice * this.dataService.Kopparbergs.amount) + (this.dataService.Mycronic.currentPrice * this.dataService.Mycronic.amount) + (this.dataService.NVIDIA.currentPrice * this.dataService.NVIDIA.amount) + (this.dataService.ICA.currentPrice * this.dataService.ICA.amount) + (this.dataService.Bahnhof.currentPrice * this.dataService.Bahnhof.amount) + (this.dataService.ClasOhlson.currentPrice * this.dataService.ClasOhlson.amount) + (this.dataService.Peab.currentPrice * this.dataService.Peab.amount) + (this.dataService.BillerudKorsnas.currentPrice * this.dataService.BillerudKorsnas.amount) + (this.dataService.Avanza.currentPrice * this.dataService.Avanza.amount) + (this.dataService.Cloetta.currentPrice * this.dataService.Cloetta.amount) + (this.dataService.Handelsbanken.currentPrice * this.dataService.Handelsbanken.amount)   
-        }
-      ]
-    }]
-  })
+    }
+  },
+  series: [{
+    data: [{
+      name: 'Ger inte utdelning',
+      y: (this.dataService.totalValueNonDividendStocks)
+      },{
+        name: 'Ger utdelning',        
+        y: (this.dataService.totalValueDividendStocks)   
+      }
+    ]
+  }]
+})
 
 }
