@@ -60,6 +60,7 @@ export class AppComponent {
   totalValue = this.dataService.totalValue;
   yield = this.totalValue / this.totalCost -1;
   totalDividend = this.dataService.totalDividend;
+  totalDividendSum = this.dataService.totalDividendSum;
   totalDividendCost = this.dataService.totalDividendCost;
   totalDividendValue = this.dataService.totalDividendValue;
 }

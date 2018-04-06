@@ -109,6 +109,15 @@
       <div class="table-cell--right"> {{item.dividendValue | percent}} </div>
     </ng-template>
   </data-table-column>
+  <data-table-column
+    [property]="'totalDividend'"
+    [header]="'Total utdelning'"
+    [sortable]="true"
+    [resizable]="true">
+    <ng-template #dataTableCell let-item="item">
+      <div class="table-cell--right"> {{item.totalDividend | number}} kr </div>
+    </ng-template>
+  </data-table-column>
 </data-table>
 
 <data-table id="industry-grid"
@@ -284,7 +293,8 @@
             <th class="table-cell--right">Totalvärde</th>
             <th class="table-cell--right">Avkastning</th>
             <th class="table-cell--right">Utdelning (inköp)</th>
-            <th class="table-cell--right">Utdelning (aktuellt)</th>            
+            <th class="table-cell--right">Utdelning (aktuellt)</th>     
+            <th class="table-cell--right">Total utdelning</th>       
           </tr>
         </thead>
         <tbody>
@@ -293,7 +303,8 @@
             <td class="table-cell--right">{{totalValue | number}} kr</td>
             <td class="table-cell--right">{{yield | percent}}</td>
             <td class="table-cell--right">{{totalDividendCost | percent}}</td>
-            <td class="table-cell--right">{{totalDividendValue | percent}}</td>            
+            <td class="table-cell--right">{{totalDividendValue | percent}}</td>
+            <td class="table-cell--right">{{totalDividendSum | number}} kr</td>          
           </tr>
         </tbody>
       </table>
