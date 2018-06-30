@@ -1,4 +1,4 @@
-<h1>Aktieöversikt 2018-06-23</h1>
+<h1>Aktieöversikt 2018-06-30</h1>
 
 <data-table id="stock-grid"
   headerTitle="Aktier"
@@ -282,6 +282,72 @@
     </tr>
   </tbody>
 </table> -->
+
+<data-table id="industry-grid"
+  headerTitle="Börsöversikt"
+  [items]="marketitems"
+  [itemCount]="marketCount"
+  (reload)="reloadMarkets($event)"
+
+  [limit]="marketCount"
+  [indexColumn]="false"
+
+  (rowClick)="rowClickMarket($event)"
+  (rowDoubleClick)="rowDoubleClickMarket($event)"
+  class="sw-table-wrapper">
+
+  <data-table-column
+    [property]="'name'"
+    [header]="'Namn'"
+    [sortable]="true"
+    [resizable]="true">
+  </data-table-column>
+  <data-table-column
+    [property]="'totalCost'"
+    [header]="'Totalkostnad'"
+    [sortable]="true"
+    [resizable]="true">
+    <ng-template #dataTableCell let-item="item">
+      <div class="table-cell--right"> {{item.totalCost | number}} kr</div>
+    </ng-template>
+  </data-table-column>
+  <data-table-column
+    [property]="'totalValue'"
+    [header]="'Nuvarande värde'"
+    [sortable]="true"
+    [resizable]="true">
+    <ng-template #dataTableCell let-item="item">
+      <div class="table-cell--right"> {{item.totalValue | number}} kr </div>
+    </ng-template>
+  </data-table-column>
+  <data-table-column
+    [property]="'yield'"
+    [header]="'Avkastning'"
+    [sortable]="true"
+    [resizable]="true">
+    <ng-template #dataTableCell let-item="item">
+      <div class="table-cell--right"> {{item.yield | percent}} </div>
+    </ng-template>
+  </data-table-column>
+  <data-table-column
+    [property]="'amount'"
+    [header]="'Antal bolag'"
+    [sortable]="true"
+    [resizable]="true">
+    <ng-template #dataTableCell let-item="item">
+      <div class="table-cell--right"> {{item.amount | number}} </div>
+    </ng-template>
+  </data-table-column>
+  <data-table-column
+    [property]="'portion'"
+    [header]="'Andel nuvarande värde'"
+    [sortable]="true"
+    [resizable]="true">
+    <ng-template #dataTableCell let-item="item">
+      <div class="table-cell--right"> {{item.portion | percent}} </div>
+    </ng-template>
+  </data-table-column>
+</data-table>
 
 <section class="row">
   <div class="col-sm-8 col-xs-12">

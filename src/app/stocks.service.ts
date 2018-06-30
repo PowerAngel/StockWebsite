@@ -31,12 +31,25 @@ export class StocksService {
             industry.amount++;
           }
       });
+
+      this.stockMarkets.forEach(market => {
+        if(element.stockMarket === market.name){
+          market.totalCost += element.totalCost;
+          market.totalValue += element.totalValue;
+          market.amount++;
+        }
+      })
     });
 
     this.industries.forEach(industry => {
       industry.yield = industry.totalValue / industry.totalCost -1;
       industry.portion = industry.totalValue / this.totalValue;
     });
+
+    this.stockMarkets.forEach(market => {
+      market.yield = market.totalValue / market.totalCost -1;
+      market.portion = market.totalValue / this.totalValue;
+    })
 
     this.totalDividendCost = this.totalDividend / this.totalCost;
     this.totalDividendValue = this.totalDividend / this.totalValue;
@@ -59,7 +72,7 @@ export class StocksService {
     industry: 'Dagligvaror',
     boughtFor: 52.62,
     amount: 17,
-    currentPrice: 42.75,
+    currentPrice: 43.40,
     stockMarket: 'Stockholmsbörsen (Small Cap)',
     dividend: 0.5,
     totalCost: 0,
@@ -77,7 +90,7 @@ export class StocksService {
     industry: 'Övrigt',
     boughtFor: 1292.155,
     amount: 2,
-    currentPrice: 1796,
+    currentPrice: 1662,
     stockMarket: 'NYSE',
     dividend: 0,
     totalCost: 0,
@@ -95,7 +108,7 @@ export class StocksService {
     industry: 'Övrigt',
     boughtFor: 8756.88,
     amount: 1,
-    currentPrice: 15367,
+    currentPrice: 15220,
     stockMarket: 'NASDAQ',
     dividend: 0,
     totalCost: 0,
@@ -113,7 +126,7 @@ export class StocksService {
     industry: 'Industrivaror & Tjänster',
     boughtFor: 197.6,
     amount: 10,
-    currentPrice: 240.0,
+    currentPrice: 234.65,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
     dividend: 7,
     totalCost: 0,
@@ -131,7 +144,7 @@ export class StocksService {
     industry: 'Finans & Fastighet',
     boughtFor: 331.14,
     amount: 8,
-    currentPrice: 474.40,
+    currentPrice: 460.0,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
     dividend: 10.5,
     totalCost: 0,
@@ -149,7 +162,7 @@ export class StocksService {
     industry: 'Telekomoperatörer',
     boughtFor: 18.20,
     amount: 40,
-    currentPrice: 32.75,
+    currentPrice: 33.0,
     stockMarket: 'Aktietorget',
     dividend: 0.5,
     totalCost: 0,
@@ -167,7 +180,7 @@ export class StocksService {
     industry: 'Material',
     boughtFor: 132.35,
     amount: 22,
-    currentPrice: 125.25,
+    currentPrice: 126.75,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
     dividend: 4.3,
     totalCost: 0,
@@ -185,7 +198,7 @@ export class StocksService {
     industry: 'Dagligvaror',
     boughtFor: 140.25,
     amount: 6,
-    currentPrice: 70.70,
+    currentPrice: 71.30,
     stockMarket: 'Stockholmsbörsen (Mid Cap)',
     dividend: 6.25,
     totalCost: 0,
@@ -203,7 +216,7 @@ export class StocksService {
     industry: 'Sällanköpvaror & Tjänster',
     boughtFor: 28,
     amount: 15,
-    currentPrice: 27.26,
+    currentPrice: 27.18,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
     dividend: 0.75,
     totalCost: 0,
@@ -221,7 +234,7 @@ export class StocksService {
     industry: 'Industrivaror & Tjänster',
     boughtFor: 85.1,
     amount: 10,
-    currentPrice: 80.0,
+    currentPrice: 82.0,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
     dividend: 0.0,
     totalCost: 0,
@@ -239,7 +252,7 @@ export class StocksService {
     industry: 'Finans & Fastighet',
     boughtFor: 116.48,
     amount: 19,
-    currentPrice: 102.4,
+    currentPrice: 102.8,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
     dividend: 5.5,
     totalCost: 0,
@@ -257,7 +270,7 @@ export class StocksService {
     industry: 'Sällanköpvaror & Tjänster',
     boughtFor: 14.03,
     amount: 70,
-    currentPrice: 13.7,
+    currentPrice: 13.55,
     stockMarket: 'First North Stockholm',
     dividend: 0,
     totalCost: 0,
@@ -275,7 +288,7 @@ export class StocksService {
     industry: 'Dagligvaror',
     boughtFor: 305.56,
     amount: 9,
-    currentPrice: 274.5,
+    currentPrice: 274.7,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
     dividend: 11,
     totalCost: 0,
@@ -293,7 +306,7 @@ export class StocksService {
     industry: 'Dagligvaror',
     boughtFor: 233.15,
     amount: 10,
-    currentPrice: 200.0,
+    currentPrice: 206.0,
     stockMarket: 'Nordic MTF',
     dividend: 5.9,
     totalCost: 0,
@@ -309,9 +322,9 @@ export class StocksService {
     name: 'Mycronic',
     ticker: 'MYCR',
     industry: 'Industrivaror & Tjänster',
-    boughtFor: 93.47,
-    amount: 15,
-    currentPrice: 98.85,
+    boughtFor: 93.91,
+    amount: 21,
+    currentPrice: 100.2,
     stockMarket: 'Stockholmsbörsen (Mid Cap)',
     dividend: 2.5,
     totalCost: 0,
@@ -329,7 +342,7 @@ export class StocksService {
     industry: 'Övrigt',
     boughtFor: 898.66,
     amount: 1,
-    currentPrice: 2284,
+    currentPrice: 2121,
     stockMarket: 'NASDAQ',
     dividend: 8.12,
     totalCost: 0,
@@ -345,9 +358,9 @@ export class StocksService {
     name: 'Peab B',
     ticker: 'PEAB B',
     industry: 'Industrivaror & Tjänster',
-    boughtFor: 85.2,
-    amount: 30,
-    currentPrice: 70.05,
+    boughtFor: 81.58,
+    amount: 38,
+    currentPrice: 67.65,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
     dividend: 4,
     totalCost: 0,
@@ -365,7 +378,7 @@ export class StocksService {
     industry: 'Informationsteknik',
     boughtFor: 12.9,
     amount: 53,
-    currentPrice: 10.41,
+    currentPrice: 10.5,
     stockMarket: 'First North Stockholm',
     dividend: 0,
     totalCost: 0,
@@ -383,7 +396,7 @@ export class StocksService {
     industry: 'Övrigt',
     boughtFor: 1740.52,
     amount: 1,
-    currentPrice: 3087,
+    currentPrice: 3071,
     stockMarket: 'NASDAQ',
     dividend: 0,
     totalCost: 0,
@@ -401,7 +414,7 @@ export class StocksService {
     industry: 'Informationsteknik',
     boughtFor: 46.50,
     amount: 22,
-    currentPrice: 41.50,
+    currentPrice: 40.10,
     stockMarket: 'Stockholmsbörsen (Mid Cap)',
     dividend: 0,
     totalCost: 0,
@@ -510,6 +523,83 @@ export class StocksService {
 
   industries = [
     this.Dagligvaror, this.Industrivaror, this.Informationsteknik, this.Material, this.Sallankop, this.FinansFastighet, this.Telekom, this.Energi, this.Halsa, this.Ovrigt
+  ];
+
+  /* Börser */
+  Aktietorget = {
+    name: 'Aktietorget',
+    totalCost: 0,
+    totalValue: 0,
+    yield: 0,
+    amount: 0,
+    portion: 0
+  }
+
+  FirstNorth = {
+    name: 'First North Stockholm',
+    totalCost: 0,
+    totalValue: 0,
+    yield: 0,
+    amount: 0,
+    portion: 0
+  }
+
+  NASDAQ = {
+    name: 'NASDAQ',
+    totalCost: 0,
+    totalValue: 0,
+    yield: 0,
+    amount: 0,
+    portion: 0
+  }
+
+  NordicMTF = {
+    name: 'Nordic MTF',
+    totalCost: 0,
+    totalValue: 0,
+    yield: 0,
+    amount: 0,
+    portion: 0
+  }
+
+  NYSE = {
+    name: 'NYSE',
+    totalCost: 0,
+    totalValue: 0,
+    yield: 0,
+    amount: 0,
+    portion: 0
+  }
+
+  StockholmLarge = {
+    name: 'Stockholmsbörsen (Large Cap)',
+    totalCost: 0,
+    totalValue: 0,
+    yield: 0,
+    amount: 0,
+    portion: 0
+  }
+
+  StockholmMid = {
+    name: 'Stockholmsbörsen (Mid Cap)',
+    totalCost: 0,
+    totalValue: 0,
+    yield: 0,
+    amount: 0,
+    portion: 0
+  }
+
+  StockholmSmall = {
+    name: 'Stockholmsbörsen (Small Cap)',
+    totalCost: 0,
+    totalValue: 0,
+    yield: 0,
+    amount: 0,
+    portion: 0
+  }
+
+  stockMarkets = [
+    this.Aktietorget, this.FirstNorth, this.NASDAQ, this.NordicMTF, this.NYSE, this.StockholmLarge, this.StockholmMid, this.StockholmSmall
   ];
 
   DagligvarorTotalCost = (this.Actic.boughtFor * this.Actic.amount) + (this.ClasOhlson.boughtFor * this.ClasOhlson.amount) + (this.ICA.boughtFor * this.ICA.amount) + (this.Kopparbergs.boughtFor * this.Kopparbergs.amount);

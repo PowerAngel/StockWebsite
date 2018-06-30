@@ -19,10 +19,15 @@ export class AppComponent {
   industryitems = [];
   industries = new DataTableResource(this.dataService.industries);
 
+  marketCount= 0;
+  marketitems = [];
+  markets = new DataTableResource(this.dataService.stockMarkets);
+
   constructor(private dataService: StocksService)
   {
     this.tablestocks.count().then(count => this.itemCount = count);
     this.industries.count().then(industrycount => this.industryCount = industrycount);
+    this.markets.count().then(marketcount => this.marketCount = marketcount);
   }
 
   reloadItems(params) {
@@ -48,6 +53,19 @@ export class AppComponent {
   }
   rowDoubleClickIndustry(rowEvent) {
     alert('Double clicked: ' + rowEvent.row.item.name);
+  }
+
+  //Börser
+  reloadMarkets(params) {
+    this.markets.query(params).then(marketitems => this.marketitems = marketitems)
+  }
+
+  rowClickMarket(rowEvent){
+
+  }
+
+  rowDoubleClickMarket(rowEvent) {
+    
   }
   
 

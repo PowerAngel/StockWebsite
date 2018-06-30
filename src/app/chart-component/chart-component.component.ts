@@ -387,4 +387,130 @@ dividendPercentageChartByCode = new Chart({
   }]
 })
 
+/*
+  *
+  *
+  *
+  * TOTALVÄRDE PER BÖRS
+  *
+  *
+  */
+
+ totalValuePerStockMarket = new Chart({
+  chart: {
+    type: 'pie',
+    backgroundColor: this.chartBackgroundColor
+  },
+  title: {
+    text: 'Totalvärde per börs'
+  },
+  plotOptions: {
+    pie: {
+      allowPointSelect: true,
+      cursor: 'pointer',
+      dataLabels: {
+          enabled: true,
+          format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+          style: {
+              color: 'black'
+          }
+      },
+      tooltip: {
+        pointFormat: '{point.y:.2f} kr' 
+      }
+    }
+  },
+  series: [{
+    data: [{
+      name: 'Aktietorget',
+      y: this.dataService.Aktietorget.totalValue
+      },{
+        name: 'First North Stockholm',   
+        y: this.dataService.FirstNorth.totalValue   
+      },{
+        name: 'NASDAQ',
+        y: this.dataService.NASDAQ.totalValue
+      },{
+        name: 'Nordic MTF',
+        y: this.dataService.NordicMTF.totalValue
+      }, {
+        name: 'NYSE',
+        y: this.dataService.NYSE.totalValue
+      }, {
+        name: 'Stockholmsbörsen (Large Cap)',
+        y: this.dataService.StockholmLarge.totalValue
+      }, {
+        name: 'Stockholmsbörsen (Mid Cap)',
+        y: this.dataService.StockholmMid.totalValue
+      }, {
+        name: 'Stockholmsbörsen (Small Cap)',
+        y: this.dataService.StockholmSmall.totalValue
+      }
+    ]
+  }]
+})
+
+/*
+  *
+  *
+  *
+  * TOTALKOSTNAD PER BÖRS
+  *
+  *
+  */
+
+ totalCostPerStockMarket = new Chart({
+  chart: {
+    type: 'pie',
+    backgroundColor: this.chartBackgroundColor
+  },
+  title: {
+    text: 'Totalkostnad per börs'
+  },
+  plotOptions: {
+    pie: {
+      allowPointSelect: true,
+      cursor: 'pointer',
+      dataLabels: {
+          enabled: true,
+          format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+          style: {
+              color: 'black'
+          }
+      },
+      tooltip: {
+        pointFormat: '{point.y:.2f} kr' 
+      }
+    }
+  },
+  series: [{
+    data: [{
+      name: 'Aktietorget',
+      y: this.dataService.Aktietorget.totalCost
+      },{
+        name: 'First North Stockholm',   
+        y: this.dataService.FirstNorth.totalCost     
+      },{
+        name: 'NASDAQ',
+        y: this.dataService.NASDAQ.totalCost
+      },{
+        name: 'Nordic MTF',
+        y: this.dataService.NordicMTF.totalCost
+      }, {
+        name: 'NYSE',
+        y: this.dataService.NYSE.totalCost
+      }, {
+        name: 'Stockholmsbörsen (Large Cap)',
+        y: this.dataService.StockholmLarge.totalCost
+      }, {
+        name: 'Stockholmsbörsen (Mid Cap)',
+        y: this.dataService.StockholmMid.totalCost
+      }, {
+        name: 'Stockholmsbörsen (Small Cap)',
+        y: this.dataService.StockholmSmall.totalCost
+      }
+    ]
+  }]
+})
+
 }
