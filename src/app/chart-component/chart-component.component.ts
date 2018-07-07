@@ -88,6 +88,9 @@ export class ChartComponentComponent implements OnInit {
         name: this.dataService.ICA.name,
         y: this.dataService.ICA.boughtFor * this.dataService.ICA.amount
         },{
+        name: this.dataService.JNJ.name,
+        y: this.dataService.JNJ.boughtFor * this.dataService.JNJ.amount
+        },{
         name: this.dataService.Kopparbergs.name,
         y: this.dataService.Kopparbergs.boughtFor * this.dataService.Kopparbergs.amount
         },{
@@ -188,6 +191,9 @@ export class ChartComponentComponent implements OnInit {
         },{
         name: this.dataService.ICA.name,
         y: this.dataService.ICA.currentPrice * this.dataService.ICA.amount
+        },{
+        name: this.dataService.JNJ.name,
+        y: this.dataService.JNJ.boughtFor * this.dataService.JNJ.amount
         },{
         name: this.dataService.Kopparbergs.name,
         y: this.dataService.Kopparbergs.currentPrice * this.dataService.Kopparbergs.amount
