@@ -72,7 +72,7 @@ export class StocksService {
     industry: 'Dagligvaror',
     boughtFor: 52.62,
     amount: 17,
-    currentPrice: 43.45,
+    currentPrice: 43.0,
     stockMarket: 'Stockholmsbörsen (Small Cap)',
     dividend: 0.5,
     totalCost: 0,
@@ -90,7 +90,7 @@ export class StocksService {
     industry: 'Övrigt',
     boughtFor: 1292.155,
     amount: 2,
-    currentPrice: 1646,
+    currentPrice: 1597,
     stockMarket: 'NYSE',
     dividend: 0,
     totalCost: 0,
@@ -108,7 +108,7 @@ export class StocksService {
     industry: 'Övrigt',
     boughtFor: 8756.88,
     amount: 1,
-    currentPrice: 17252,
+    currentPrice: 17344,
     stockMarket: 'NASDAQ',
     dividend: 0,
     totalCost: 0,
@@ -126,7 +126,7 @@ export class StocksService {
     industry: 'Industrivaror & Tjänster',
     boughtFor: 197.6,
     amount: 10,
-    currentPrice: 227.1,
+    currentPrice: 229.8,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
     dividend: 7,
     totalCost: 0,
@@ -144,7 +144,7 @@ export class StocksService {
     industry: 'Finans & Fastighet',
     boughtFor: 331.14,
     amount: 8,
-    currentPrice: 396.6,
+    currentPrice: 410.4,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
     dividend: 10.5,
     totalCost: 0,
@@ -162,7 +162,7 @@ export class StocksService {
     industry: 'Telekomoperatörer',
     boughtFor: 18.20,
     amount: 40,
-    currentPrice: 36.0,
+    currentPrice: 36.3,
     stockMarket: 'Aktietorget',
     dividend: 0.5,
     totalCost: 0,
@@ -180,7 +180,7 @@ export class StocksService {
     industry: 'Material',
     boughtFor: 123.08,
     amount: 36,
-    currentPrice: 103.5,
+    currentPrice: 103.15,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
     dividend: 4.3,
     totalCost: 0,
@@ -198,7 +198,7 @@ export class StocksService {
     industry: 'Dagligvaror',
     boughtFor: 140.25,
     amount: 6,
-    currentPrice: 80.45,
+    currentPrice: 78.10,
     stockMarket: 'Stockholmsbörsen (Mid Cap)',
     dividend: 6.25,
     totalCost: 0,
@@ -216,7 +216,7 @@ export class StocksService {
     industry: 'Sällanköpvaror & Tjänster',
     boughtFor: 28,
     amount: 15,
-    currentPrice: 27.7,
+    currentPrice: 27.78,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
     dividend: 0.75,
     totalCost: 0,
@@ -234,7 +234,7 @@ export class StocksService {
     industry: 'Industrivaror & Tjänster',
     boughtFor: 85.1,
     amount: 10,
-    currentPrice: 90.31,
+    currentPrice: 87,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
     dividend: 0.0,
     totalCost: 0,
@@ -252,7 +252,7 @@ export class StocksService {
     industry: 'Finans & Fastighet',
     boughtFor: 116.48,
     amount: 19,
-    currentPrice: 110.8,
+    currentPrice: 111.4,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
     dividend: 5.5,
     totalCost: 0,
@@ -270,7 +270,7 @@ export class StocksService {
     industry: 'Sällanköpvaror & Tjänster',
     boughtFor: 14.03,
     amount: 70,
-    currentPrice: 18.45,
+    currentPrice: 16.8,
     stockMarket: 'First North Stockholm',
     dividend: 0,
     totalCost: 0,
@@ -286,9 +286,9 @@ export class StocksService {
     name: 'ICA Gruppen',
     ticker: 'ICA',
     industry: 'Dagligvaror',
-    boughtFor: 305.56,
-    amount: 9,
-    currentPrice: 287.5,
+    boughtFor: 298.19,
+    amount: 11,
+    currentPrice: 272.6,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
     dividend: 11,
     totalCost: 0,
@@ -306,7 +306,7 @@ export class StocksService {
     industry: 'Övrigt',
     boughtFor: 1086,
     amount: 1,
-    currentPrice: 1196,
+    currentPrice: 1239,
     stockMarket: 'NYSE',
     dividend: 31.55,
     totalCost: 0,
@@ -324,7 +324,7 @@ export class StocksService {
     industry: 'Dagligvaror',
     boughtFor: 233.15,
     amount: 10,
-    currentPrice: 238.0,
+    currentPrice: 236.0,
     stockMarket: 'Nordic MTF',
     dividend: 5.9,
     totalCost: 0,
@@ -336,13 +336,31 @@ export class StocksService {
     url: "https://www.avanza.se/aktier/om-aktien.html/13477/kopparbergs-b"
   }
 
+  MTG = {
+    name: 'Modern Times Group',
+    ticker: 'MTG B',
+    industry: 'Dagligvaror',
+    boughtFor: 309,
+    amount: 3,
+    currentPrice: 311.4,
+    stockMarket: 'Stockholmsbörsen (Large Cap)',
+    dividend: 12.5,
+    totalCost: 0,
+    totalValue: 0,
+    yield: 0,
+    dividendCost: 0,
+    dividendValue: 0,
+    totalDividend: 12,
+    url: "https://www.avanza.se/aktier/om-aktien.html/5438/modern-times-group-b"
+  }
+
   Mycronic = {
     name: 'Mycronic',
     ticker: 'MYCR',
     industry: 'Industrivaror & Tjänster',
-    boughtFor: 93.91,
-    amount: 21,
-    currentPrice: 93.8,
+    boughtFor: 93.04,
+    amount: 27,
+    currentPrice: 89.6,
     stockMarket: 'Stockholmsbörsen (Mid Cap)',
     dividend: 2.5,
     totalCost: 0,
@@ -360,7 +378,7 @@ export class StocksService {
     industry: 'Övrigt',
     boughtFor: 898.66,
     amount: 1,
-    currentPrice: 2330,
+    currentPrice: 2256,
     stockMarket: 'NASDAQ',
     dividend: 8.12,
     totalCost: 0,
@@ -378,7 +396,7 @@ export class StocksService {
     industry: 'Industrivaror & Tjänster',
     boughtFor: 81.58,
     amount: 38,
-    currentPrice: 71.55,
+    currentPrice: 76.3,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
     dividend: 4,
     totalCost: 0,
@@ -396,7 +414,7 @@ export class StocksService {
     industry: 'Informationsteknik',
     boughtFor: 12.9,
     amount: 53,
-    currentPrice: 8.965,
+    currentPrice: 8.8,
     stockMarket: 'First North Stockholm',
     dividend: 0,
     totalCost: 0,
@@ -414,7 +432,7 @@ export class StocksService {
     industry: 'Övrigt',
     boughtFor: 1740.52,
     amount: 1,
-    currentPrice: 3251,
+    currentPrice: 2815,
     stockMarket: 'NASDAQ',
     dividend: 0,
     totalCost: 0,
@@ -432,7 +450,7 @@ export class StocksService {
     industry: 'Informationsteknik',
     boughtFor: 46.50,
     amount: 22,
-    currentPrice: 39.64,
+    currentPrice: 39.02,
     stockMarket: 'Stockholmsbörsen (Mid Cap)',
     dividend: 0,
     totalCost: 0,
@@ -445,7 +463,7 @@ export class StocksService {
   }
 
   stocks = [
-    this.Actic, this.Alibaba, this.Amazon, this.AtlasCopco, this.Avanza, this.Bahnhof, this.BillerudKorsnas, this.ClasOhlson, this.Cloetta, this.Epiroc, this.Handelsbanken, this.Hovding, this.ICA, this.JNJ, this.Kopparbergs, this.Mycronic, this.NVIDIA, this.Peab, this.Starbreeze, this.Tesla, this.Tobii
+    this.Actic, this.Alibaba, this.Amazon, this.AtlasCopco, this.Avanza, this.Bahnhof, this.BillerudKorsnas, this.ClasOhlson, this.Cloetta, this.Epiroc, this.Handelsbanken, this.Hovding, this.ICA, this.JNJ, this.Kopparbergs, this.MTG, this.Mycronic, this.NVIDIA, this.Peab, this.Starbreeze, this.Tesla, this.Tobii
   ];
 
   /* Branscher */
@@ -620,7 +638,7 @@ export class StocksService {
     this.Aktietorget, this.FirstNorth, this.NASDAQ, this.NordicMTF, this.NYSE, this.StockholmLarge, this.StockholmMid, this.StockholmSmall
   ];
 
-  DagligvarorTotalCost = (this.Actic.boughtFor * this.Actic.amount) + (this.ClasOhlson.boughtFor * this.ClasOhlson.amount) + (this.ICA.boughtFor * this.ICA.amount) + (this.Kopparbergs.boughtFor * this.Kopparbergs.amount);
+  DagligvarorTotalCost = (this.Actic.boughtFor * this.Actic.amount) + (this.ClasOhlson.boughtFor * this.ClasOhlson.amount) + (this.ICA.boughtFor * this.ICA.amount) + (this.Kopparbergs.boughtFor * this.Kopparbergs.amount) + (this.MTG.boughtFor * this.MTG.amount);
   IndustrivarorTotalCost = (this.AtlasCopco.boughtFor * this.AtlasCopco.amount) + (this.Mycronic.boughtFor * this.Mycronic.amount) + (this.Peab.boughtFor * this.Peab.amount);
   InformationsteknikTotalCost = (this.Starbreeze.boughtFor * this.Starbreeze.amount) + (this.Tobii.boughtFor * this.Tobii.amount);
   MaterialTotalCost = (this.BillerudKorsnas.boughtFor * this.BillerudKorsnas.amount);
@@ -631,7 +649,7 @@ export class StocksService {
   HalsaTotalCost = 0;
   OvrigtToalCost = (this.Alibaba.boughtFor * this.Alibaba.amount) + (this.Amazon.boughtFor * this.Amazon.amount) + (this.NVIDIA.boughtFor * this.NVIDIA.amount) + (this.Tesla.boughtFor * this.Tesla.amount);
 
-  DagligvarorTotalValue = (this.Actic.currentPrice * this.Actic.amount) + (this.ClasOhlson.currentPrice * this.ClasOhlson.amount) + (this.ICA.currentPrice * this.ICA.amount) + (this.Kopparbergs.currentPrice * this.Kopparbergs.amount);
+  DagligvarorTotalValue = (this.Actic.currentPrice * this.Actic.amount) + (this.ClasOhlson.currentPrice * this.ClasOhlson.amount) + (this.ICA.currentPrice * this.ICA.amount) + (this.Kopparbergs.currentPrice * this.Kopparbergs.amount) + (this.MTG.currentPrice * this.MTG.amount);
   IndustrivarorTotalValue = (this.AtlasCopco.currentPrice * this.AtlasCopco.amount) + (this.Mycronic.currentPrice * this.Mycronic.amount) + (this.Peab.currentPrice * this.Peab.amount);
   InformationsteknikTotalValue = (this.Starbreeze.currentPrice * this.Starbreeze.amount) + (this.Tobii.currentPrice * this.Tobii.amount);
   MaterialTotalValue = (this.BillerudKorsnas.currentPrice * this.BillerudKorsnas.amount);

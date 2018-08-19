@@ -94,6 +94,9 @@ export class ChartComponentComponent implements OnInit {
         name: this.dataService.Kopparbergs.name,
         y: this.dataService.Kopparbergs.boughtFor * this.dataService.Kopparbergs.amount
         },{
+        name: this.dataService.MTG.name,
+        y: this.dataService.MTG.boughtFor * this.dataService.MTG.amount
+        },{
         name: this.dataService.Mycronic.name,
         y: this.dataService.Mycronic.boughtFor * this.dataService.Mycronic.amount
         },{
@@ -197,6 +200,9 @@ export class ChartComponentComponent implements OnInit {
         },{
         name: this.dataService.Kopparbergs.name,
         y: this.dataService.Kopparbergs.currentPrice * this.dataService.Kopparbergs.amount
+        },{
+        name: this.dataService.MTG.name,
+        y: this.dataService.MTG.currentPrice * this.dataService.MTG.amount
         },{
         name: this.dataService.Mycronic.name,
         y: this.dataService.Mycronic.currentPrice * this.dataService.Mycronic.amount
