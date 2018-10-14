@@ -1,4 +1,4 @@
-<h1>Aktieöversikt 2018-10-06</h1>
+<h1>Aktieöversikt 2018-10-13</h1>
 
 <data-table id="stock-grid"
   headerTitle="Aktier"
@@ -186,103 +186,6 @@
   </data-table-column>
 </data-table>
 
-
-<!-- <h2>Branschöversikt</h2>
-<table class="table">
-  <thead>
-    <tr>
-      <th class="table-cell--left">Bransch</th>
-      <th class="table-cell--right">Totalkostnad</th>
-      <th class="table-cell--right">Nuvarande värde</th>
-      <th class="table-cell--right">Avkastning</th>
-      <th class="table-cell--right">Antal bolag</th>
-      <th class="table-cell--right">Andel nuvarande värde</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Dagligvaror</td>
-      <td class="table-cell--right">{{DagligvarorTotalCost | number}} kr</td>
-      <td class="table-cell--right">{{DagligvarorTotalValue | number}} kr</td>
-      <td class="table-cell--right">{{DagligvarorYield -1 | percent}}</td>
-      <td class="table-cell--right">4</td>
-      <td class="table-cell--right">{{DagligvarorPortion | percent}}</td>
-    </tr>
-    <tr>
-      <td>Industrivaror & Tjänster</td>
-      <td class="table-cell--right">{{IndustrivarorTotalCost | number}} kr</td>
-      <td class="table-cell--right">{{IndustrivarorTotalValue | number}} kr</td>
-      <td class="table-cell--right">{{IndustrivarorYield -1 | percent}}</td>      
-      <td class="table-cell--right">3</td>
-      <td class="table-cell--right">{{IndustrivarorPortion | percent}}</td>
-    </tr>
-    <tr>
-      <td>Informationsteknik</td>
-      <td class="table-cell--right">{{InformationsteknikTotalCost | number}} kr</td>
-      <td class="table-cell--right">{{InformationsteknikTotalValue | number}} kr</td>
-      <td class="table-cell--right">{{InformationsteknikYield -1 | percent}}</td>      
-      <td class="table-cell--right">2</td>
-      <td class="table-cell--right">{{InformationsteknikPortion | percent}}</td>
-    </tr>
-    <tr>
-      <td>Material</td>
-      <td class="table-cell--right">{{MaterialTotalCost | number}} kr</td>
-      <td class="table-cell--right">{{MaterialTotalValue | number}} kr</td>
-      <td class="table-cell--right">{{MaterialYield -1 | percent}}</td>      
-      <td class="table-cell--right">1</td>
-      <td class="table-cell--right">{{MaterialPortion | percent}}</td>
-    </tr>
-    <tr>
-      <td>Sällanköpvaror & tjänster</td>
-      <td class="table-cell--right">{{SallankopTotalCost | number}} kr</td>
-      <td class="table-cell--right">{{SallankopTotalValue | number}} kr</td>
-      <td class="table-cell--right">{{SallankopYield -1 | percent}}</td>      
-      <td class="table-cell--right">2</td>
-      <td class="table-cell--right">{{SallankopPortion | percent}}</td>
-    </tr>
-    <tr>
-      <td>Finans & Fastighet</td>
-      <td class="table-cell--right">{{FinansFastighetTotalCost | number}} kr</td>
-      <td class="table-cell--right">{{FinansFastighetTotalValue | number}} kr</td>
-      <td class="table-cell--right">{{FinansFastighetYield -1 | percent}}</td>      
-      <td class="table-cell--right">2</td>
-      <td class="table-cell--right">{{FinansFastighetPortion | percent}}</td>
-    </tr>
-    <tr>
-      <td>Telekomoperatörer</td>
-      <td class="table-cell--right">{{TelekomTotalCost | number}} kr</td>
-      <td class="table-cell--right">{{TelekomTotalValue | number}} kr</td>
-      <td class="table-cell--right">{{TelekomYield -1 | percent}}</td>      
-      <td class="table-cell--right">1</td>
-      <td class="table-cell--right">{{TelekomPortion | percent}}</td>
-    </tr>
-    <tr>
-      <td>Energi</td>
-      <td class="table-cell--right">0 kr</td>
-      <td class="table-cell--right">0 kr</td>
-      <td class="table-cell--right">{{0 | percent}}</td>      
-      <td class="table-cell--right">0</td>
-      <td class="table-cell--right">{{EnergiPortion | percent}}</td>
-    </tr>
-    <tr>
-      <td>Hälsovård</td>
-      <td class="table-cell--right">0 kr</td>
-      <td class="table-cell--right">0 kr</td>
-      <td class="table-cell--right">{{0 | percent}}</td>      
-      <td class="table-cell--right">0</td>
-      <td class="table-cell--right">{{HalsaPortion | percent}}</td>
-    </tr>
-    <tr>
-      <td>Okänd</td>
-      <td class="table-cell--right">{{OvrigtTotalCost | number}} kr</td>
-      <td class="table-cell--right">{{OvrigtTotalValue | number}} kr</td>
-      <td class="table-cell--right">{{OvrigtYield -1 | percent}}</td>      
-      <td class="table-cell--right">4</td>
-      <td class="table-cell--right">{{OvrigtPortion | percent}}</td>
-    </tr>
-  </tbody>
-</table> -->
-
 <data-table id="industry-grid"
   headerTitle="Börsöversikt"
   [items]="marketitems"
@@ -359,7 +262,8 @@
             <th class="table-cell--right">Totalvärde</th>
             <th class="table-cell--right">Avkastning</th>
             <th class="table-cell--right">Utdelning (inköp)</th>
-            <th class="table-cell--right">Utdelning (aktuellt)</th>     
+            <th class="table-cell--right">Utdelning (aktuellt)</th>
+            <th class="table-cell--right">Förväntad årlig utdelning</th>     
             <th class="table-cell--right">Total utdelning</th>       
           </tr>
         </thead>
@@ -370,6 +274,7 @@
             <td class="table-cell--right">{{yield | percent}}</td>
             <td class="table-cell--right">{{totalDividendCost | percent}}</td>
             <td class="table-cell--right">{{totalDividendValue | percent}}</td>
+            <td class="table-cell--right">{{totalDividend | number}} kr</td>
             <td class="table-cell--right">{{totalDividendSum | number}} kr</td>          
           </tr>
         </tbody>
@@ -387,32 +292,4 @@
     </div>
   </div>
 </section>
-
-<!-- <section class="container">
-  <table class="left">
-    <thead>
-      <tr>
-        <th class="table-cell--right">Totalkostnad</th>
-        <th class="table-cell--right">Totalvärde</th>
-        <th class="table-cell--right">Avkastning</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="table-cell--right">{{TotalCost | number}} kr</td>
-        <td class="table-cell--right">{{TotalValue | number}} kr</td>
-        <td class="table-cell--right">{{(TotalValue / TotalCost) - 1 | percent}}</td>
-      </tr>
-    </tbody>
-  </table>
-  <div class="right">
-    <h3>Regler</h3>
-    <ul>
-      <li>10-20 % utländska bolag</li>
-      <li>80 % av värdet ska ge direktavkastning</li>
-      <li>Undvik onödigt courtage. Handla t.ex. inte små poster på Nordic MTF</li>
-    </ul>
-  </div>
-</section> -->
-
 <app-chart-component></app-chart-component>
