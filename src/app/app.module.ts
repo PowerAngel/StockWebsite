@@ -8,16 +8,24 @@ import { ChartModule } from 'angular-highcharts';
 
 import { DataTableModule } from 'angular-4-data-table/src/index';
 
+import { RouterModule, Routes } from '@angular/router';
+import { TableComponent } from './table/table.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChartComponentComponent
+    ChartComponentComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
     ChartModule,
-    DataTableModule
+    DataTableModule,
+    RouterModule.forRoot([
+      {path: 'Table', component: TableComponent},
+      {path: 'Chart', component: ChartComponentComponent}
+    ])
   ],
   providers: [StocksService],
   bootstrap: [AppComponent]
