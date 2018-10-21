@@ -24,7 +24,8 @@ import { TableComponent } from './table/table.component';
     DataTableModule,
     RouterModule.forRoot([
       {path: 'Table', component: TableComponent},
-      {path: 'Chart', component: ChartComponentComponent}
+      {path: 'Chart', component: ChartComponentComponent},
+      {path: '', component: TableComponent}
     ])
   ],
   providers: [StocksService],
