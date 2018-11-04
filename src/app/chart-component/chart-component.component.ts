@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart } from 'angular-highcharts';
 import { StocksService } from '../stocks.service';
+import { element } from '../../../node_modules/protractor';
 
 @Component({
   selector: 'app-chart-component',
@@ -9,10 +10,144 @@ import { StocksService } from '../stocks.service';
 })
 export class ChartComponentComponent implements OnInit {
 
-  constructor(private dataService: StocksService) { }
+  constructor(private dataService: StocksService) { 
+
+   this.dataService.stocks.sort((a,b) => a.name < b.name ? -1 : a.name > b.name ? 1 : 0);
+   this.dataService.industries.sort((a,b) => a.name < b.name ? -1 : a.name > b.name ? 1 : 0);
+
+   //TotalCostStock
+   this.dataService.stocks.forEach(element => {
+    var tempObject = {name: element.name, y: element.boughtFor * element.amount};
+    this.totalCostStockData.push(tempObject);
+   });
+
+   this.totalCostChart.addSerie({
+     data: this.totalCostStockData
+   })
+
+   //TotalValueStock
+   this.dataService.stocks.forEach(element => {
+    var tempObject = {name: element.name, y: element.currentPrice * element.amount};
+    this.totalValueStockData.push(tempObject);
+   });
+
+   this.totalValueChart.addSerie({
+     data: this.totalValueStockData
+   })
+
+   //TotalCostIndustry
+   this.dataService.industries.forEach(element => {
+    var tempObject = {name: element.name, y: element.totalCost};
+    this.totalCostIndustryData.push(tempObject);
+   });
+
+   this.totalCostPerIndustryChart.addSerie({
+     data: this.totalCostIndustryData
+   });
+
+   //TotalValueIndustry
+   this.dataService.industries.forEach(element => {
+    var tempObject = {name: element.name, y: element.totalValue};
+    this.totalValueIndustryData.push(tempObject);
+   });
+
+   this.totalValuePerIndustryChart.addSerie({
+     data: this.totalCostIndustryData
+   });
+
+   //TotalCostMarket
+   this.dataService.stockMarkets.forEach(element => {
+    var tempObject = {name: element.name, y: element.totalCost}
+    this.totalCostMarketData.push(tempObject);
+   });
+
+   this.totalCostPerStockMarket.addSerie({
+     data: this.totalCostMarketData
+    });
+
+    //TotalValueMarket
+   this.dataService.stockMarkets.forEach(element => {
+    var tempObject = {name: element.name, y: element.totalValue}
+    this.totalValueMarketData.push(tempObject);
+   });
+
+   this.totalValuePerStockMarket.addSerie({
+     data: this.totalValueMarketData
+    });
+   
+   //YearlyDividendSumShare
+   this.dataService.stocks.forEach(element => {
+      if(element.dividendYearlySum != 0)
+      {
+        var tempObject = {name: element.name, y: element.dividendYearlySum};
+        this.yearlyDividendSumShareData.push(tempObject);
+      }
+    });
+
+    this.yearlyDividendSumShareData.sort((a,b) => a.y < b.y ? -1 : a.y > b.y ? 1 : 0);
+
+    this.yearlyDividendSumShare.addSerie({
+      data: this.yearlyDividendSumShareData
+    })
+
+  }
   chartBackgroundColor = "#F5F5F5";
   ngOnInit() {
   }
+
+  sortByValue(list = this.totalCostStockData){
+    list.sort((a,b) => a.y < b.y ? -1 : a.y > b.y ? 1 : 0);
+    return list;
+  }
+  sortByName(list = this.totalCostStockData){
+    list.sort((a,b) => a.name < b.name ? -1 : a.name > b.name ? 1 : 0);
+    return list;
+  }
+
+  sortTotalCostStock(){
+    if(this.sortedByName){
+      this.totalCostStockData = this.sortByValue(this.totalCostStockData);
+    }
+    else if(!this.sortedByName){
+      this.totalCostStockData = this.sortByName(this.totalCostStockData);
+    }
+
+    this.totalCostChart.removeSerie(0);
+    
+    this.totalCostChart.addSerie({
+      data: this.totalCostStockData
+    })
+
+    this.sortedByName = !this.sortedByName;
+  }
+
+  sortTotalValueStock(){
+    if(this.sortedByNameValue){
+      this.totalValueStockData = this.sortByValue(this.totalValueStockData);
+    }
+    else if(!this.sortedByNameValue){
+      this.totalValueStockData = this.sortByName(this.totalValueStockData);
+    }
+
+    this.totalValueChart.removeSerie(0);
+    
+    this.totalValueChart.addSerie({
+      data: this.totalValueStockData
+    })
+
+    this.sortedByNameValue = !this.sortedByNameValue;
+  }
+
+sortedByName = true;
+sortedByNameValue = true;
+
+totalCostStockData = [];
+totalValueStockData = [];
+totalCostIndustryData = [];
+totalValueIndustryData = [];
+totalCostMarketData = [];
+totalValueMarketData = [];
+yearlyDividendSumShareData = [];
 
 /*
 *
@@ -22,7 +157,6 @@ export class ChartComponentComponent implements OnInit {
 *
 *
 */
-
   totalCostChart = new Chart({
     chart: {
       type: 'pie',
@@ -47,76 +181,7 @@ export class ChartComponentComponent implements OnInit {
         }
       }
     },
-    series: [{
-      data: [{
-        name: this.dataService.Actic.name,
-        y: this.dataService.Actic.boughtFor * this.dataService.Actic.amount
-        },{
-        name: this.dataService.Alibaba.name,
-        y: this.dataService.Alibaba.boughtFor * this.dataService.Alibaba.amount
-        },{
-        name: this.dataService.Amazon.name,
-        y: this.dataService.Amazon.boughtFor * this.dataService.Amazon.amount
-        },{
-        name: this.dataService.AtlasCopco.name,
-        y: this.dataService.AtlasCopco.boughtFor * this.dataService.AtlasCopco.amount
-        },{
-        name: this.dataService.Avanza.name,
-        y: this.dataService.Avanza.boughtFor * this.dataService.Avanza.amount
-        },{
-        name: this.dataService.Bahnhof.name,
-        y: this.dataService.Bahnhof.boughtFor * this.dataService.Bahnhof.amount
-        },{
-        name: this.dataService.BillerudKorsnas.name,
-        y: this.dataService.BillerudKorsnas.boughtFor * this.dataService.BillerudKorsnas.amount
-        },{
-        name: this.dataService.ClasOhlson.name,
-        y: this.dataService.ClasOhlson.boughtFor * this.dataService.ClasOhlson.amount
-        },{
-        name: this.dataService.Cloetta.name,
-        y: this.dataService.Cloetta.boughtFor * this.dataService.Cloetta.amount
-        },{
-        name: this.dataService.Epiroc.name,
-        y: this.dataService.Epiroc.boughtFor * this.dataService.Epiroc.amount
-        },{
-        name: this.dataService.Handelsbanken.name,
-        y: this.dataService.Handelsbanken.boughtFor * this.dataService.Handelsbanken.amount
-        },{
-        name: this.dataService.Hovding.name,
-        y: this.dataService.Hovding.boughtFor * this.dataService.Hovding.amount
-        },{
-        name: this.dataService.ICA.name,
-        y: this.dataService.ICA.boughtFor * this.dataService.ICA.amount
-        },{
-        name: this.dataService.JNJ.name,
-        y: this.dataService.JNJ.boughtFor * this.dataService.JNJ.amount
-        },{
-        name: this.dataService.Kopparbergs.name,
-        y: this.dataService.Kopparbergs.boughtFor * this.dataService.Kopparbergs.amount
-        },{
-        name: this.dataService.MTG.name,
-        y: this.dataService.MTG.boughtFor * this.dataService.MTG.amount
-        },{
-        name: this.dataService.Mycronic.name,
-        y: this.dataService.Mycronic.boughtFor * this.dataService.Mycronic.amount
-        },{
-        name: this.dataService.NVIDIA.name,
-        y: this.dataService.NVIDIA.boughtFor * this.dataService.NVIDIA.amount
-        },{
-        name: this.dataService.Peab.name,
-        y: this.dataService.Peab.boughtFor * this.dataService.Peab.amount
-        },{
-        name: this.dataService.Starbreeze.name,
-        y: this.dataService.Starbreeze.boughtFor * this.dataService.Starbreeze.amount
-        },{
-        name: this.dataService.Tesla.name,
-        y: this.dataService.Tesla.boughtFor * this.dataService.Tesla.amount
-        },{
-        name: this.dataService.Tobii.name,
-        y: this.dataService.Tobii.boughtFor * this.dataService.Tobii.amount
-        },
-      ]
-    }]
+    series: []
   })
 
 
@@ -154,76 +219,7 @@ export class ChartComponentComponent implements OnInit {
         }
       }
     },
-    series: [{
-      data: [{
-        name: this.dataService.Actic.name,
-        y: this.dataService.Actic.currentPrice * this.dataService.Actic.amount
-        },{
-        name: this.dataService.Alibaba.name,
-        y: this.dataService.Alibaba.currentPrice * this.dataService.Alibaba.amount
-        },{
-        name: this.dataService.Amazon.name,
-        y: this.dataService.Amazon.currentPrice * this.dataService.Amazon.amount
-        },{
-        name: this.dataService.AtlasCopco.name,
-        y: this.dataService.AtlasCopco.currentPrice * this.dataService.AtlasCopco.amount
-        },{
-        name: this.dataService.Avanza.name,
-        y: this.dataService.Avanza.currentPrice * this.dataService.Avanza.amount
-        },{
-        name: this.dataService.Bahnhof.name,
-        y: this.dataService.Bahnhof.currentPrice * this.dataService.Bahnhof.amount
-        },{
-        name: this.dataService.BillerudKorsnas.name,
-        y: this.dataService.BillerudKorsnas.currentPrice * this.dataService.BillerudKorsnas.amount
-        },{
-        name: this.dataService.ClasOhlson.name,
-        y: this.dataService.ClasOhlson.currentPrice * this.dataService.ClasOhlson.amount
-        },{
-        name: this.dataService.Cloetta.name,
-        y: this.dataService.Cloetta.currentPrice * this.dataService.Cloetta.amount
-        },{
-        name: this.dataService.Epiroc.name,
-        y: this.dataService.Epiroc.currentPrice * this.dataService.Epiroc.amount
-        },{
-        name: this.dataService.Handelsbanken.name,
-        y: this.dataService.Handelsbanken.currentPrice * this.dataService.Handelsbanken.amount
-        },{
-        name: this.dataService.Hovding.name,
-        y: this.dataService.Hovding.currentPrice * this.dataService.Hovding.amount
-        },{
-        name: this.dataService.ICA.name,
-        y: this.dataService.ICA.currentPrice * this.dataService.ICA.amount
-        },{
-        name: this.dataService.JNJ.name,
-        y: this.dataService.JNJ.boughtFor * this.dataService.JNJ.amount
-        },{
-        name: this.dataService.Kopparbergs.name,
-        y: this.dataService.Kopparbergs.currentPrice * this.dataService.Kopparbergs.amount
-        },{
-        name: this.dataService.MTG.name,
-        y: this.dataService.MTG.currentPrice * this.dataService.MTG.amount
-        },{
-        name: this.dataService.Mycronic.name,
-        y: this.dataService.Mycronic.currentPrice * this.dataService.Mycronic.amount
-        },{
-        name: this.dataService.NVIDIA.name,
-        y: this.dataService.NVIDIA.currentPrice * this.dataService.NVIDIA.amount
-        },{
-        name: this.dataService.Peab.name,
-        y: this.dataService.Peab.currentPrice * this.dataService.Peab.amount
-        },{
-        name: this.dataService.Starbreeze.name,
-        y: this.dataService.Starbreeze.currentPrice * this.dataService.Starbreeze.amount
-        },{
-        name: this.dataService.Tesla.name,
-        y: this.dataService.Tesla.currentPrice * this.dataService.Tesla.amount
-        },{
-        name: this.dataService.Tobii.name,
-        y: this.dataService.Tobii.currentPrice * this.dataService.Tobii.amount
-        },
-      ]
-    }]
+    series: []
   })
 
 
@@ -260,34 +256,7 @@ export class ChartComponentComponent implements OnInit {
         }
       }
     },
-    series: [{
-      data: [{
-        name: 'Dagligvaror',
-        y: this.dataService.DagligvarorTotalCost
-        },{
-          name: 'Industrivaror & Tjänster',   
-          y: this.dataService.IndustrivarorTotalCost     
-        },{
-          name: 'Informationsteknik',
-          y: this.dataService.InformationsteknikTotalCost
-        },{
-          name: 'Material',
-          y: this.dataService.MaterialTotalCost
-        }, {
-          name: 'Okänd',
-          y: this.dataService.OvrigtToalCost
-        }, {
-          name: 'Sällanköpvaror & Tjänster',
-          y: this.dataService.SallankopTotalCost
-        }, {
-          name: 'Finans & Fastighet',
-          y: this.dataService.FinansFastighetTotalCost
-        }, {
-          name: 'Telekomoperatörer',
-          y: this.dataService.TelekomTotalCost
-        }
-      ]
-    }]
+    series: []
   })
 
 
@@ -324,34 +293,7 @@ export class ChartComponentComponent implements OnInit {
         }
       }
     },
-    series: [{
-      data: [{
-        name: 'Dagligvaror',
-        y: this.dataService.DagligvarorTotalValue
-        },{
-          name: 'Industrivaror & Tjänster',   
-          y: this.dataService.IndustrivarorTotalValue     
-        },{
-          name: 'Informationsteknik',
-          y: this.dataService.InformationsteknikTotalValue
-        },{
-          name: 'Material',
-          y: this.dataService.MaterialTotalValue
-        }, {
-          name: 'Okänd',
-          y: this.dataService.OvrigtTotalValue
-        }, {
-          name: 'Sällanköpvaror & Tjänster',
-          y: this.dataService.SallankopTotalValue
-        }, {
-          name: 'Finans & Fastighet',
-          y: this.dataService.FinansFastighetTotalValue
-        }, {
-          name: 'Telekomoperatörer',
-          y: this.dataService.TelekomTotalValue
-        }
-      ]
-    }]
+    series: []
   })
 
   /*
@@ -399,6 +341,7 @@ dividendPercentageChartByCode = new Chart({
   }]
 })
 
+
 /*
   *
   *
@@ -432,34 +375,7 @@ dividendPercentageChartByCode = new Chart({
       }
     }
   },
-  series: [{
-    data: [{
-      name: 'Aktietorget',
-      y: this.dataService.Aktietorget.totalValue
-      },{
-        name: 'First North Stockholm',   
-        y: this.dataService.FirstNorth.totalValue   
-      },{
-        name: 'NASDAQ',
-        y: this.dataService.NASDAQ.totalValue
-      },{
-        name: 'Nordic MTF',
-        y: this.dataService.NordicMTF.totalValue
-      }, {
-        name: 'NYSE',
-        y: this.dataService.NYSE.totalValue
-      }, {
-        name: 'Stockholmsbörsen (Large Cap)',
-        y: this.dataService.StockholmLarge.totalValue
-      }, {
-        name: 'Stockholmsbörsen (Mid Cap)',
-        y: this.dataService.StockholmMid.totalValue
-      }, {
-        name: 'Stockholmsbörsen (Small Cap)',
-        y: this.dataService.StockholmSmall.totalValue
-      }
-    ]
-  }]
+  series: []
 })
 
 /*
@@ -495,34 +411,43 @@ dividendPercentageChartByCode = new Chart({
       }
     }
   },
-  series: [{
-    data: [{
-      name: 'Aktietorget',
-      y: this.dataService.Aktietorget.totalCost
-      },{
-        name: 'First North Stockholm',   
-        y: this.dataService.FirstNorth.totalCost     
-      },{
-        name: 'NASDAQ',
-        y: this.dataService.NASDAQ.totalCost
-      },{
-        name: 'Nordic MTF',
-        y: this.dataService.NordicMTF.totalCost
-      }, {
-        name: 'NYSE',
-        y: this.dataService.NYSE.totalCost
-      }, {
-        name: 'Stockholmsbörsen (Large Cap)',
-        y: this.dataService.StockholmLarge.totalCost
-      }, {
-        name: 'Stockholmsbörsen (Mid Cap)',
-        y: this.dataService.StockholmMid.totalCost
-      }, {
-        name: 'Stockholmsbörsen (Small Cap)',
-        y: this.dataService.StockholmSmall.totalCost
+  series: []
+})
+
+/*
+  *
+  *
+  *
+  * ANDEL AV TOTAL ÅRLIG UTDELNING
+  *
+  *
+  */
+
+  yearlyDividendSumShare = new Chart({
+  chart: {
+    type: 'pie',
+    backgroundColor: this.chartBackgroundColor
+  },
+  title: {
+    text: 'Förväntad årlig utdelning per aktie'
+  },
+  plotOptions: {
+    pie: {
+      allowPointSelect: true,
+      cursor: 'pointer',
+      dataLabels: {
+          enabled: true,
+          format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+          style: {
+              color: 'black'
+          }
+      },
+      tooltip: {
+        pointFormat: '{point.y:.2f} kr' 
       }
-    ]
-  }]
+    }
+  },
+  series: []
 })
 
 }

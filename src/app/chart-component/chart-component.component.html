@@ -4,9 +4,11 @@
   
 <div class="row">
     <div class="col-lg-6 col-xs-12">
+      <button (click)="sortTotalCostStock()" id="totalCostStockSortButton">Sort</button>
       <div class="chart-container box" [chart]="totalCostChart"></div>
     </div>
     <div class="col-lg-6 col-xs-12">
+      <button (click)="sortTotalValueStock()" id="totalValueStockSortButton">Sort</button>
       <div class="chart-container box" [chart]="totalValueChart"></div>
     </div>
   </div>
@@ -34,5 +36,6 @@
       <div class="chart-container box" [chart]="dividendPercentageChartByCode"></div>
     </div>
     <div class="col-lg-6 col-xs-12">
+      <div class="chart-container box" [chart]="yearlyDividendSumShare"></div>
     </div>
   </div>

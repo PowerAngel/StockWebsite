@@ -10,6 +10,7 @@ export class StocksService {
       element.yield = (element.currentPrice * element.amount) / (element.boughtFor * element.amount) - 1;
       element.dividendCost = element.dividend / element.boughtFor;
       element.dividendValue = element.dividend / element.currentPrice;
+      element.dividendYearlySum = element.dividend * element.amount;
 
       this.totalCost += element.totalCost;
       this.totalValue += element.totalValue;
@@ -85,6 +86,7 @@ export class StocksService {
     yield: 0,
     dividendCost: 0,
     dividendValue: 0,
+    dividendYearlySum: 0,
     totalDividend: 8.5,
     url: "https://www.avanza.se/aktier/om-aktien.html/742358/actic-group"
   }
@@ -103,6 +105,7 @@ export class StocksService {
     yield: 0,
     dividendCost: 0,
     dividendValue: 0,
+    dividendYearlySum: 0,
     totalDividend: 0,
     url: "https://www.avanza.se/aktier/om-aktien.html/506278/alibaba-group-holding-ltd"
   }
@@ -121,6 +124,7 @@ export class StocksService {
     yield: 0,
     dividendCost: 0,
     dividendValue: 0,
+    dividendYearlySum: 0,
     totalDividend: 0,
     url: "https://www.avanza.se/aktier/om-aktien.html/3986/amazon-com-inc"
   }
@@ -139,6 +143,7 @@ export class StocksService {
     yield: 0,
     dividendCost: 0,
     dividendValue: 0,
+    dividendYearlySum: 0,
     totalDividend: 95.6,
     url: "https://www.avanza.se/aktier/om-aktien.html/5235/atlas-copco-b"
   }
@@ -157,6 +162,7 @@ export class StocksService {
     yield: 0,
     dividendCost: 0,
     dividendValue: 0,
+    dividendYearlySum: 0,
     totalDividend: 84,
     url: "https://www.avanza.se/aktier/om-aktien.html/5361/avanza-bank-holding"
   }
@@ -175,6 +181,7 @@ export class StocksService {
     yield: 0,
     dividendCost: 0,
     dividendValue: 0,
+    dividendYearlySum: 0,
     totalDividend: 27,
     url: "https://www.avanza.se/aktier/om-aktien.html/106733/bahnhof-b"
   }
@@ -193,6 +200,7 @@ export class StocksService {
     yield: 0,
     dividendCost: 0,
     dividendValue: 0,
+    dividendYearlySum: 0,
     totalDividend: 119,
     url: "https://www.avanza.se/aktier/om-aktien.html/5556/billerudkorsnas"
   }
@@ -211,6 +219,7 @@ export class StocksService {
     yield: 0,
     dividendCost: 0,
     dividendValue: 0,
+    dividendYearlySum: 0,
     totalDividend: 75,
     url: "https://www.avanza.se/aktier/om-aktien.html/5457/clas-ohlson-b"
   }
@@ -229,6 +238,7 @@ export class StocksService {
     yield: 0,
     dividendCost: 0,
     dividendValue: 0,
+    dividendYearlySum: 0,
     totalDividend: 22.5,
     url: "https://www.avanza.se/aktier/om-aktien.html/163148/cloetta-b"
   }
@@ -247,6 +257,7 @@ export class StocksService {
     yield: 0,
     dividendCost: 0,
     dividendValue: 0,
+    dividendYearlySum: 0,
     totalDividend: 0,
     url: "https://www.avanza.se/aktier/om-aktien.html/861431/epiroc-b"
   }
@@ -265,6 +276,7 @@ export class StocksService {
     yield: 0,
     dividendCost: 0,
     dividendValue: 0,
+    dividendYearlySum: 0,
     totalDividend: 105,
     url: "https://www.avanza.se/aktier/om-aktien.html/5265/handelsbanken-b"
   }
@@ -283,6 +295,7 @@ export class StocksService {
     yield: 0,
     dividendCost: 0,
     dividendValue: 0,
+    dividendYearlySum: 0,
     totalDividend: 0,
     url: "https://www.avanza.se/aktier/om-aktien.html/572376/hovding-sverige"
   }
@@ -301,6 +314,7 @@ export class StocksService {
     yield: 0,
     dividendCost: 0,
     dividendValue: 0,
+    dividendYearlySum: 0,
     totalDividend: 77,
     url: "https://www.avanza.se/aktier/om-aktien.html/31607/ica-gruppen"
   }
@@ -319,6 +333,7 @@ export class StocksService {
     yield: 0,
     dividendCost: 0,
     dividendValue: 0,
+    dividendYearlySum: 0,
     totalDividend: 8.12,
     url: "https://www.avanza.se/aktier/om-aktien.html/3666/johnson---johnson"
   }
@@ -337,6 +352,7 @@ export class StocksService {
     yield: 0,
     dividendCost: 0,
     dividendValue: 0,
+    dividendYearlySum: 0,
     totalDividend: 89,
     url: "https://www.avanza.se/aktier/om-aktien.html/13477/kopparbergs-b"
   }
@@ -355,6 +371,7 @@ export class StocksService {
     yield: 0,
     dividendCost: 0,
     dividendValue: 0,
+    dividendYearlySum: 0,
     totalDividend: 12,
     url: "https://www.avanza.se/aktier/om-aktien.html/5438/modern-times-group-b"
   }
@@ -373,6 +390,7 @@ export class StocksService {
     yield: 0,
     dividendCost: 0,
     dividendValue: 0,
+    dividendYearlySum: 0,
     totalDividend: 57.5,
     url: "https://www.avanza.se/aktier/om-aktien.html/5466/mycronic"
   }
@@ -391,6 +409,7 @@ export class StocksService {
     yield: 0,
     dividendCost: 0,
     dividendValue: 0,
+    dividendYearlySum: 0,
     totalDividend: 8.63,
     url: "https://www.avanza.se/aktier/om-aktien.html/4478/nvidia-corp"
   }
@@ -409,6 +428,7 @@ export class StocksService {
     yield: 0,
     dividendCost: 0,
     dividendValue: 0,
+    dividendYearlySum: 0,
     totalDividend: 163.2,
     url: "https://www.avanza.se/aktier/om-aktien.html/5330/peab-b"
   }
@@ -427,6 +447,7 @@ export class StocksService {
     yield: 0,
     dividendCost: 0,
     dividendValue: 0,
+    dividendYearlySum: 0,
     totalDividend: 0,
     url: "https://www.avanza.se/aktier/om-aktien.html/5528/starbreeze-b"
   }
@@ -445,6 +466,7 @@ export class StocksService {
     yield: 0,
     dividendCost: 0,
     dividendValue: 0,
+    dividendYearlySum: 0,
     totalDividend: 0,
     url: "https://www.avanza.se/aktier/om-aktien.html/238449/tesla-inc"
   }
@@ -463,6 +485,7 @@ export class StocksService {
     yield: 0,
     dividendCost: 0,
     dividendValue: 0,
+    dividendYearlySum: 0,
     totalDividend: 0,
     url: "https://www.avanza.se/aktier/om-aktien.html/556803/tobii"
   }
