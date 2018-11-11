@@ -52,7 +52,7 @@ export class ChartComponentComponent implements OnInit {
    });
 
    this.totalValuePerIndustryChart.addSerie({
-     data: this.totalCostIndustryData
+     data: this.totalValueIndustryData
    });
 
    //TotalCostMarket
