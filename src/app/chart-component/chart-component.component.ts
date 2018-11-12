@@ -105,41 +105,74 @@ export class ChartComponentComponent implements OnInit {
   }
 
   sortTotalCostStock(){
-    if(this.sortedByName){
+    if(this.sortedByNameStockCost){
       this.totalCostStockData = this.sortByValue(this.totalCostStockData);
     }
-    else if(!this.sortedByName){
+    else if(!this.sortedByNameStockCost){
       this.totalCostStockData = this.sortByName(this.totalCostStockData);
     }
 
-    this.totalCostChart.removeSerie(0);
-    
+    this.totalCostChart.removeSerie(0);    
     this.totalCostChart.addSerie({
       data: this.totalCostStockData
     })
 
-    this.sortedByName = !this.sortedByName;
+    this.sortedByNameStockCost = !this.sortedByNameStockCost;
   }
 
   sortTotalValueStock(){
-    if(this.sortedByNameValue){
+    if(this.sortedByNameStockValue){
       this.totalValueStockData = this.sortByValue(this.totalValueStockData);
     }
-    else if(!this.sortedByNameValue){
+    else if(!this.sortedByNameStockValue){
       this.totalValueStockData = this.sortByName(this.totalValueStockData);
     }
 
     this.totalValueChart.removeSerie(0);
-    
     this.totalValueChart.addSerie({
       data: this.totalValueStockData
     })
 
-    this.sortedByNameValue = !this.sortedByNameValue;
+    this.sortedByNameStockValue = !this.sortedByNameStockValue;
   }
 
-sortedByName = true;
-sortedByNameValue = true;
+  sortTotalCostIndustry(){
+    if(this.sortedByNameIndustryCost){
+      this.totalCostIndustryData = this.sortByValue(this.totalCostIndustryData);
+    }
+    else if(!this.sortedByNameIndustryCost){
+      this.totalCostIndustryData = this.sortByName(this.totalCostIndustryData);
+    }
+
+    this.totalCostPerIndustryChart.removeSerie(0);
+    this.totalCostPerIndustryChart.addSerie({
+      data: this.totalCostIndustryData
+    })
+
+    this.sortedByNameIndustryCost = !this.sortedByNameIndustryCost;
+  }
+
+  sortTotalValueIndustry(){
+    if(this.sortedByNameIndustryValue){
+      this.totalValueIndustryData = this.sortByValue(this.totalValueIndustryData);
+    }
+    else if(!this.sortedByNameIndustryValue){
+      this.totalValueIndustryData = this.sortByName(this.totalValueIndustryData);
+    }
+
+    this.totalValuePerIndustryChart.removeSerie(0);
+    this.totalValuePerIndustryChart.addSerie({
+      data: this.totalValueIndustryData
+    })
+
+    this.sortedByNameIndustryValue = !this.sortedByNameIndustryValue;
+  }
+
+sortedByNameStockCost = true;
+sortedByNameStockValue = true;
+
+sortedByNameIndustryCost = true;
+sortedByNameIndustryValue = true;
 
 totalCostStockData = [];
 totalValueStockData = [];

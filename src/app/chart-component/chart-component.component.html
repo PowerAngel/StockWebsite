@@ -15,9 +15,11 @@
   
   <div class="row">
     <div class="col-lg-6 col-xs-12">
+      <button (click)="sortTotalCostIndustry()" id="totalCostIndustrySortButton">Sort</button>
       <div class="chart-container box" [chart]="totalCostPerIndustryChart"></div>
     </div>
     <div class="col-lg-6 col-xs-12">
+        <button (click)="sortTotalValueIndustry()" id="totalValueIndustrySortButton">Sort</button>
       <div class="chart-container box" [chart]="totalValuePerIndustryChart"></div>
     </div>
   </div>
