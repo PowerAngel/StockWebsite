@@ -14,6 +14,10 @@ export class TableComponent implements OnInit {
   items = [];
   tablestocks = new DataTableResource(this.dataService.stocks);
 
+  oldItemCount = 0;
+  oldItems = [];
+  oldTablestocks = new DataTableResource(this.dataService.oldStocks);
+
   industryCount = 0;
   industryitems = [];
   industries = new DataTableResource(this.dataService.industries);
@@ -25,12 +29,17 @@ export class TableComponent implements OnInit {
   constructor(private dataService: StocksService)
   {
     this.tablestocks.count().then(count => this.itemCount = count);
+    this.oldTablestocks.count().then(count => this.oldItemCount = count);
     this.industries.count().then(industrycount => this.industryCount = industrycount);
     this.markets.count().then(marketcount => this.marketCount = marketcount);
   }
 
   reloadItems(params) {
     this.tablestocks.query(params).then(items => this.items = items);
+  }
+
+  reloadOldItems(params){
+    this.oldTablestocks.query(params).then(items => this.oldItems = items);
   }
 
   rowClick(rowEvent) {

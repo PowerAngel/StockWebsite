@@ -118,6 +118,127 @@
   </data-table-column>
 </data-table>
 
+<!-- OLD STOCKS -->
+<data-table id="old-stock-grid"
+  headerTitle="Tidigare ägda aktier"
+  [items]="oldItems"
+  [itemCount]="oldItemCount"
+  (reload)="reloadOldItems($event)"
+
+  [limit]="oldItemCount"
+  [indexColumn]="false"
+
+  (rowClick)="rowClick($event)"
+  (rowDoubleClick)="rowDoubleClick($event)"
+  class="sw-table-wrapper">
+
+  <data-table-column
+    [property]="'name'"
+    [header]="'Namn'"
+    [sortable]="true"
+    [resizable]="true">
+  </data-table-column>
+  <data-table-column
+    [property]="'ticker'"
+    [header]="'Ticker'"
+    [sortable]="true"
+    [resizable]="true">
+  </data-table-column>
+  <data-table-column
+    [property]="'industry'"
+    [header]="'Bransch'"
+    [sortable]="true"
+    [resizable]="true">
+  </data-table-column>
+  <data-table-column
+    [property]="'boughtFor'"
+    [header]="'Handlades för'"
+    [sortable]="true"
+    [resizable]="true">
+    <ng-template #dataTableCell let-item="item">
+      <div class="table-cell--right"> {{item.boughtFor | number}} kr </div>
+    </ng-template>
+  </data-table-column>
+  <data-table-column
+    [property]="'amount'"
+    [header]="'Antal'"
+    [sortable]="true"
+    [resizable]="true">
+    <ng-template #dataTableCell let-item="item">
+      <div class="table-cell--right"> {{item.amount | number}} </div>
+    </ng-template>
+  </data-table-column>
+  <data-table-column
+    [property]="'totalCost'"
+    [header]="'Totalkostnad'"
+    [sortable]="true"
+    [resizable]="true">
+    <ng-template #dataTableCell let-item="item">
+      <div class="table-cell--right"> {{item.totalCost | number}} kr </div>
+    </ng-template>
+  </data-table-column>
+  <data-table-column
+    [property]="'currentPrice'"
+    [header]="'Nuvarande pris'"
+    [sortable]="true"
+    [resizable]="true">
+    <ng-template #dataTableCell let-item="item">
+      <div class="table-cell--right"> {{item.currentPrice | number}} kr </div>
+    </ng-template>
+  </data-table-column>
+  <data-table-column
+    [property]="'totalValue'"
+    [header]="'Totalvärde'"
+    [sortable]="true"
+    [resizable]="true">
+    <ng-template #dataTableCell let-item="item">
+      <div class="table-cell--right"> {{item.totalValue | number}} kr </div>
+    </ng-template>
+  </data-table-column>
+  <data-table-column
+    [property]="'yield'"
+    [header]="'Avkastning'"
+    [sortable]="true"
+    [resizable]="true">
+    <ng-template #dataTableCell let-item="item">
+      <div class="table-cell--right"> {{item.yield | percent}} </div>
+    </ng-template>
+  </data-table-column>
+  <data-table-column
+    [property]="'stockMarket'"
+    [header]="'Börs'"
+    [sortable]="true"
+    [resizable]="true">
+  </data-table-column>
+  <data-table-column
+    [property]="'dividendCost'"
+    [header]="'Utdelning (inköp)'"
+    [sortable]="true"
+    [resizable]="true">
+    <ng-template #dataTableCell let-item="item">
+      <div class="table-cell--right"> {{item.dividendCost | percent}} </div>
+    </ng-template>
+  </data-table-column>
+  <data-table-column
+    [property]="'dividendValue'"
+    [header]="'Utdelning (aktuellt)'"
+    [sortable]="true"
+    [resizable]="true">
+    <ng-template #dataTableCell let-item="item">
+      <div class="table-cell--right"> {{item.dividendValue | percent}} </div>
+    </ng-template>
+  </data-table-column>
+  <data-table-column
+    [property]="'totalDividend'"
+    [header]="'Total utdelning'"
+    [sortable]="true"
+    [resizable]="true">
+    <ng-template #dataTableCell let-item="item">
+      <div class="table-cell--right"> {{item.totalDividend | number}} kr </div>
+    </ng-template>
+  </data-table-column>
+</data-table>
+
 <data-table id="industry-grid"
   headerTitle="Branschöversikt"
   [items]="industryitems"
