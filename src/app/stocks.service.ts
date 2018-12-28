@@ -410,14 +410,14 @@ export class StocksService {
     amount: 2,
     currentPrice: 1203.0,
     stockMarket: 'NASDAQ',
-    dividend: 7.23,
+    dividend: 5.79,
     totalCost: 0,
     totalValue: 0,
     yield: 0,
     dividendCost: 0,
     dividendValue: 0,
     dividendYearlySum: 0,
-    totalDividend: 8.63,
+    totalDividend: 10.07,
     url: "https://www.avanza.se/aktier/om-aktien.html/4478/nvidia-corp"
   }
 
