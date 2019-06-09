@@ -79,6 +79,8 @@ export class StocksService {
   totalValueNonDividendStocks = 0;
   annualDividend = 0;
 
+  //Old stocks
+
   Actic = {
     name: 'Actic Group',
     ticker: 'ATIC',
@@ -98,13 +100,35 @@ export class StocksService {
     url: "https://www.avanza.se/aktier/om-aktien.html/742358/actic-group",
   }
 
+  ClasOhlson = {
+    name: 'Clas Ohlson AB B',
+    ticker: 'CLAS B',
+    industry: 'Dagligvaror',
+    boughtFor: 140.25,
+    amount: 6,
+    currentPrice: 89.0,
+    stockMarket: 'Stockholmsbörsen (Mid Cap)',
+    dividend: 6.25,
+    totalCost: 0,
+    totalValue: 0,
+    yield: 0,
+    dividendCost: 0,
+    dividendValue: 0,
+    dividendYearlySum: 0,
+    totalDividend: 75,
+    url: "https://www.avanza.se/aktier/om-aktien.html/5457/clas-ohlson-b"
+  }
+
+
+  //Currently own
+
   Acconeer = {
     name: 'Acconeer',
     ticker: 'ACCON',
     industry: 'Informationsteknik',
     boughtFor: 19.61,
     amount: 119,
-    currentPrice: 19.22,
+    currentPrice: 19.50,
     stockMarket: 'First North Stockholm',
     dividend: 0.0,
     totalCost: 0,
@@ -123,7 +147,7 @@ export class StocksService {
     industry: 'Övrigt',
     boughtFor: 1292.155,
     amount: 2,
-    currentPrice: 1415.5,
+    currentPrice: 1447.5,
     stockMarket: 'NYSE',
     dividend: 0,
     totalCost: 0,
@@ -142,7 +166,7 @@ export class StocksService {
     industry: 'Övrigt',
     boughtFor: 8756.88,
     amount: 1,
-    currentPrice: 16838,
+    currentPrice: 16932,
     stockMarket: 'NASDAQ',
     dividend: 0,
     totalCost: 0,
@@ -161,7 +185,7 @@ export class StocksService {
     industry: 'Industrivaror & Tjänster',
     boughtFor: 199.04,
     amount: 15,
-    currentPrice: 230.3,
+    currentPrice: 242.8,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
     dividend: 6.3,
     totalCost: 0,
@@ -180,7 +204,7 @@ export class StocksService {
     industry: 'Finans & Fastighet',
     boughtFor: 68.26,
     amount: 50,
-    currentPrice: 68.8,
+    currentPrice: 70.8,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
     dividend: 2.1,
     totalCost: 0,
@@ -199,7 +223,7 @@ export class StocksService {
     industry: 'Telekomoperatörer',
     boughtFor: 22.84,
     amount: 140,
-    currentPrice: 23.5,
+    currentPrice: 25.35,
     stockMarket: 'Aktietorget',
     dividend: 0.55,
     totalCost: 0,
@@ -218,7 +242,7 @@ export class StocksService {
     industry: 'Material',
     boughtFor: 123.08,
     amount: 36,
-    currentPrice: 113.9,
+    currentPrice: 115.9,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
     dividend: 4.3,
     totalCost: 0,
@@ -231,32 +255,13 @@ export class StocksService {
     url: "https://www.avanza.se/aktier/om-aktien.html/5556/billerudkorsnas"
   }
 
-  ClasOhlson = {
-    name: 'Clas Ohlson AB B',
-    ticker: 'CLAS B',
-    industry: 'Dagligvaror',
-    boughtFor: 140.25,
-    amount: 6,
-    currentPrice: 83.95,
-    stockMarket: 'Stockholmsbörsen (Mid Cap)',
-    dividend: 6.25,
-    totalCost: 0,
-    totalValue: 0,
-    yield: 0,
-    dividendCost: 0,
-    dividendValue: 0,
-    dividendYearlySum: 0,
-    totalDividend: 75,
-    url: "https://www.avanza.se/aktier/om-aktien.html/5457/clas-ohlson-b"
-  }
-
   Cloetta = {
     name: 'Cloetta',
     ticker: 'CLA B',
     industry: 'Sällanköpvaror & Tjänster',
     boughtFor: 28,
     amount: 15,
-    currentPrice: 29.88,
+    currentPrice: 30.74,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
     dividend: 0.75,
     totalCost: 0,
@@ -275,7 +280,7 @@ export class StocksService {
     industry: 'Industrivaror & Tjänster',
     boughtFor: 80.625,
     amount: 32,
-    currentPrice: 86.0,
+    currentPrice: 89.14,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
     dividend: 2.1,
     totalCost: 0,
@@ -292,9 +297,9 @@ export class StocksService {
     name: 'Handelsbanken',
     ticker: 'SHB B',
     industry: 'Finans & Fastighet',
-    boughtFor: 102.65,
-    amount: 37,
-    currentPrice: 93.52,
+    boughtFor: 101.58,
+    amount: 43,
+    currentPrice: 91.94,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
     dividend: 5.5,
     totalCost: 0,
@@ -313,7 +318,7 @@ export class StocksService {
     industry: 'Sällanköpvaror & Tjänster',
     boughtFor: 12.69,
     amount: 105,
-    currentPrice: 22.6,
+    currentPrice: 23.7,
     stockMarket: 'First North Stockholm',
     dividend: 0,
     totalCost: 0,
@@ -332,7 +337,7 @@ export class StocksService {
     industry: 'Dagligvaror',
     boughtFor: 298.19,
     amount: 11,
-    currentPrice: 378.3,
+    currentPrice: 393.6,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
     dividend: 11.5,
     totalCost: 0,
@@ -351,7 +356,7 @@ export class StocksService {
     industry: 'Hälsa',
     boughtFor: 1086,
     amount: 1,
-    currentPrice: 1244,
+    currentPrice: 1300,
     stockMarket: 'NYSE',
     dividend: 31.55,
     totalCost: 0,
@@ -370,7 +375,7 @@ export class StocksService {
     industry: 'Dagligvaror',
     boughtFor: 233.15,
     amount: 10,
-    currentPrice: 169.4,
+    currentPrice: 165.4,
     stockMarket: 'Nordic MTF',
     dividend: 5.9,
     totalCost: 0,
@@ -408,7 +413,7 @@ export class StocksService {
     industry: 'Dagligvaror',
     boughtFor: 306.93,
     amount: 28,
-    currentPrice: 110.1,
+    currentPrice: 113.0,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
     dividend: 0,
     totalCost: 0,
@@ -427,7 +432,7 @@ export class StocksService {
     industry: 'Industrivaror & Tjänster',
     boughtFor: 93.04,
     amount: 27,
-    currentPrice: 114.8,
+    currentPrice: 118.0,
     stockMarket: 'Stockholmsbörsen (Mid Cap)',
     dividend: 3,
     totalCost: 0,
@@ -446,7 +451,7 @@ export class StocksService {
     industry: 'Informationsteknik',
     boughtFor: 1101.83,
     amount: 2,
-    currentPrice: 1285.0,
+    currentPrice: 1365.5,
     stockMarket: 'NASDAQ',
     dividend: 5.79,
     totalCost: 0,
@@ -465,7 +470,7 @@ export class StocksService {
     industry: 'Industrivaror & Tjänster',
     boughtFor: 80.09,
     amount: 46,
-    currentPrice: 74.9,
+    currentPrice: 79.05,
     stockMarket: 'Stockholmsbörsen (Large Cap)',
     dividend: 4.2,
     totalCost: 0,
@@ -484,7 +489,7 @@ export class StocksService {
     industry: 'Informationsteknik',
     boughtFor: 7.75,
     amount: 200,
-    currentPrice: 1.06,
+    currentPrice: 1.632,
     stockMarket: 'First North Stockholm',
     dividend: 0,
     totalCost: 0,
@@ -503,7 +508,7 @@ export class StocksService {
     industry: 'Industrivaror & Tjänster',
     boughtFor: 1740.52,
     amount: 1,
-    currentPrice: 1756,
+    currentPrice: 1919,
     stockMarket: 'NASDAQ',
     dividend: 0,
     totalCost: 0,
@@ -522,7 +527,7 @@ export class StocksService {
     industry: 'Informationsteknik',
     boughtFor: 40.425,
     amount: 40,
-    currentPrice: 38.48,
+    currentPrice: 40.68,
     stockMarket: 'Stockholmsbörsen (Mid Cap)',
     dividend: 0,
     totalCost: 0,
@@ -536,11 +541,11 @@ export class StocksService {
   }
 
   stocks = [
-    this.Acconeer, this.Alibaba, this.Amazon, this.AtlasCopco, this.Avanza, this.Bahnhof, this.BillerudKorsnas, this.ClasOhlson, this.Cloetta, this.Epiroc, this.Handelsbanken, this.Hovding, this.ICA, this.JNJ, this.Kopparbergs, this.MTG, this.Mycronic, this.NVIDIA, this.Peab, this.Starbreeze, this.Tesla, this.Tobii
+    this.Acconeer, this.Alibaba, this.Amazon, this.AtlasCopco, this.Avanza, this.Bahnhof, this.BillerudKorsnas, this.Cloetta, this.Epiroc, this.Handelsbanken, this.Hovding, this.ICA, this.JNJ, this.Kopparbergs, this.MTG, this.Mycronic, this.NVIDIA, this.Peab, this.Starbreeze, this.Tesla, this.Tobii
   ];
 
   oldStocks = [
-    this.Actic
+    this.Actic, this.ClasOhlson
   ];
 
   /* Branscher */
