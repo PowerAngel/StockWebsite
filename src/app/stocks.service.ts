@@ -1,6 +1,25 @@
 import { Injectable } from '@angular/core';
 import { element } from 'protractor';
 
+export interface Stock{
+  name: string,
+  ticker: string,
+  industry: string,
+  boughtFor: number,
+  amount: number,
+  currentPrice: number,
+  stockMarket: string,
+  dividend: number,
+  totalCost: number,
+  totalValue: number,
+  yield: number,
+  dividendCost: number,
+  dividendValue: number,
+  dividendYearlySum: number,
+  totalDividend: number,
+  url: string
+}
+
 @Injectable()
 export class StocksService {
 
@@ -81,7 +100,7 @@ export class StocksService {
 
   //Old stocks
 
-  Actic = {
+  Actic : Stock = {
     name: 'Actic Group',
     ticker: 'ATIC',
     industry: 'Dagligvaror',
@@ -100,7 +119,7 @@ export class StocksService {
     url: "https://www.avanza.se/aktier/om-aktien.html/742358/actic-group",
   }
 
-  ClasOhlson = {
+  ClasOhlson : Stock = {
     name: 'Clas Ohlson AB B',
     ticker: 'CLAS B',
     industry: 'Dagligvaror',
@@ -122,7 +141,7 @@ export class StocksService {
 
   //Currently own
 
-  Acconeer = {
+  Acconeer : Stock = {
     name: 'Acconeer',
     ticker: 'ACCON',
     industry: 'Informationsteknik',
@@ -141,7 +160,7 @@ export class StocksService {
     url: "https://www.avanza.se/aktier/om-aktien.html/808452/acconeer",
   }
 
-  Alibaba = {
+  Alibaba : Stock = {
     name: 'Alibaba Group Holding Ltd',
     ticker: 'BABA',
     industry: 'Övrigt',
@@ -160,7 +179,7 @@ export class StocksService {
     url: "https://www.avanza.se/aktier/om-aktien.html/506278/alibaba-group-holding-ltd"
   }
 
-  Amazon = {
+  Amazon : Stock = {
     name: 'Amazon',
     ticker: 'AMZN',
     industry: 'Övrigt',
@@ -179,7 +198,7 @@ export class StocksService {
     url: "https://www.avanza.se/aktier/om-aktien.html/3986/amazon-com-inc"
   }
 
-  AtlasCopco = {
+  AtlasCopco : Stock = {
     name: 'Atlas Copco B',
     ticker: 'ATCO B',
     industry: 'Industrivaror & Tjänster',
@@ -198,7 +217,7 @@ export class StocksService {
     url: "https://www.avanza.se/aktier/om-aktien.html/5235/atlas-copco-b",
   }
 
-  Avanza = {
+  Avanza : Stock = {
     name: 'Avanza ',
     ticker: 'AZA',
     industry: 'Finans & Fastighet',
@@ -217,7 +236,7 @@ export class StocksService {
     url: "https://www.avanza.se/aktier/om-aktien.html/5361/avanza-bank-holding"
   }
 
-  Bahnhof = {
+  Bahnhof : Stock = {
     name: 'Bahnhof B',
     ticker: 'BAHN B',
     industry: 'Telekomoperatörer',
@@ -236,7 +255,7 @@ export class StocksService {
     url: "https://www.avanza.se/aktier/om-aktien.html/106733/bahnhof-b"
   }
 
-  BillerudKorsnas = {
+  BillerudKorsnas : Stock = {
     name: 'BillerudKorsnäs',
     ticker: 'BILL',
     industry: 'Material',
@@ -255,7 +274,7 @@ export class StocksService {
     url: "https://www.avanza.se/aktier/om-aktien.html/5556/billerudkorsnas"
   }
 
-  Cloetta = {
+  Cloetta : Stock = {
     name: 'Cloetta',
     ticker: 'CLA B',
     industry: 'Sällanköpvaror & Tjänster',
@@ -274,7 +293,7 @@ export class StocksService {
     url: "https://www.avanza.se/aktier/om-aktien.html/163148/cloetta-b"
   }
 
-  Epiroc = {
+  Epiroc : Stock = {
     name: 'Epiroc',
     ticker: 'EPI B',
     industry: 'Industrivaror & Tjänster',
@@ -293,7 +312,7 @@ export class StocksService {
     url: "https://www.avanza.se/aktier/om-aktien.html/861431/epiroc-b"
   }
 
-  Handelsbanken = {
+  Handelsbanken : Stock = {
     name: 'Handelsbanken',
     ticker: 'SHB B',
     industry: 'Finans & Fastighet',
@@ -312,7 +331,7 @@ export class StocksService {
     url: "https://www.avanza.se/aktier/om-aktien.html/5265/handelsbanken-b"
   }
 
-  Hovding = {
+  Hovding : Stock = {
     name: 'Hövding Sverige',
     ticker: 'HOVD',
     industry: 'Sällanköpvaror & Tjänster',
@@ -331,7 +350,7 @@ export class StocksService {
     url: "https://www.avanza.se/aktier/om-aktien.html/572376/hovding-sverige"
   }
 
-  ICA = {
+  ICA : Stock = {
     name: 'ICA Gruppen',
     ticker: 'ICA',
     industry: 'Dagligvaror',
@@ -350,7 +369,7 @@ export class StocksService {
     url: "https://www.avanza.se/aktier/om-aktien.html/31607/ica-gruppen"
   }
 
-  JNJ = {
+  JNJ : Stock = {
     name: 'Johnson & Johnson',
     ticker: 'JNJ',
     industry: 'Hälsa',
@@ -369,7 +388,7 @@ export class StocksService {
     url: "https://www.avanza.se/aktier/om-aktien.html/3666/johnson---johnson"
   }
 
-  Kopparbergs = {
+  Kopparbergs : Stock = {
     name: 'Kopparbergs',
     ticker: 'KOBR MTF B',
     industry: 'Dagligvaror',
@@ -407,7 +426,7 @@ export class StocksService {
     url: "https://www.avanza.se/aktier/om-aktien.html/5438/modern-times-group-b"
   }*/
 
-  MTG = {
+  MTG : Stock = {
     name: 'Modern Times Group',
     ticker: 'MTG B',
     industry: 'Dagligvaror',
@@ -426,7 +445,7 @@ export class StocksService {
     url: "https://www.avanza.se/aktier/om-aktien.html/5438/modern-times-group-b"
   }
 
-  Mycronic = {
+  Mycronic : Stock = {
     name: 'Mycronic',
     ticker: 'MYCR',
     industry: 'Industrivaror & Tjänster',
@@ -445,7 +464,7 @@ export class StocksService {
     url: "https://www.avanza.se/aktier/om-aktien.html/5466/mycronic"
   }
 
-  NVIDIA = {
+  NVIDIA : Stock = {
     name: 'NVIDIA Corp',
     ticker: 'NVDA',
     industry: 'Informationsteknik',
@@ -464,7 +483,7 @@ export class StocksService {
     url: "https://www.avanza.se/aktier/om-aktien.html/4478/nvidia-corp"
   }
 
-  Peab = {
+  Peab : Stock = {
     name: 'Peab B',
     ticker: 'PEAB B',
     industry: 'Industrivaror & Tjänster',
@@ -483,7 +502,7 @@ export class StocksService {
     url: "https://www.avanza.se/aktier/om-aktien.html/5330/peab-b"
   }
 
-  Starbreeze = {
+  Starbreeze : Stock = {
     name: 'Starbreeze B',
     ticker: 'STAR B',
     industry: 'Informationsteknik',
@@ -502,7 +521,7 @@ export class StocksService {
     url: "https://www.avanza.se/aktier/om-aktien.html/5528/starbreeze-b"
   }
 
-  Tesla = {
+  Tesla : Stock = {
     name: 'Tesla',
     ticker: 'TSLA',
     industry: 'Industrivaror & Tjänster',
@@ -521,7 +540,7 @@ export class StocksService {
     url: "https://www.avanza.se/aktier/om-aktien.html/238449/tesla-inc"
   }
 
-  Tobii = {
+  Tobii : Stock = {
     name: 'Tobii',
     ticker: 'TOBII',
     industry: 'Informationsteknik',
