@@ -544,7 +544,7 @@ export class StocksService {
     name: 'Tobii',
     ticker: 'TOBII',
     industry: 'Informationsteknik',
-    boughtFor: 39.0,
+    boughtFor: 38.33,
     amount: 85,
     currentPrice: 35.24,
     stockMarket: 'Stockholmsbörsen (Mid Cap)',
