@@ -1,14 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 body {
     font-family: 'Roboto Condensed', sans-serif;
+    background-color: #3e4347;
 }
 h1 {
     text-align: center;
+    color: #e8e8e8;
 }
 
 h2 {
-    text-align: center
+    text-align: center;
+    color: #e8e8e8;
 }
+
+h4 {
+    color: #e8e8e8;
+}
+
 .page {
     margin: 50px 50px;
 }
@@ -26,13 +34,20 @@ h2 {
 }
 thead tr th {
     border-bottom: 2px solid #DDD;
+    color: #e8e8e8;
 }
 
 tbody tr td {
     border-bottom: 1px solid #DDD;
+    /*color: #e8e8e8;*/
 }
+
 .table th, .table td {
     padding: 4px 8px;
+}
+
+.white-text {
+    color: #e8e8e8;
 }
 
 .odd {
@@ -41,6 +56,14 @@ tbody tr td {
 
 .even {
     background-color: #efefef;
+}
+
+.row-odd {
+    background-color: #e8e8e8 !important;
+}
+
+.row-even {
+    background-color: #c2c3c4;
 }
 
 .container {

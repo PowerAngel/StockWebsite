@@ -91,7 +91,7 @@ export class ChartComponentComponent implements OnInit {
     })
 
   }
-  chartBackgroundColor = "#F5F5F5";
+  chartBackgroundColor = "#c2c3c4";
   ngOnInit() {
   }
 
