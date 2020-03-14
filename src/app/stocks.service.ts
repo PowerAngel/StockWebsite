@@ -398,7 +398,7 @@ export class StocksService {
     amount: 2,
     currentPrice: 1308.5,
     stockMarket: "NYSE",
-    dividend: 31.55,
+    dividend: 49.53,
     totalCost: 0,
     totalValue: 0,
     yield: 0,
