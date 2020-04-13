@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart } from 'angular-highcharts';
 import { StocksService } from '../stocks.service';
-import { element } from '../../../node_modules/protractor';
 
 @Component({
   selector: 'app-chart-component',

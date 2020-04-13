@@ -8,7 +8,7 @@ import { ChartModule } from 'angular-highcharts';
 
 import { DataTableModule } from 'angular-4-data-table/src/index';
 
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { TableComponent } from './table/table.component';
 
 

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { StocksService } from '../stocks.service';
-import { DataTableModule } from 'angular-4-data-table/src/index';
 import { DataTableResource } from 'angular-4-data-table';
 
 @Component({
