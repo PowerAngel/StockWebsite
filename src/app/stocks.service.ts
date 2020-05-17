@@ -430,7 +430,7 @@ export class StocksService {
   Mastercard: Stock = {
     name: "Mastercard Inc",
     ticker: "MA",
-    industry: "Övrigt",
+    industry: "Finans & Fastighet",
     boughtFor: 2729.0,
     amount: 2,
     currentPrice: 2750.5,
@@ -632,6 +632,7 @@ export class StocksService {
     this.ICA,
     this.JNJ,
     this.Kopparbergs,
+    this.Mastercard,
     this.Match,
     this.MTG,
     this.Mycronic,
@@ -853,7 +854,8 @@ export class StocksService {
     this.Hovding.boughtFor * this.Hovding.amount;
   FinansFastighetTotalCost =
     this.Avanza.boughtFor * this.Avanza.amount +
-    this.Handelsbanken.boughtFor * this.Handelsbanken.amount;
+    this.Handelsbanken.boughtFor * this.Handelsbanken.amount +
+    this.Mastercard.boughtFor * this.Mastercard.amount;
   TelekomTotalCost = this.Bahnhof.boughtFor * this.Bahnhof.amount;
   EnergiTotalCost = 0;
   HalsaTotalCost = 0;
@@ -884,7 +886,8 @@ export class StocksService {
     this.Hovding.currentPrice * this.Hovding.amount;
   FinansFastighetTotalValue =
     this.Avanza.currentPrice * this.Avanza.amount +
-    this.Handelsbanken.currentPrice * this.Handelsbanken.amount;
+    this.Handelsbanken.currentPrice * this.Handelsbanken.amount +
+    this.Mastercard.currentPrice * this.Mastercard.amount;
   TelekomTotalValue = this.Bahnhof.currentPrice * this.Bahnhof.amount;
   EnergiTotalValue = 0;
   HalsaTotalValue = 0;
