@@ -6,6 +6,7 @@ body {
 h1 {
     text-align: center;
     color: #e8e8e8;
+    margin-bottom: 25px;
 }
 
 h2 {
@@ -15,6 +16,7 @@ h2 {
 
 h4 {
     color: #e8e8e8;
+    margin-top: 50px !important;
 }
 
 .page {
@@ -58,6 +60,10 @@ tbody tr td {
     background-color: #efefef;
 }
 
+.row {
+    margin-top: 50px;
+}
+
 .row-odd {
     background-color: #e8e8e8 !important;
 }
@@ -76,6 +82,20 @@ tbody tr td {
 .graybox {
     background-color: #CFE2ED;
     padding: 0 15px 10px 15px;
+}
+
+.link {
+    width: 100px;
+    height: 25px;
+    font: bold 11px Arial;
+    text-decoration: none;
+    background-color: #CFE2ED;
+    padding: 8px 24px 8px 24px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+    border-radius: 10px;
 }
 
 @media only screen and (max-width : 1024px)
