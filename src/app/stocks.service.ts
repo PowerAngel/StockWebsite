@@ -243,7 +243,7 @@ export class StocksService {
     industry: "Industrivaror & Tjänster",
     boughtFor: 212.54,
     amount: 17,
-    currentPrice: 3643.0,
+    currentPrice: 364.30,
     stockMarket: "Stockholmsbörsen (Large Cap)",
     dividend: 7,
     totalCost: 0,
