@@ -158,6 +158,25 @@ export class StocksService {
     url: "https://www.avanza.se/aktier/om-aktien.html/238449/tesla-inc"
   };
 
+  Tesla2: Stock = {
+    name: "Tesla",
+    ticker: "TSLA",
+    industry: "Industrivaror & Tjänster",
+    boughtFor: 5922.0,
+    amount: 1,
+    currentPrice: 15999,
+    stockMarket: "NASDAQ",
+    dividend: 0,
+    totalCost: 0,
+    totalValue: 0,
+    yield: 0,
+    dividendCost: 0,
+    dividendValue: 0,
+    dividendYearlySum: 0,
+    totalDividend: 0,
+    url: "https://www.avanza.se/aktier/om-aktien.html/238449/tesla-inc"
+  };
+
   //Currently own
 
   Acconeer: Stock = {
@@ -166,7 +185,7 @@ export class StocksService {
     industry: "Informationsteknik",
     boughtFor: 18.545,
     amount: 348,
-    currentPrice: 17.48,
+    currentPrice: 17.4,
     stockMarket: "First North Stockholm",
     dividend: 0.0,
     totalCost: 0,
@@ -185,7 +204,7 @@ export class StocksService {
     industry: "Övrigt",
     boughtFor: 1292.155,
     amount: 2,
-    currentPrice: 2397.5,
+    currentPrice: 2232.0,
     stockMarket: "NYSE",
     dividend: 0,
     totalCost: 0,
@@ -205,7 +224,7 @@ export class StocksService {
     industry: "Övrigt",
     boughtFor: 8756.88,
     amount: 1,
-    currentPrice: 29395,
+    currentPrice: 26746,
     stockMarket: "NASDAQ",
     dividend: 0,
     totalCost: 0,
@@ -224,7 +243,7 @@ export class StocksService {
     industry: "Industrivaror & Tjänster",
     boughtFor: 212.54,
     amount: 17,
-    currentPrice: 359.0,
+    currentPrice: 3643.0,
     stockMarket: "Stockholmsbörsen (Large Cap)",
     dividend: 7,
     totalCost: 0,
@@ -243,7 +262,7 @@ export class StocksService {
     industry: "Finans & Fastighet",
     boughtFor: 69.91,
     amount: 58,
-    currentPrice: 150.6,
+    currentPrice: 178.8,
     stockMarket: "Stockholmsbörsen (Large Cap)",
     dividend: 2.1,
     totalCost: 0,
@@ -262,7 +281,7 @@ export class StocksService {
     industry: "Telekomoperatörer",
     boughtFor: 22.84,
     amount: 140,
-    currentPrice: 29.5,
+    currentPrice: 30.0,
     stockMarket: "Aktietorget",
     dividend: 0.6,
     totalCost: 0,
@@ -281,7 +300,7 @@ export class StocksService {
     industry: "Material",
     boughtFor: 121.48,
     amount: 41,
-    currentPrice: 132.85,
+    currentPrice: 143.35,
     stockMarket: "Stockholmsbörsen (Large Cap)",
     dividend: 4.3,
     totalCost: 0,
@@ -300,7 +319,7 @@ export class StocksService {
     industry: "Sällanköpvaror & Tjänster",
     boughtFor: 28,
     amount: 15,
-    currentPrice: 23.8,
+    currentPrice: 24.06,
     stockMarket: "Stockholmsbörsen (Large Cap)",
     dividend: 0.75,
     totalCost: 0,
@@ -319,7 +338,7 @@ export class StocksService {
     industry: "Industrivaror & Tjänster",
     boughtFor: 85.42,
     amount:55,
-    currentPrice: 115.8,
+    currentPrice: 122.1,
     stockMarket: "Stockholmsbörsen (Large Cap)",
     dividend: 2.4,
     totalCost: 0,
@@ -338,7 +357,7 @@ export class StocksService {
     industry: "Finans & Fastighet",
     boughtFor: 95.88,
     amount: 63,
-    currentPrice: 90.16,
+    currentPrice: 90.44,
     stockMarket: "Stockholmsbörsen (Large Cap)",
     dividend: 5.5,
     totalCost: 0,
@@ -357,7 +376,7 @@ export class StocksService {
     industry: "Sällanköpvaror & Tjänster",
     boughtFor: 13.03,
     amount: 111,
-    currentPrice: 18.98,
+    currentPrice: 21.0,
     stockMarket: "First North Stockholm",
     dividend: 0,
     totalCost: 0,
@@ -376,7 +395,7 @@ export class StocksService {
     industry: "Dagligvaror",
     boughtFor: 298.19,
     amount: 11,
-    currentPrice: 445.8,
+    currentPrice: 438.1,
     stockMarket: "Stockholmsbörsen (Large Cap)",
     dividend: 11.5,
     totalCost: 0,
@@ -395,7 +414,7 @@ export class StocksService {
     industry: "Hälsa",
     boughtFor: 1248.0,
     amount: 3,
-    currentPrice: 1309.0,
+    currentPrice: 1348.67,
     stockMarket: "NYSE",
     dividend: 49.53,
     totalCost: 0,
@@ -414,7 +433,7 @@ export class StocksService {
     industry: "Dagligvaror",
     boughtFor: 233.15,
     amount: 10,
-    currentPrice: 152.4,
+    currentPrice: 154.6,
     stockMarket: "Nordic MTF",
     dividend: 5.9,
     totalCost: 0,
@@ -433,7 +452,7 @@ export class StocksService {
     industry: "Finans & Fastighet",
     boughtFor: 2729.0,
     amount: 2,
-    currentPrice: 2716.0,
+    currentPrice: 2746.5,
     stockMarket: "NYSE",
     dividend: 15.7,
     totalCost: 0,
@@ -452,7 +471,7 @@ export class StocksService {
     industry: "Övrigt",
     boughtFor: 714.0,
     amount: 7,
-    currentPrice: 922.14,
+    currentPrice: 828.43,
     stockMarket: "NASDAQ",
     dividend: 0,
     totalCost: 0,
@@ -490,7 +509,7 @@ export class StocksService {
     industry: "Dagligvaror",
     boughtFor: 95.2,
     amount: 67,
-    currentPrice: 113.3,
+    currentPrice: 114.1,
     stockMarket: "Stockholmsbörsen (Large Cap)",
     dividend: 0,
     totalCost: 0,
@@ -509,7 +528,7 @@ export class StocksService {
     industry: "Industrivaror & Tjänster",
     boughtFor: 93.04,
     amount: 27,
-    currentPrice: 173.0,
+    currentPrice: 175.3,
     stockMarket: "Stockholmsbörsen (Mid Cap)",
     dividend: 3,
     totalCost: 0,
@@ -528,7 +547,7 @@ export class StocksService {
     industry: "Informationsteknik",
     boughtFor: 1101.83,
     amount: 2,
-    currentPrice: 3850.5,
+    currentPrice: 3684.5,
     stockMarket: "NASDAQ",
     dividend: 5.79,
     totalCost: 0,
@@ -547,7 +566,7 @@ export class StocksService {
     industry: "Industrivaror & Tjänster",
     boughtFor: 74.04,
     amount: 86,
-    currentPrice: 79.85,
+    currentPrice: 85.2,
     stockMarket: "Stockholmsbörsen (Large Cap)",
     dividend: 4.2,
     totalCost: 0,
@@ -566,7 +585,7 @@ export class StocksService {
     industry: "Informationsteknik",
     boughtFor: 7.75,
     amount: 200,
-    currentPrice: 1.38,
+    currentPrice: 1.42,
     stockMarket: "First North Stockholm",
     dividend: 0,
     totalCost: 0,
@@ -579,32 +598,13 @@ export class StocksService {
     url: "https://www.avanza.se/aktier/om-aktien.html/5528/starbreeze-b"
   };
 
-  Tesla2: Stock = {
-    name: "Tesla",
-    ticker: "TSLA",
-    industry: "Industrivaror & Tjänster",
-    boughtFor: 5922.0,
-    amount: 1,
-    currentPrice: 14189,
-    stockMarket: "NASDAQ",
-    dividend: 0,
-    totalCost: 0,
-    totalValue: 0,
-    yield: 0,
-    dividendCost: 0,
-    dividendValue: 0,
-    dividendYearlySum: 0,
-    totalDividend: 0,
-    url: "https://www.avanza.se/aktier/om-aktien.html/238449/tesla-inc"
-  };
-
   Tobii: Stock = {
     name: "Tobii",
     ticker: "TOBII",
     industry: "Informationsteknik",
     boughtFor: 32.3,
     amount: 204,
-    currentPrice: 36.06,
+    currentPrice: 36.6,
     stockMarket: "Stockholmsbörsen (Mid Cap)",
     dividend: 0,
     totalCost: 0,
@@ -639,11 +639,10 @@ export class StocksService {
     this.NVIDIA,
     this.Peab,
     this.Starbreeze,
-    this.Tesla2,
     this.Tobii
   ];
 
-  oldStocks = [this.Actic, this.ClasOhlson, this.Tesla];
+  oldStocks = [this.Actic, this.ClasOhlson, this.Tesla, this.Tesla2];
 
   /* Branscher */
   Dagligvaror = {
@@ -862,8 +861,7 @@ export class StocksService {
   OvrigtToalCost =
     this.Alibaba.boughtFor * this.Alibaba.amount +
     this.Amazon.boughtFor * this.Amazon.amount +
-    this.NVIDIA.boughtFor * this.NVIDIA.amount +
-    this.Tesla2.boughtFor * this.Tesla2.amount;
+    this.NVIDIA.boughtFor * this.NVIDIA.amount;
 
   DagligvarorTotalValue =
     this.Actic.currentPrice * this.Actic.amount +
@@ -894,8 +892,7 @@ export class StocksService {
   OvrigtTotalValue =
     this.Alibaba.currentPrice * this.Alibaba.amount +
     this.Amazon.currentPrice * this.Amazon.amount +
-    this.NVIDIA.currentPrice * this.NVIDIA.amount +
-    this.Tesla2.currentPrice * this.Tesla2.amount;
+    this.NVIDIA.currentPrice * this.NVIDIA.amount;
 
   stockToBuy() {
     return "The one with the best potential growth!";
